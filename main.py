@@ -301,17 +301,17 @@ def who_rule_based(j):
     return f"{who}{exp} who want to build in Web3."
 
 
-_gemini_model = None
+_gemini = {"models": None, "failures": 0}
 
 
-def pick_gemini_model(key):
-    """Ask Google which models this key can use; pick the newest stable 'flash' model."""
-    global _gemini_model
-    if _gemini_model is not None:
-        return _gemini_model
-    _gemini_model = os.environ.get("GEMINI_MODEL") or ""
-    if _gemini_model:
-        return _gemini_model
+def gemini_models(key):
+    """Ask Google which models this key can use. Fast 'flash-lite' first, then 'flash'; stable before preview."""
+    if _gemini["models"] is not None:
+        return _gemini["models"]
+    forced = os.environ.get("GEMINI_MODEL")
+    if forced:
+        _gemini["models"] = [forced]
+        return _gemini["models"]
     try:
         r = HTTP.get("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200",
                      headers={"x-goog-api-key": key}, timeout=20)
@@ -328,20 +328,27 @@ def pick_gemini_model(key):
     names = [m["name"].split("/")[-1] for m in models
              if "generateContent" in (m.get("supportedGenerationMethods") or [])]
     flash = [n for n in names if "flash" in n and not any(b in n for b in bad)]
-    ranked = sorted(flash, key=lambda n: (("lite" not in n), ("preview" not in n), ver(n), -len(n)),
+    ranked = sorted(flash, key=lambda n: (("preview" not in n), ("lite" in n), ver(n), -len(n)),
                     reverse=True)
-    _gemini_model = ranked[0] if ranked else ""
-    log(f"  Gemini model: {_gemini_model or 'none available'}")
-    return _gemini_model
+    _gemini["models"] = ranked[:4]
+    log(f"  Gemini models to try: {', '.join(_gemini['models']) or 'none available'}")
+    return _gemini["models"]
+
+
+def gemini_call(key, model, prompt, thinking=True):
+    cfg = {"temperature": 0.3, "maxOutputTokens": 1024}
+    if thinking:
+        cfg["thinkingConfig"] = {"thinkingLevel": "low"}
+    return HTTP.post(
+        f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+        headers={"x-goog-api-key": key}, timeout=25,
+        json={"contents": [{"parts": [{"text": prompt}]}], "generationConfig": cfg})
 
 
 def who_ai(j):
     """One-sentence 'who should apply' via Google Gemini free tier. Returns None on any issue."""
     key = os.environ.get("GEMINI_API_KEY")
-    if not key or not j["description"]:
-        return None
-    model = pick_gemini_model(key)
-    if not model:
+    if not key or not j["description"] or _gemini["failures"] >= 3:
         return None
     prompt = (
         "You write one line for a job-board post. Based on the job below, say WHO SHOULD APPLY: "
@@ -351,22 +358,29 @@ def who_ai(j):
         f"Title: {j['title']}\nCompany: {j['company']}\nLocation: {j['location']}\n"
         f"Description:\n{j['description'][:4000]}"
     )
-    try:
-        r = HTTP.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-            headers={"x-goog-api-key": key}, timeout=60,
-            json={"contents": [{"parts": [{"text": prompt}]}],
-                  "generationConfig": {"temperature": 0.3, "maxOutputTokens": 2048}})
-        if not r.ok:
-            log(f"  ! Gemini {r.status_code}: {r.text[:300]}")
-            return None
-        parts = r.json()["candidates"][0]["content"]["parts"]
-        text = " ".join(p.get("text", "") for p in parts if not p.get("thought")).strip()
-        text = re.sub(r"\s+", " ", text).strip(' "')
-        return text if 10 < len(text) < 300 else None
-    except Exception as e:
-        log(f"  ! Gemini error: {e}")
-        return None
+    for model in list(gemini_models(key)):
+        try:
+            r = gemini_call(key, model, prompt)
+            if r.status_code == 400 and "thinking" in r.text.lower():
+                r = gemini_call(key, model, prompt, thinking=False)
+            if not r.ok:
+                log(f"  ! Gemini {model} {r.status_code}: {r.text[:200]}")
+                raise RuntimeError("bad status")
+            parts = r.json()["candidates"][0]["content"]["parts"]
+            text = " ".join(p.get("text", "") for p in parts if not p.get("thought")).strip()
+            text = re.sub(r"\s+", " ", text).strip(' "')
+            if 10 < len(text) < 300:
+                _gemini["models"] = [model] + [m for m in _gemini["models"] if m != model]
+                return text
+            raise RuntimeError("empty answer")
+        except Exception as e:
+            log(f"  ! Gemini {model} failed: {str(e)[:120]}")
+            _gemini["failures"] += 1
+            _gemini["models"] = [m for m in _gemini["models"] if m != model] + [model]
+            if _gemini["failures"] >= 3:
+                log("  ! Gemini disabled for this run, using built-in lines")
+                return None
+    return None
 
 
 def format_post(j, ch):
