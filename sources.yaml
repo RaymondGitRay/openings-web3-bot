@@ -4,10 +4,10 @@
 # ─────────────────────────────────────────────────────────────
 
 settings:
-  max_posts_per_run: 4        # per channel, per run (runs every 3h → max ~32/day)
+  max_posts_per_run: 100      # per channel, per run (runs every 3h)
   max_job_age_days: 10        # ignore jobs older than this (when a date is known)
   first_run_posts: 3          # on the very first run, post only this many, mark the rest as seen
-  delay_between_posts: 4      # seconds, keeps Telegram happy
+  delay_between_posts: 3.2    # seconds between posts (Telegram allows ~20/min per channel)
   remember_days: 180          # a job (same company + title, or same link) is never re-posted within this window
 
 channels:
@@ -18,7 +18,8 @@ channels:
 
     # Company career pages. Left = the company's job-board name (slug),
     # right = how it appears in posts. The bot auto-detects which job board each
-    # one uses (Greenhouse, Lever, Ashby, Workable, SmartRecruiters, Recruitee).
+    # one uses (Greenhouse, Lever, Ashby, Workable, SmartRecruiters, Recruitee,
+    # BambooHR, Personio, Breezy, Teamtailor, Pinpoint).
     # Wrong slugs are skipped and listed in the "check" run log.
     companies:
       # ── Exchanges & brokers ──
@@ -315,6 +316,113 @@ channels:
       panteracapital: Pantera Capital
       framework: Framework Ventures
 
+    # Careers pages of companies whose job board isn't found by name above.
+    # The bot reads each page, finds the job board it links to (and adds it automatically),
+    # and also picks up jobs embedded in the page itself (schema.org data, Comeet).
+    careers_pages:
+      Chainalysis: https://www.chainalysis.com/careers/
+      Chainlink Labs: https://chain.link/careers
+      Solana Foundation: https://solana.org/careers
+      Anza: https://www.anza.xyz/careers
+      Wintermute: https://www.wintermute.com/careers
+      TRM Labs: https://www.trmlabs.com/careers
+      Fordefi: https://www.fordefi.com/careers
+      Utila: https://utila.io/careers
+      Polygon Labs: https://polygon.technology/careers
+      Optimism: https://www.optimism.io/careers
+      Matter Labs: https://matter-labs.io/careers
+      StarkWare: https://starkware.co/careers/
+      Ava Labs: https://www.avalabs.org/careers
+      Avara (Aave): https://avara.xyz/careers
+      Lido: https://lido.fi/careers
+      dYdX: https://www.dydx.xyz/careers
+      Tools for Humanity: https://www.toolsforhumanity.com/careers
+      World: https://world.org/careers
+      KuCoin: https://www.kucoin.com/careers
+      Gate.io: https://www.gate.io/careers
+      Crypto.com: https://crypto.com/careers
+      HashKey: https://group.hashkey.com/en/careers
+      Matrixport: https://www.matrixport.com/careers
+      Cobo: https://www.cobo.com/careers
+      Deribit: https://www.deribit.com/careers
+      Bullish: https://bullish.com/careers
+      GSR: https://www.gsr.io/careers
+      Talos: https://www.talos.com/careers
+      Bitwise: https://bitwiseinvestments.com/careers
+      CoinShares: https://coinshares.com/careers
+      Kaiko: https://www.kaiko.com/careers
+      Coin Metrics: https://coinmetrics.io/careers/
+      Glassnode: https://glassnode.com/careers
+      Arkham: https://www.arkhamintelligence.com/careers
+      The Block: https://www.theblock.co/careers
+      CoinDesk: https://www.coindesk.com/careers
+      Ankr: https://www.ankr.com/careers/
+      Chainstack: https://chainstack.com/careers/
+      thirdweb: https://thirdweb.com/careers
+      Wormhole: https://wormhole.com/careers
+      Parity Technologies: https://www.parity.io/careers
+      Web3 Foundation: https://web3.foundation/careers/
+      Protocol Labs: https://www.protocol.ai/join/
+      ChainSafe: https://chainsafe.io/careers/
+      Interop Labs (Axelar): https://interoplabs.io/careers
+      Zero Hash: https://zerohash.com/careers
+      Bridge: https://www.bridge.xyz/careers
+      Transak: https://transak.com/careers
+      Banxa: https://banxa.com/careers/
+      Zodia Custody: https://zodia-custody.com/careers/
+      Komainu: https://www.komainu.com/careers
+      Taurus: https://www.taurushq.com/careers
+      Dynamic: https://www.dynamic.xyz/careers
+      Magic: https://magic.link/careers
+      Web3Auth: https://web3auth.io/careers
+      Argent: https://www.argent.xyz/careers
+      Exodus: https://www.exodus.com/careers
+      Trust Wallet: https://trustwallet.com/careers
+      Ledn: https://www.ledn.io/careers
+      Nexo: https://nexo.com/careers
+      Yuga Labs: https://yuga.com/careers
+      Dapper Labs: https://www.dapperlabs.com/careers
+      Flashbots: https://www.flashbots.net/jobs
+      Eigen Labs: https://www.eigenlabs.org/careers
+      Babylon Labs: https://babylonlabs.io/careers
+      Sei Labs: https://www.sei.io/careers
+      Monad: https://www.monad.xyz/careers
+      Berachain: https://www.berachain.com/careers
+      Algorand: https://algorand.co/careers
+      Input Output (Cardano): https://iohk.io/en/careers/
+      EMURGO: https://www.emurgo.io/careers
+      TON Foundation: https://ton.org/careers
+      Flow: https://flow.com/careers
+      Sui Foundation: https://sui.io/careers
+      Bitso: https://bitso.com/careers
+      Swyftx: https://swyftx.com/careers
+      CoinDCX: https://coindcx.com/careers
+      Mythical Games: https://mythicalgames.com/careers
+      Maple Finance: https://maple.finance/careers
+      Synthetix: https://synthetix.io/careers
+      Sky: https://sky.money/careers
+      Pendle: https://www.pendle.finance/careers
+      Jupiter: https://jup.ag/careers
+      MetaMask: https://metamask.io/careers
+      Mountain Protocol: https://mountainprotocol.com/careers
+      Mantle: https://www.mantle.xyz/careers
+      zkSync: https://zksync.io/careers
+      Celestia Labs: https://celestia.org/careers/
+      Injective: https://injective.com/careers
+      Hedera: https://hedera.com/careers
+      Stellar: https://stellar.org/foundation/careers
+      Upbit: https://upbit.com/careers
+      Indodax: https://indodax.com/careers
+      Tokocrypto: https://www.tokocrypto.com/careers
+      Independent Reserve: https://www.independentreserve.com/careers
+      Bitkub: https://www.bitkub.com/careers
+      bitFlyer: https://bitflyer.com/en-jp/careers
+      Coincheck: https://corporate.coincheck.com/careers
+      Amber Group: https://www.ambergroup.io/careers
+      Animoca Brands: https://www.animocabrands.com/careers
+      Safeheron: https://safeheron.com/careers
+      Ceffu: https://www.ceffu.com/careers
+
     # Slugs that are generic words: only keep their jobs if they mention Web3 keywords
     keyword_check_companies: [crypto, base, safe, bridge, ton, scroll, figure, merkle, compound,
       curve, agora, framework, near, jupiter, galaxy, copper, taurus, talos, dune, balancer, kava,
@@ -329,6 +437,10 @@ channels:
     # General sources — only jobs matching "keywords" are kept
     google_jobs: true         # Google Jobs via SerpApi, needs secret SERPAPI_KEY (1 search per run)
     remoteok: true
+
+    # Auto-discovery: any job link pointing at a company job board is added as a permanent
+    # source. With secret BRAVE_API_KEY, the bot also searches the web for new boards.
+    discover: true
     keywords: [web3, crypto, blockchain, defi, stablecoin, ethereum, solana, bitcoin, nft, onchain, "on-chain", tokenization, wallet, custody, dao, "smart contract", solidity, "digital assets"]
 
     # Extra RSS feeds (optional). Any job RSS feed works.
