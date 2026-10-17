@@ -14,7 +14,13 @@ channels:
   web3:
     chat_id: "@Openings_Web3"
     hashtag: "#Web3Jobs"
-    footer: "🔗 Openings network · Hiring? DM to feature your role"
+    footer: "🔗 Openings network · Hiring or collaborating? DM @Openings_Web3_bot"
+
+    # Welcome message posted with "--pin" (run mode "pin"), with a DM button that opens the bot inbox
+    pinned:
+      file: pinned_message.html
+      button: "💬 DM us to hire or collaborate"
+      url: "https://t.me/Openings_Web3_bot?start=pinned"
 
     # Company career pages. Left = the company's job-board name (slug),
     # right = how it appears in posts. The bot auto-detects which job board each
