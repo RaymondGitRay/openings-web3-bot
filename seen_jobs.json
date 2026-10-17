@@ -1,0 +1,230 @@
+{
+ "platforms": {
+  "aave": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "alchemy": {
+   "ats": "ashby",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "anchorage": {
+   "ats": "lever",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "animocabrands": {
+   "ats": "lever",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "aptoslabs": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "avalabs": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "binance": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "bitgo": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "bitpanda": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "bitso": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "blockchain": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "bvnk": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "bybit": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "chainalysis": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "chainlinklabs": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "circle": {
+   "ats": "ashby",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "coinbase": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "consensys": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "cryptocom": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "dydx": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "eigenlabs": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "falconx": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "figment": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "fireblocks": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "flashbots": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "galaxydigital": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "gemini": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "gsr": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "immutable": {
+   "ats": "lever",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "kaiko": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "kraken": {
+   "ats": "lever",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "krakenfx": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "ledger": {
+   "ats": "ashby",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "magiceden": {
+   "ats": "ashby",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "matterlabs": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "messari": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "moonpay": {
+   "ats": "lever",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "mystenlabs": {
+   "ats": "ashby",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "nansen": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "offchainlabs": {
+   "ats": "lever",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "okx": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "ondofinance": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "opensea": {
+   "ats": "ashby",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "optimism": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "paxos": {
+   "ats": "ashby",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "phantom": {
+   "ats": "ashby",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "polygon": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "ripple": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "securitize": {
+   "ats": "greenhouse",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "solana": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "starkware": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "toolsforhumanity": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "uniswap": {
+   "ats": "ashby",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "uniswaplabs": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "wintermute": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  },
+  "zerohash": {
+   "ats": "none",
+   "checked": "2026-10-17T17:41:29.990097+00:00"
+  }
+ },
+ "remotive_last": "2026-10-17T17:41:29.990097+00:00",
+ "seen": {}
+}
