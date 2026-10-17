@@ -324,8 +324,9 @@ def find_boards(text):
     found = set()
     for ats, pat in BOARD_PATTERNS:
         for m in re.finditer(pat, text or "", re.I):
-            slug = m.group(1).lower().strip(".")
-            if slug and slug not in NOT_SLUGS and len(slug) > 1:
+            slug = requests.utils.unquote(m.group(1)).lower().strip(". ")
+            if (slug and slug not in NOT_SLUGS and len(slug) > 1 and "." not in slug
+                    and not any(x in slug for x in ("cdn", "asset", "static", "image", "img"))):
                 found.add((ats, slug))
     return found
 
