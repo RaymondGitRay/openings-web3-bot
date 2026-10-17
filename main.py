@@ -202,9 +202,132 @@ def fetch_recruitee(slug, name):
     return out
 
 
+def fetch_bamboohr(slug, name):
+    try:
+        r = HTTP.get(f"https://{slug}.bamboohr.com/careers/list", timeout=TIMEOUT,
+                     headers={"Accept": "application/json"})
+    except requests.exceptions.ConnectionError:
+        return None
+    if r.status_code != 200 or "result" not in r.text[:300]:
+        return None
+    out = []
+    for j in r.json().get("result", []):
+        l = j.get("location") or {}
+        loc = ", ".join(x for x in [l.get("city"), l.get("state")] if x)
+        out.append(job("bh", j.get("id"), j.get("jobOpeningName"), name, loc,
+                       f"https://{slug}.bamboohr.com/careers/{j.get('id')}", None,
+                       remote=bool(j.get("isRemote"))))
+    return out
+
+
+def fetch_personio(slug, name):
+    import xml.etree.ElementTree as ET
+    for tld in ("de", "com"):
+        try:
+            r = HTTP.get(f"https://{slug}.jobs.personio.{tld}/xml?language=en", timeout=TIMEOUT)
+        except requests.exceptions.ConnectionError:
+            continue
+        if r.status_code == 200 and "<position" in r.text:
+            break
+    else:
+        return None
+    out = []
+    for pos in ET.fromstring(r.content).iter("position"):
+        g = lambda t: (pos.findtext(t) or "").strip()
+        desc = " ".join((d.findtext("value") or "") for d in pos.iter("jobDescription"))
+        out.append(job("ps", g("id"), g("name"), name, g("office"),
+                       f"https://{slug}.jobs.personio.{tld}/job/{g('id')}", g("createdAt"),
+                       description=desc))
+    return out
+
+
+def fetch_breezy(slug, name):
+    try:
+        r = HTTP.get(f"https://{slug}.breezy.hr/json", timeout=TIMEOUT)
+    except requests.exceptions.ConnectionError:
+        return None
+    if r.status_code != 200 or not r.text.strip().startswith("["):
+        return None
+    out = []
+    for j in r.json():
+        l = j.get("location") or {}
+        out.append(job("bz", j.get("id"), j.get("name"), name, l.get("name"), j.get("url"),
+                       j.get("published_date"), remote=bool(l.get("is_remote"))))
+    return out
+
+
+def fetch_teamtailor(slug, name):
+    try:
+        r = HTTP.get(f"https://{slug}.teamtailor.com/jobs.rss", timeout=TIMEOUT)
+    except requests.exceptions.ConnectionError:
+        return None
+    if r.status_code != 200 or "<rss" not in r.text[:500]:
+        return None
+    feed = feedparser.parse(r.text)
+    out = []
+    for e in feed.entries:
+        posted = time.mktime(e.published_parsed) if getattr(e, "published_parsed", None) else None
+        loc = e.get("tt_location") or e.get("location") or ""
+        out.append(job("tt", e.get("id") or e.get("link"), e.get("title"), name, loc,
+                       e.get("link"), posted, description=e.get("summary", "")))
+    return out
+
+
+def fetch_pinpoint(slug, name):
+    try:
+        r = HTTP.get(f"https://{slug}.pinpointhq.com/postings.json", timeout=TIMEOUT)
+    except requests.exceptions.ConnectionError:
+        return None
+    if r.status_code != 200 or not r.text.strip().startswith("{"):
+        return None
+    data = r.json()
+    items = data.get("data") or data.get("postings") or []
+    out = []
+    for j in items:
+        a = j.get("attributes") or j
+        l = a.get("location") or {}
+        loc = l.get("name") if isinstance(l, dict) else str(l or "")
+        out.append(job("pp", j.get("id"), a.get("title"), name, loc,
+                       a.get("url") or f"https://{slug}.pinpointhq.com/en/postings/{j.get('id')}",
+                       a.get("published_at") or a.get("created_at"),
+                       description=a.get("description", "")))
+    return out
+
+
 ATS = {"greenhouse": fetch_greenhouse, "lever": fetch_lever, "ashby": fetch_ashby,
        "workable": fetch_workable, "lever_eu": fetch_lever_eu,
-       "smartrecruiters": fetch_smartrecruiters, "recruitee": fetch_recruitee}
+       "smartrecruiters": fetch_smartrecruiters, "recruitee": fetch_recruitee,
+       "bamboohr": fetch_bamboohr, "personio": fetch_personio, "breezy": fetch_breezy,
+       "teamtailor": fetch_teamtailor, "pinpoint": fetch_pinpoint}
+
+# Patterns that reveal which job board a company uses, from any link or careers page.
+BOARD_PATTERNS = [
+    ("greenhouse", r"(?:boards|job-boards)(?:\.eu)?\.greenhouse\.io/(?:embed/job_board(?:/js)?\?for=)?([a-z0-9_-]+)"),
+    ("lever_eu", r"jobs\.eu\.lever\.co/([a-z0-9_.-]+)"),
+    ("lever", r"jobs\.lever\.co/([a-z0-9_.-]+)"),
+    ("ashby", r"jobs\.ashbyhq\.com/([a-z0-9_.%-]+)"),
+    ("workable", r"apply\.workable\.com/([a-z0-9_-]+)"),
+    ("smartrecruiters", r"(?:jobs|careers)\.smartrecruiters\.com/([a-z0-9_-]+)"),
+    ("recruitee", r"//([a-z0-9-]+)\.recruitee\.com"),
+    ("bamboohr", r"//([a-z0-9-]+)\.bamboohr\.com"),
+    ("personio", r"//([a-z0-9-]+)\.jobs\.personio\.(?:de|com)"),
+    ("breezy", r"//([a-z0-9-]+)\.breezy\.hr"),
+    ("teamtailor", r"//([a-z0-9-]+)\.teamtailor\.com"),
+    ("pinpoint", r"//([a-z0-9-]+)\.pinpointhq\.com"),
+]
+NOT_SLUGS = {"embed", "api", "www", "jobs", "app", "careers", "job", "v1", "v0", "static",
+             "assets", "cdn", "help", "support", "en", "de", "boards", "job-boards", "posting-api"}
+
+
+def find_boards(text):
+    """Return {(ats, slug)} for every job-board link found in a piece of text/HTML."""
+    found = set()
+    for ats, pat in BOARD_PATTERNS:
+        for m in re.finditer(pat, text or "", re.I):
+            slug = m.group(1).lower().strip(".")
+            if slug and slug not in NOT_SLUGS and len(slug) > 1:
+                found.add((ats, slug))
+    return found
 
 
 def fetch_company(slug, name, state):
@@ -233,6 +356,158 @@ def fetch_company(slug, name, state):
     cache[slug] = {"ats": "none", "checked": NOW.isoformat()}
     log(f"  ✗ '{slug}' not found on any supported job board — fix or remove it in sources.yaml")
     return []
+
+
+def _walk_jsonld(obj):
+    if isinstance(obj, list):
+        for x in obj:
+            yield from _walk_jsonld(x)
+    elif isinstance(obj, dict):
+        t = obj.get("@type")
+        if t == "JobPosting" or (isinstance(t, list) and "JobPosting" in t):
+            yield obj
+        for k in ("@graph", "itemListElement", "item", "mainEntity"):
+            if k in obj:
+                yield from _walk_jsonld(obj[k])
+
+
+def scan_careers_page(name, url):
+    """Read a company careers page. Returns (job boards linked from it, jobs embedded in it)."""
+    try:
+        r = HTTP.get(url, timeout=TIMEOUT, headers={
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                          "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml"})
+    except Exception:
+        return set(), []
+    if not r.ok:
+        return set(), []
+    html_text = r.text
+    boards = find_boards(html_text)
+    jobs = []
+    # 1) schema.org JobPosting data (used by many careers pages, Gem, Rippling, etc.)
+    for block in re.findall(r'<script[^>]+application/ld\+json[^>]*>(.*?)</script>', html_text, re.S | re.I):
+        try:
+            data = json.loads(block.strip())
+        except Exception:
+            continue
+        for jp in _walk_jsonld(data):
+            org = jp.get("hiringOrganization") or {}
+            locs = jp.get("jobLocation") or []
+            locs = locs if isinstance(locs, list) else [locs]
+            loc = ", ".join(filter(None, [
+                ((l.get("address") or {}).get("addressLocality") if isinstance(l.get("address"), dict) else "")
+                for l in locs if isinstance(l, dict)]))
+            remote = "TELECOMMUTE" in str(jp.get("jobLocationType", "")).upper()
+            jobs.append(job("ld", jp.get("identifier") if isinstance(jp.get("identifier"), str)
+                            else (jp.get("url") or jp.get("title")),
+                            jp.get("title"), (org.get("name") if isinstance(org, dict) else "") or name,
+                            loc, jp.get("url") or url, jp.get("datePosted"), remote=remote,
+                            description=jp.get("description", "")))
+    # 2) Comeet careers pages embed their positions as JSON
+    m = re.search(r"COMPANY_POSITIONS_DATA\s*=\s*(\[.*?\]);", html_text, re.S)
+    if m:
+        try:
+            for j in json.loads(m.group(1)):
+                jobs.append(job("cm", j.get("uid") or j.get("position_uid"), j.get("name"), name,
+                                (j.get("location") or {}).get("name", ""),
+                                j.get("url_comeet_hosted_page") or j.get("url_active_page") or url,
+                                j.get("time_updated"),
+                                remote=bool((j.get("location") or {}).get("is_remote"))))
+        except Exception:
+            pass
+    return boards, jobs
+
+
+BRAVE_QUERIES = [
+    "site:jobs.ashbyhq.com crypto", "site:jobs.ashbyhq.com web3", "site:jobs.ashbyhq.com blockchain",
+    "site:jobs.lever.co crypto", "site:jobs.lever.co web3", "site:jobs.lever.co blockchain",
+    "site:job-boards.greenhouse.io crypto", "site:boards.greenhouse.io web3",
+    "site:job-boards.greenhouse.io stablecoin", "site:apply.workable.com crypto",
+    "site:apply.workable.com web3", "site:jobs.smartrecruiters.com crypto",
+    "site:teamtailor.com web3", "site:bamboohr.com crypto careers", "site:jobs.personio.de crypto",
+    "site:breezy.hr crypto", "site:recruitee.com web3", "site:jobs.ashbyhq.com defi",
+    "site:jobs.lever.co defi", "site:job-boards.greenhouse.io digital assets",
+]
+
+
+def brave_discover(state, per_run=3, monthly_budget=900):
+    """Find new companies' job boards with Brave Search (free monthly credits). Needs BRAVE_API_KEY."""
+    key = os.environ.get("BRAVE_API_KEY")
+    if not key:
+        return set()
+    month = NOW.strftime("%Y-%m")
+    b = state.setdefault("brave", {})
+    if b.get("month") != month:
+        b.update(month=month, used=0)
+    found = set()
+    for _ in range(per_run):
+        if b["used"] >= monthly_budget:
+            break
+        i = b.get("next", 0)
+        q = BRAVE_QUERIES[i % len(BRAVE_QUERIES)]
+        offset = (i // len(BRAVE_QUERIES)) % 5  # page deeper on each pass through the list
+        b["next"] = i + 1
+        b["used"] += 1
+        try:
+            r = HTTP.get("https://api.search.brave.com/res/v1/web/search", timeout=30,
+                         headers={"X-Subscription-Token": key, "Accept": "application/json"},
+                         params={"q": q, "count": 20, "offset": offset})
+            if not r.ok:
+                log(f"  ! Brave {r.status_code}: {r.text[:150]}")
+                continue
+            for res in (r.json().get("web") or {}).get("results", []):
+                found |= find_boards(res.get("url", "") + " " + res.get("description", ""))
+        except Exception as e:
+            log(f"  ! Brave error: {e}")
+    return found
+
+
+def remember_boards(state, boards, known_slugs, source, names=None):
+    """Add newly found job boards to the permanent discovered list."""
+    disc = state.setdefault("discovered", {})
+    added = 0
+    for ats, slug in boards:
+        key = f"{ats}:{slug}"
+        if key in disc or slug in known_slugs:
+            continue
+        disc[key] = {"name": (names or {}).get((ats, slug)) or slug.replace("-", " ").title(),
+                     "found": NOW.isoformat()[:10], "via": source}
+        added += 1
+    return added
+
+
+def fetch_discovered(state, keywords):
+    """Fetch every discovered board; keep only jobs that mention Web3 keywords."""
+    from concurrent.futures import ThreadPoolExecutor
+    disc = state.setdefault("discovered", {})
+
+    def one(item):
+        key, meta = item
+        ats, slug = key.split(":", 1)
+        try:
+            got = ATS[ats](slug, meta["name"])
+        except Exception:
+            got = None
+        return key, got
+
+    jobs, dead, live = [], [], 0
+    with ThreadPoolExecutor(max_workers=16) as pool:
+        for key, got in pool.map(one, list(disc.items())):
+            if got is None:
+                disc[key]["fails"] = disc[key].get("fails", 0) + 1
+                if disc[key]["fails"] >= 3:
+                    dead.append(key)
+                continue
+            disc[key]["fails"] = 0
+            live += 1
+            for j in got:
+                j["_slug"] = key
+            jobs += [j for j in got if matches(j["title"] + " " + j["description"], keywords)]
+    for key in dead:
+        disc.pop(key, None)
+    log(f"  discovered boards: {len(jobs)} Web3 jobs from {live} of {len(disc)} boards")
+    return jobs
 
 
 _remote_cache = {}
@@ -588,7 +863,8 @@ def collect(ch, state):
     from concurrent.futures import ThreadPoolExecutor
     jobs, found = [], 0
     companies = list((ch.get("companies") or {}).items())
-    with ThreadPoolExecutor(max_workers=12) as pool:
+    known_slugs = {slug for slug, _ in companies}
+    with ThreadPoolExecutor(max_workers=16) as pool:
         results = pool.map(lambda kv: fetch_company(kv[0], kv[1] or kv[0], state), companies)
         for got in results:
             if got:
@@ -599,6 +875,20 @@ def collect(ch, state):
     jobs = [j for j in jobs if j.get("_slug") not in check
             or matches(j["title"] + " " + j["description"], kw)]
     log(f"  company pages: {len(jobs)} jobs from {found} companies")
+
+    # Careers pages: find which job board each company uses, plus jobs embedded in the page
+    pages = list((ch.get("careers_pages") or {}).items())
+    page_jobs, page_boards, names = [], set(), {}
+    with ThreadPoolExecutor(max_workers=16) as pool:
+        for (name, url), (boards, pj) in zip(pages, pool.map(lambda kv: scan_careers_page(*kv), pages)):
+            page_boards |= boards
+            for b in boards:
+                names.setdefault(b, name)
+            page_jobs += pj
+    added = remember_boards(state, page_boards, known_slugs, "careers page", names)
+    jobs += page_jobs
+    log(f"  careers pages: {len(page_jobs)} embedded jobs, {len(page_boards)} job boards found "
+        f"({added} new)")
 
     def safe(name, fn):
         try:
@@ -626,7 +916,22 @@ def collect(ch, state):
         extra += safe(f"RSS {url}", lambda u=url: fetch_rss(u))
     kept = [j for j in extra if not kw or matches(j.get("_text") or j["title"], kw)]
     log(f"  general sources: {len(kept)} of {len(extra)} match keywords")
-    return jobs + kept
+    jobs += kept
+
+    # Auto-discovery: any job link that points at a company job board becomes a permanent source
+    if ch.get("discover", True):
+        link_boards, link_names = set(), {}
+        for j in jobs:
+            for b in find_boards(j["url"] or ""):
+                link_boards.add(b)
+                link_names.setdefault(b, j["company"])
+        added = remember_boards(state, link_boards, known_slugs, "job link", link_names)
+        brave = brave_discover(state)
+        added_b = remember_boards(state, brave, known_slugs, "brave search")
+        log(f"  discovery: +{added} boards from job links, +{added_b} from search "
+            f"({len(state.get('discovered', {}))} discovered in total)")
+        jobs += fetch_discovered(state, kw)
+    return jobs
 
 
 def main():
