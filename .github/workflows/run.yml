@@ -33,6 +33,7 @@ jobs:
       - name: Run bot
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           MODE="${{ github.event.inputs.mode || 'normal' }}"
           if [ "$MODE" = "dry-run" ]; then python main.py --dry-run
