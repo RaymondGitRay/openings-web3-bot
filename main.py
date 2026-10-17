@@ -55,7 +55,15 @@ def norm(s):
     return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
 
 
-def job(source, uid, title, company, location, url, posted=None, salary=None, remote=False):
+def strip_html(s):
+    s = html.unescape(html.unescape(s or ""))
+    s = re.sub(r"<(br|/p|/li|/h\d)[^>]*>", "\n", s, flags=re.I)
+    s = re.sub(r"<[^>]+>", " ", s)
+    return re.sub(r"[ \t]+", " ", s).strip()
+
+
+def job(source, uid, title, company, location, url, posted=None, salary=None, remote=False,
+        description=""):
     return {
         "id": f"{source}:{uid}",
         "dedupe": f"{norm(company)}|{norm(title)}",
@@ -65,6 +73,7 @@ def job(source, uid, title, company, location, url, posted=None, salary=None, re
         "url": url,
         "posted": parse_date(posted),
         "salary": salary,
+        "description": strip_html(description)[:6000],
     }
 
 
@@ -80,14 +89,16 @@ def fmt_money(lo, hi, cur="USD"):
 # ───────────────────────── fetchers ─────────────────────────
 
 def fetch_greenhouse(slug, name):
-    r = HTTP.get(f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs", timeout=TIMEOUT)
+    r = HTTP.get(f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true",
+                 timeout=TIMEOUT)
     if r.status_code != 200:
         return None
     out = []
     for j in r.json().get("jobs", []):
         out.append(job("gh", j["id"], j.get("title"), name,
                        (j.get("location") or {}).get("name"), j.get("absolute_url"),
-                       j.get("first_published") or j.get("updated_at")))
+                       j.get("first_published") or j.get("updated_at"),
+                       description=j.get("content", "")))
     return out
 
 
@@ -102,7 +113,10 @@ def fetch_lever(slug, name):
         out.append(job("lv", j["id"], j.get("text"), name, cat.get("location"),
                        j.get("hostedUrl"), j.get("createdAt"),
                        fmt_money(sal.get("min"), sal.get("max"), sal.get("currency")),
-                       remote=j.get("workplaceType") == "remote"))
+                       remote=j.get("workplaceType") == "remote",
+                       description=(j.get("descriptionPlain") or "") + "\n" + "\n".join(
+                           f"{l.get('text', '')}: {strip_html(l.get('content', ''))}"
+                           for l in (j.get("lists") or []))))
     return out
 
 
@@ -118,7 +132,8 @@ def fetch_ashby(slug, name):
         comp = (j.get("compensation") or {}).get("compensationTierSummary")
         out.append(job("ab", j.get("id") or j.get("jobUrl"), j.get("title"), name,
                        j.get("location"), j.get("jobUrl"), j.get("publishedAt"),
-                       comp, remote=bool(j.get("isRemote"))))
+                       comp, remote=bool(j.get("isRemote")),
+                       description=j.get("descriptionPlain") or j.get("descriptionHtml") or ""))
     return out
 
 
@@ -163,7 +178,8 @@ def fetch_remoteok():
         for j in data[1:]:  # first item is a legal notice
             out.append(job("rok", j.get("id"), j.get("position"), j.get("company"),
                            j.get("location") or "Remote", j.get("url"), j.get("date"),
-                           fmt_money(j.get("salary_min"), j.get("salary_max")), remote=True)
+                           fmt_money(j.get("salary_min"), j.get("salary_max")), remote=True,
+                           description=j.get("description", ""))
                        | {"_text": " ".join([j.get("position", ""), " ".join(j.get("tags") or [])])})
         _remote_cache["remoteok"] = out
     return _remote_cache["remoteok"]
@@ -181,7 +197,8 @@ def fetch_remotive(state):
         for j in data:
             out.append(job("rmt", j.get("id"), j.get("title"), j.get("company_name"),
                            j.get("candidate_required_location") or "Remote", j.get("url"),
-                           j.get("publication_date"), j.get("salary") or None, remote=True)
+                           j.get("publication_date"), j.get("salary") or None, remote=True,
+                           description=j.get("description", ""))
                        | {"_text": " ".join([j.get("title", ""), j.get("category", ""),
                                              " ".join(j.get("tags") or [])])})
         _remote_cache["remotive"] = out
@@ -197,7 +214,8 @@ def fetch_rss(url):
         if getattr(e, "published_parsed", None):
             posted = time.mktime(e.published_parsed)
         out.append(job("rss", e.get("id") or e.get("link"), e.get("title"),
-                       e.get("author") or feed.feed.get("title", ""), "", e.get("link"), posted)
+                       e.get("author") or feed.feed.get("title", ""), "", e.get("link"), posted,
+                       description=e.get("summary", ""))
                    | {"_text": e.get("title", "") + " " + e.get("summary", "")})
     return out
 
@@ -209,18 +227,133 @@ def matches(text, keywords):
 
 # ───────────────────────── telegram ─────────────────────────
 
+# Job function → (hashtag, who-it-suits phrase). First match wins, so order matters.
+FUNCTIONS = [
+    ("Intern", ["intern", "internship", "graduate", "trainee"], "students and fresh grads"),
+    ("Security", ["security", "appsec", "infosec", "auditor", "penetration"], "security engineers and auditors"),
+    ("Data", ["data scientist", "data engineer", "data analyst", "analytics", "machine learning", "ml engineer", "ai engineer", "research scientist"], "data / ML people"),
+    ("Engineering", ["engineer", "developer", "devops", "sre", "architect", "solidity", "smart contract", "backend", "frontend", "full stack", "fullstack", "blockchain", "protocol", "infrastructure", "qa", "programmer"], "engineers"),
+    ("Product", ["product manager", "product owner", "product lead", "head of product", "program manager", "project manager", "technical program"], "product and program managers"),
+    ("Design", ["designer", "design", "ux", "ui ", "creative"], "designers"),
+    ("Compliance", ["compliance", "aml", "kyc", "risk", "legal", "counsel", "regulatory", "licensing", "audit", "fraud"], "compliance, risk and legal professionals"),
+    ("Finance", ["finance", "accountant", "accounting", "treasury", "controller", "tax", "fp&a", "trader", "trading", "quant", "investment", "analyst"], "finance, trading and investment people"),
+    ("BD", ["business development", "bd ", "partnership", "sales", "account executive", "account manager", "institutional", "relationship manager", "growth"], "BD and sales people"),
+    ("Marketing", ["marketing", "community", "content", "social media", "brand", "communications", "pr ", "seo", "ecosystem", "devrel", "developer relations", "events", "kol"], "marketers and community builders"),
+    ("CustomerSuccess", ["customer success", "customer support", "support", "client service", "onboarding", "customer experience", "implementation"], "customer success and support people"),
+    ("Operations", ["operations", "ops", "chief of staff", "administrator", "office", "executive assistant", "strategy"], "operators and generalists"),
+    ("People", ["recruit", "talent", "people", "hr ", "human resources"], "recruiters and HR people"),
+]
+SENIORITY = [
+    (["chief", "vp", "vice president", "head of", "director", "general manager"], "Senior leaders"),
+    (["principal", "staff", "lead", "manager"], "Experienced"),
+    (["senior", "sr.", "sr "], "Senior"),
+    (["junior", "jr.", "associate", "entry"], "Early-career"),
+    (["intern", "graduate", "trainee"], ""),
+]
+PLACES = {
+    "Remote": ["remote", "anywhere", "worldwide", "global"], "Singapore": ["singapore"],
+    "HongKong": ["hong kong"], "Dubai": ["dubai", "uae", "abu dhabi"], "London": ["london"],
+    "NewYork": ["new york", "nyc"], "SanFrancisco": ["san francisco"], "Tokyo": ["tokyo", "japan"],
+    "Seoul": ["seoul", "korea"], "India": ["india", "bangalore", "bengaluru", "mumbai", "delhi"],
+    "Europe": ["europe", "emea", "berlin", "paris", "lisbon", "amsterdam", "zurich", "dublin"],
+    "USA": ["united states", "usa", " us", "us-", "us ", "canada", "toronto"], "APAC": ["apac", "asia"],
+}
+
+
+def has_any(text, words):
+    t = f" {text.lower()} "
+    return any(w in t for w in words)
+
+
+def classify(j):
+    t = j["title"].lower() + " "
+    func = next((f for f in FUNCTIONS if has_any(t, f[1])), None)
+    level = next((lbl for words, lbl in SENIORITY if has_any(t, words)), "")
+    m = re.search(r"(\d{1,2})\s*\+?\s*(?:-|to)?\s*\d{0,2}\s*\+?\s*years", j["description"], re.I)
+    years = int(m.group(1)) if m and 0 < int(m.group(1)) < 20 else None
+    loc = j["location"].lower()
+    places = [p for p, words in PLACES.items() if has_any(loc, words)][:2]
+    return func, level, years, places
+
+
+LEADER_LABEL = {"Engineering": "engineering", "Data": "data / AI", "Security": "security",
+                "Product": "product", "Design": "design", "Compliance": "compliance & risk",
+                "Finance": "finance", "BD": "BD & sales", "Marketing": "marketing",
+                "CustomerSuccess": "customer success", "Operations": "operations",
+                "People": "people & talent"}
+
+
+def who_rule_based(j):
+    func, level, years, _ = classify(j)
+    if func and func[0] == "Intern":
+        return "Students and fresh grads keen to start a career in Web3."
+    if level == "Senior leaders":
+        who = f"Senior {LEADER_LABEL.get(func[0], '') + ' ' if func else ''}leaders"
+    else:
+        who = func[2] if func else "professionals"
+        who = f"{level} {who}" if level else who[0].upper() + who[1:]
+    exp = f" with {years}+ years of experience" if years else ""
+    return f"{who}{exp} who want to build in Web3."
+
+
+def who_ai(j):
+    """One-sentence 'who should apply' via Google Gemini free tier. Returns None on any issue."""
+    key = os.environ.get("GEMINI_API_KEY")
+    if not key or not j["description"]:
+        return None
+    model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+    prompt = (
+        "You write one line for a job-board post. Based on the job below, say WHO SHOULD APPLY: "
+        "the ideal candidate's background, years of experience, and 2-3 key skills. "
+        "Max 30 words, plain text, no emojis, no intro like 'Ideal candidate:'. "
+        "Start with the type of person (e.g. 'Backend engineers with 5+ years...').\n\n"
+        f"Title: {j['title']}\nCompany: {j['company']}\nLocation: {j['location']}\n"
+        f"Description:\n{j['description'][:4000]}"
+    )
+    try:
+        r = HTTP.post(
+            f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+            headers={"x-goog-api-key": key}, timeout=30,
+            json={"contents": [{"parts": [{"text": prompt}]}],
+                  "generationConfig": {"temperature": 0.3, "maxOutputTokens": 120,
+                                       "thinkingConfig": {"thinkingBudget": 0}}})
+        if not r.ok:
+            log(f"  ! Gemini {r.status_code}: {r.text[:150]}")
+            return None
+        text = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+        text = re.sub(r"\s+", " ", text).strip(' "')
+        return text if 10 < len(text) < 300 else None
+    except Exception as e:
+        log(f"  ! Gemini error: {e}")
+        return None
+
+
 def format_post(j, ch):
     e = html.escape
-    lines = [f"🚀 <b>{e(j['title'])}</b>", f"🏢 {e(j['company'])}"]
+    func, _, _, places = classify(j)
+    who = who_ai(j) or who_rule_based(j)
+    lines = [
+        f"🏢 <b>{e(j['company'])}</b>",
+        f"💼 {e(j['title'])}",
+    ]
     if j["location"]:
         lines.append(f"📍 {e(j['location'])}")
     if j.get("salary"):
         lines.append(f"💰 {e(str(j['salary']))}")
-    lines.append("")
-    lines.append(f'👉 <a href="{e(j["url"], quote=True)}">Apply on the official listing</a>')
-    tag_company = "#" + re.sub(r"[^A-Za-z0-9]", "", j["company"]) if j["company"] else ""
-    lines.append("")
-    lines.append(f"{ch.get('hashtag', '')} {tag_company}".strip())
+    lines += [
+        "",
+        f"🎯 <b>Who should apply:</b> {e(who)}",
+        "",
+        f'🔗 <a href="{e(j["url"], quote=True)}">Apply here</a>',
+        "",
+    ]
+    tags = [ch.get("hashtag", "")]
+    if func:
+        tags.append("#" + func[0])
+    tags += ["#" + p for p in places]
+    if j["company"]:
+        tags.append("#" + re.sub(r"[^A-Za-z0-9]", "", j["company"]))
+    lines.append(" ".join(t for t in tags if t))
     if ch.get("footer"):
         lines.append(f"<i>{e(ch['footer'])}</i>")
     return "\n".join(lines)
@@ -305,11 +438,14 @@ def main():
         for j in jobs:
             if not j["url"] or not j["title"]:
                 continue
-            if j["id"] in seen or j["dedupe"] in seen or j["dedupe"] in batch_keys:
+            ukey = "url:" + j["url"].split("?")[0].rstrip("/").lower()
+            if (j["id"] in seen or j["dedupe"] in seen or ukey in seen
+                    or j["dedupe"] in batch_keys or ukey in batch_keys):
                 continue
             if j["posted"] and NOW - j["posted"] > max_age:
                 continue
-            batch_keys.add(j["dedupe"])
+            batch_keys.update([j["dedupe"], ukey])
+            j["ukey"] = ukey
             fresh.append(j)
         fresh.sort(key=lambda j: j["posted"] or datetime.min.replace(tzinfo=timezone.utc),
                    reverse=True)
@@ -319,7 +455,7 @@ def main():
         if first_run:
             log(f"  first run: posting {len(to_post)}, marking the rest as seen")
             for j in fresh[len(to_post):]:
-                seen[j["id"]] = seen[j["dedupe"]] = {"ch": key, "t": NOW.isoformat()}
+                seen[j["id"]] = seen[j["dedupe"]] = seen[j["ukey"]] = {"ch": key, "t": NOW.isoformat()}
 
         for j in to_post:
             text = format_post(j, ch)
@@ -330,13 +466,13 @@ def main():
                 ok = send(token, ch["chat_id"], text)
                 time.sleep(delay)
             if ok:
-                seen[j["id"]] = seen[j["dedupe"]] = {"ch": key, "t": NOW.isoformat()}
+                seen[j["id"]] = seen[j["dedupe"]] = seen[j["ukey"]] = {"ch": key, "t": NOW.isoformat()}
                 log(f"  posted: {j['company']} — {j['title']}")
 
     # remember Remotive fetch time, prune old entries (60 days)
     if state.pop("_remotive_fetched", None):
         state["remotive_last"] = NOW.isoformat()
-    cutoff = NOW - timedelta(days=60)
+    cutoff = NOW - timedelta(days=int(s.get("remember_days", 180)))
     state["seen"] = {k: v for k, v in seen.items() if (parse_date(v.get("t")) or NOW) > cutoff}
 
     if check:
