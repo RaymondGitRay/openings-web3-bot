@@ -4,10 +4,11 @@
 # ─────────────────────────────────────────────────────────────
 
 settings:
-  max_posts_per_run: 2        # per channel, per run (runs every 3h → max ~16/day)
+  max_posts_per_run: 4        # per channel, per run (runs every 3h → max ~32/day)
   max_job_age_days: 10        # ignore jobs older than this (when a date is known)
   first_run_posts: 3          # on the very first run, post only this many, mark the rest as seen
   delay_between_posts: 4      # seconds, keeps Telegram happy
+  remember_days: 180          # a job (same company + title, or same link) is never re-posted within this window
 
 channels:
   web3:
@@ -16,70 +17,318 @@ channels:
     footer: "🔗 Openings network · Hiring? DM to feature your role"
 
     # Company career pages. Left = the company's job-board name (slug),
-    # right = how it appears in posts. The bot auto-detects whether each one
-    # is on Greenhouse, Lever or Ashby. Wrong slugs are skipped and listed
-    # in the run log so you can fix or delete them.
+    # right = how it appears in posts. The bot auto-detects which job board each
+    # one uses (Greenhouse, Lever, Ashby, Workable, SmartRecruiters, Recruitee).
+    # Wrong slugs are skipped and listed in the "check" run log.
     companies:
+      # ── Exchanges & brokers ──
       coinbase: Coinbase
       kraken: Kraken
-      krakenfx: Kraken
       gemini: Gemini
-      circle: Circle
-      ripple: Ripple
-      paxos: Paxos
-      anchorage: Anchorage Digital
-      bitgo: BitGo
-      chainalysis: Chainalysis
-      consensys: Consensys
-      ledger: Ledger
-      fireblocks: Fireblocks
-      binance: Binance
       okx: OKX
-      cryptocom: Crypto.com
+      binance: Binance
       bybit: Bybit
+      bitpanda: Bitpanda
       blockchain: Blockchain.com
-      galaxydigital: Galaxy
-      avalabs: Ava Labs
-      figment: Figment
+      crypto: Crypto.com
+      cryptocom: Crypto.com
+      bitget: Bitget
+      kucoin: KuCoin
+      gateio: Gate.io
+      mexc: MEXC
+      htx: HTX
+      bitstamp: Bitstamp
+      bitfinex: Bitfinex
+      bitmex: BitMEX
+      deribit: Deribit
+      bullish: Bullish
+      coinhako: Coinhako
+      coindcx: CoinDCX
+      coinswitch: CoinSwitch
+      indodax: Indodax
+      pintu: Pintu
+      tokocrypto: Tokocrypto
+      independentreserve: Independent Reserve
+      coinjar: CoinJar
+      swyftx: Swyftx
+      luno: Luno
+      valr: VALR
+      bitso: Bitso
+      ripio: Ripio
+      lemoncash: Lemon
+      mercadobitcoin: Mercado Bitcoin
+      upholdinc: Uphold
+      uphold: Uphold
+      # ── Asia (HK / SG / KR / JP) ──
+      hashkey: HashKey
+      hashkeygroup: HashKey
+      osl: OSL
+      ambergroup: Amber Group
+      matrixport: Matrixport
+      cobo: Cobo
+      safeheron: Safeheron
+      ceffu: Ceffu
+      bitkub: Bitkub
+      upbit: Upbit
+      dunamu: Dunamu
+      bitflyer: bitFlyer
+      coincheck: Coincheck
+      sbivc: SBI VC Trade
+      xsgd: StraitsX
+      straitsx: StraitsX
+      dbsdigitalexchange: DBS Digital Exchange
+      animocabrands: Animoca Brands
+      # ── Custody, wallets infra & security ──
+      fireblocks: Fireblocks
+      copper: Copper
+      copperco: Copper
+      ledger: Ledger
+      satoshilabs: SatoshiLabs (Trezor)
+      dfns: Dfns
+      fordefi: Fordefi
+      utila: Utila
+      taurushq: Taurus
+      taurus: Taurus
+      qredo: Qredo
+      zodiacustody: Zodia Custody
+      komainu: Komainu
+      bitgo: BitGo
+      anchorage: Anchorage Digital
+      anchoragedigital: Anchorage Digital
+      turnkey: Turnkey
+      privy: Privy
+      dynamiclabs: Dynamic
+      magiclabs: Magic
+      web3auth: Web3Auth
+      safeglobal: Safe
+      safe: Safe
+      argent: Argent
+      certik: CertiK
+      openzeppelin: OpenZeppelin
+      trailofbits: Trail of Bits
+      chainsecurity: ChainSecurity
+      immunefi: Immunefi
+      spearbit: Spearbit
+      # ── Stablecoins, payments & on/off-ramps ──
+      circle: Circle
+      paxos: Paxos
+      ripple: Ripple
+      stellar: Stellar Development Foundation
+      stellardevelopmentfoundation: Stellar Development Foundation
+      bvnk: BVNK
+      zerohash: Zero Hash
+      bridge: Bridge
+      bridgexyz: Bridge
+      moonpay: MoonPay
+      transak: Transak
+      rampnetwork: Ramp
+      mercuryo: Mercuryo
+      banxa: Banxa
+      alchemypay: Alchemy Pay
+      wirex: Wirex
+      triplea: TripleA
+      agora: Agora
+      mountainprotocol: Mountain Protocol
+      ethena: Ethena Labs
+      ethenalabs: Ethena Labs
+      # ── Compliance, data & analytics ──
+      chainalysis: Chainalysis
+      elliptic: Elliptic
+      trmlabs: TRM Labs
+      merklescience: Merkle Science
+      notabene: Notabene
+      sardine: Sardine
+      nansen: Nansen
+      messari: Messari
+      dune: Dune
+      duneanalytics: Dune
+      kaiko: Kaiko
+      coinmetrics: Coin Metrics
+      glassnode: Glassnode
+      arkhamintelligence: Arkham
+      theblock: The Block
+      coindesk: CoinDesk
+      blockworks: Blockworks
+      # ── Node, RPC & developer infra ──
       alchemy: Alchemy
+      consensys: Consensys
+      quicknode: QuickNode
+      blockdaemon: Blockdaemon
+      chainstack: Chainstack
+      ankr: Ankr
+      figment: Figment
+      kiln: Kiln
+      p2pvalidator: P2P.org
+      thirdweb: thirdweb
+      tenderly: Tenderly
+      chainlinklabs: Chainlink Labs
+      smartcontractkit: Chainlink Labs
+      pythnetwork: Pyth Network
+      dourolabs: Douro Labs (Pyth)
+      layerzerolabs: LayerZero Labs
+      wormholefoundation: Wormhole
+      xlabs: xLabs (Wormhole)
+      interoplabs: Interop Labs (Axelar)
+      chainsafe: ChainSafe
+      paritytechnologies: Parity Technologies
+      parity: Parity Technologies
+      web3foundation: Web3 Foundation
+      protocollabs: Protocol Labs
+      filecoinfoundation: Filecoin Foundation
+      gnosis: Gnosis
+      # ── L1 / L2 chains & foundations ──
+      ethereumfoundation: Ethereum Foundation
+      solanafoundation: Solana Foundation
+      solana: Solana Foundation
+      solanalabs: Solana Labs
+      anza: Anza
+      aptoslabs: Aptos Labs
+      mystenlabs: Mysten Labs
+      suifoundation: Sui Foundation
+      nearfoundation: NEAR Foundation
+      near: NEAR
+      avalabs: Ava Labs
+      avalanche: Ava Labs
+      polygonlabs: Polygon Labs
+      polygon: Polygon Labs
+      oplabs: OP Labs
+      optimism: Optimism
+      offchainlabs: Offchain Labs
+      arbitrumfoundation: Arbitrum Foundation
+      matterlabs: Matter Labs (zkSync)
+      starkware: StarkWare
+      starknetfoundation: Starknet Foundation
+      scroll: Scroll
+      celestialabs: Celestia Labs
+      celestia: Celestia
+      eigenlabs: Eigen Labs
+      babylonlabs: Babylon Labs
+      interchain: Interchain Foundation
+      injective: Injective
+      injectivelabs: Injective Labs
+      seilabs: Sei Labs
+      monad: Monad
+      monadfoundation: Monad Foundation
+      berachain: Berachain
+      hashgraph: Hashgraph (Hedera)
+      swirldslabs: Swirlds Labs (Hedera)
+      algorandfoundation: Algorand Foundation
+      algorand: Algorand
+      trilitech: TriliTech (Tezos)
+      iohk: Input Output (Cardano)
+      inputoutput: Input Output (Cardano)
+      emurgo: EMURGO
+      tonfoundation: TON Foundation
+      ton: TON
+      flowfoundation: Flow Foundation
+      dapperlabs: Dapper Labs
+      kava: Kava
+      cronos: Cronos
+      linea: Linea
+      base: Base
+      zksync: zkSync
+      mantle: Mantle
+      # ── DeFi ──
       uniswap: Uniswap Labs
       uniswaplabs: Uniswap Labs
-      opensea: OpenSea
-      phantom: Phantom
-      moonpay: MoonPay
-      mystenlabs: Mysten Labs
-      aptoslabs: Aptos Labs
-      solana: Solana Foundation
-      chainlinklabs: Chainlink Labs
-      offchainlabs: Offchain Labs
-      matterlabs: Matter Labs
-      starkware: StarkWare
-      optimism: Optimism
-      polygon: Polygon Labs
-      eigenlabs: Eigen Labs
-      flashbots: Flashbots
-      messari: Messari
-      nansen: Nansen
-      wintermute: Wintermute
-      gsr: GSR
-      falconx: FalconX
-      zerohash: Zero Hash
-      bvnk: BVNK
-      bitpanda: Bitpanda
-      animocabrands: Animoca Brands
-      immutable: Immutable
-      magiceden: Magic Eden
+      aave: Aave Labs
+      avara: Avara (Aave)
+      lidofinance: Lido
+      lido: Lido
+      dydx: dYdX
+      dydxtrading: dYdX
+      1inch: 1inch
+      compound: Compound
+      morpho: Morpho
+      morpholabs: Morpho Labs
+      pendle: Pendle
+      jupiter: Jupiter
+      jito: Jito
+      jitolabs: Jito Labs
+      eigenfoundation: Eigen Foundation
+      skyecosystem: Sky
+      makerdao: MakerDAO
+      curve: Curve
+      balancer: Balancer
+      gmx: GMX
+      synthetix: Synthetix
+      maplefinance: Maple Finance
+      centrifuge: Centrifuge
       ondofinance: Ondo Finance
       securitize: Securitize
+      superstate: Superstate
+      figure: Figure
+      # ── Wallets & consumer apps ──
+      phantom: Phantom
+      metamask: MetaMask
+      rainbowme: Rainbow
+      rainbow: Rainbow
+      zerion: Zerion
+      exodus: Exodus
+      trustwallet: Trust Wallet
+      ledn: Ledn
+      nexo: Nexo
+      youhodler: YouHodler
+      worldcoin: World
       toolsforhumanity: Tools for Humanity
-      kaiko: Kaiko
-      bitso: Bitso
-      dydx: dYdX
-      aave: Aave
+      worldfoundation: World Foundation
+      # ── NFTs, gaming & social ──
+      opensea: OpenSea
+      magiceden: Magic Eden
+      blur: Blur
+      yugalabs: Yuga Labs
+      immutable: Immutable
+      skymavis: Sky Mavis
+      sorare: Sorare
+      mythicalgames: Mythical Games
+      zora: Zora
+      farcaster: Farcaster
+      merkle: Merkle Manufactory
+      # ── Trading firms & market makers ──
+      wintermute: Wintermute
+      wintermutetrading: Wintermute
+      gsr: GSR
+      gsrmarkets: GSR
+      jumptrading: Jump Trading
+      jumpcrypto: Jump Crypto
+      cumberland: Cumberland
+      flowdesk: Flowdesk
+      keyrock: Keyrock
+      b2c2: B2C2
+      auros: Auros
+      falconx: FalconX
+      talos: Talos
+      talostrading: Talos
+      galaxydigitalservices: Galaxy
+      galaxy: Galaxy
+      galaxydigital: Galaxy
+      coinshares: CoinShares
+      bitwise: Bitwise
+      bitwiseinvestments: Bitwise
+      grayscale: Grayscale
+      # ── VCs & research ──
+      paradigm: Paradigm
+      a16zcryptoteam: a16z crypto
+      a16zcrypto: a16z crypto
+      flashbots: Flashbots
+      multicoin: Multicoin Capital
+      panteracapital: Pantera Capital
+      framework: Framework Ventures
 
-    # Remote job sites (free public APIs). Only jobs matching `keywords` are kept.
+    # Slugs that are generic words: only keep their jobs if they mention Web3 keywords
+    keyword_check_companies: [crypto, base, safe, bridge, ton, scroll, figure, merkle, compound,
+      curve, agora, framework, near, jupiter, galaxy, copper, taurus, talos, dune, balancer, kava,
+      monad, parity, avalanche, polygon, optimism, solana, celestia, linea, mantle, cronos, morpho,
+      pendle, zora, blur, argent, privy, turnkey, sardine, figment, kiln, anza, auros, lido, osl,
+      cobo, luno, pintu, valr, ripio, triplea, transak, banxa, wirex, kaiko, dune, gnosis]
+
+    # Web3 job boards (free API keys, stored as GitHub secrets)
+    web3career: true          # needs secret WEB3CAREER_TOKEN
+    cryptojobslist: true      # needs secret CJL_API_KEY
+
+    # General sources — only jobs matching "keywords" are kept
+    google_jobs: true         # Google Jobs via SerpApi, needs secret SERPAPI_KEY (1 search per run)
     remoteok: true
-    remotive: true            # Remotive asks for max 4 fetches/day — handled automatically
     keywords: [web3, crypto, blockchain, defi, stablecoin, ethereum, solana, bitcoin, nft, onchain, "on-chain", tokenization, wallet, custody, dao, "smart contract", solidity, "digital assets"]
 
     # Extra RSS feeds (optional). Any job RSS feed works.
@@ -94,5 +343,5 @@ channels:
   #     anthropic: Anthropic
   #     openai: OpenAI
   #   remoteok: true
-  #   remotive: true
+  #   google_jobs: true
   #   keywords: [ai, "machine learning", ml, llm, "data scientist", nlp]
