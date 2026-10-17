@@ -230,6 +230,7 @@ def matches(text, keywords):
 # Job function → (hashtag, who-it-suits phrase). First match wins, so order matters.
 FUNCTIONS = [
     ("Intern", ["intern", "internship", "graduate", "trainee"], "students and fresh grads"),
+    ("People", ["hrbp", "hr business partner", "human resources", "recruit", "talent acquisition", "people partner", "people operations", "hr "], "HR and talent professionals"),
     ("Security", ["security", "appsec", "infosec", "auditor", "penetration"], "security engineers and auditors"),
     ("Data", ["data scientist", "data engineer", "data analyst", "analytics", "machine learning", "ml engineer", "ai engineer", "research scientist"], "data / ML people"),
     ("Engineering", ["engineer", "developer", "devops", "sre", "architect", "solidity", "smart contract", "backend", "frontend", "full stack", "fullstack", "blockchain", "protocol", "infrastructure", "qa", "programmer"], "engineers"),
@@ -252,7 +253,9 @@ SENIORITY = [
 ]
 PLACES = {
     "Remote": ["remote", "anywhere", "worldwide", "global"], "Singapore": ["singapore"],
-    "HongKong": ["hong kong"], "Dubai": ["dubai", "uae", "abu dhabi"], "London": ["london"],
+    "HongKong": ["hong kong"], "UAE": ["dubai", "uae", "abu dhabi"], "Malaysia": ["malaysia", "kuala lumpur"],
+    "Philippines": ["philippines", "manila"], "Indonesia": ["indonesia", "jakarta"], "Vietnam": ["vietnam", "ho chi minh", "hanoi"],
+    "Thailand": ["thailand", "bangkok"], "Australia": ["australia", "sydney", "melbourne"], "London": ["london"],
     "NewYork": ["new york", "nyc"], "SanFrancisco": ["san francisco"], "Tokyo": ["tokyo", "japan"],
     "Seoul": ["seoul", "korea"], "India": ["india", "bangalore", "bengaluru", "mumbai", "delhi"],
     "Europe": ["europe", "emea", "berlin", "paris", "lisbon", "amsterdam", "zurich", "dublin"],
@@ -267,7 +270,9 @@ def has_any(text, words):
 
 def classify(j):
     t = j["title"].lower() + " "
-    func = next((f for f in FUNCTIONS if has_any(t, f[1])), None)
+    primary = re.split(r",| - | – | \| |\(", t)[0] + " "  # role part, before the department
+    func = (next((f for f in FUNCTIONS if has_any(primary, f[1])), None)
+            or next((f for f in FUNCTIONS if has_any(t, f[1])), None))
     level = next((lbl for words, lbl in SENIORITY if has_any(t, words)), "")
     m = re.search(r"(\d{1,2})\s*\+?\s*(?:-|to)?\s*\d{0,2}\s*\+?\s*years", j["description"], re.I)
     years = int(m.group(1)) if m and 0 < int(m.group(1)) < 20 else None
