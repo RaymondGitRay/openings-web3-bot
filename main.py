@@ -74,6 +74,7 @@ def job(source, uid, title, company, location, url, posted=None, salary=None, re
         "posted": parse_date(posted),
         "salary": salary,
         "description": strip_html(description)[:6000],
+        "via": "",
     }
 
 
@@ -137,7 +138,73 @@ def fetch_ashby(slug, name):
     return out
 
 
-ATS = {"greenhouse": fetch_greenhouse, "lever": fetch_lever, "ashby": fetch_ashby}
+def fetch_lever_eu(slug, name):
+    r = HTTP.get(f"https://api.eu.lever.co/v0/postings/{slug}?mode=json", timeout=TIMEOUT)
+    if r.status_code != 200 or not isinstance(r.json(), list) or not r.json():
+        return None
+    out = []
+    for j in r.json():
+        cat = j.get("categories") or {}
+        out.append(job("lv", j["id"], j.get("text"), name, cat.get("location"),
+                       j.get("hostedUrl"), j.get("createdAt"),
+                       remote=j.get("workplaceType") == "remote",
+                       description=j.get("descriptionPlain") or ""))
+    return out
+
+
+def fetch_workable(slug, name):
+    r = HTTP.get(f"https://apply.workable.com/api/v1/widget/accounts/{slug}?details=true",
+                 timeout=TIMEOUT)
+    if r.status_code != 200:
+        return None
+    data = r.json()
+    out = []
+    for j in data.get("jobs", []):
+        loc = ", ".join(x for x in [j.get("city"), j.get("country")] if x)
+        out.append(job("wk", j.get("shortcode") or j.get("url"), j.get("title"), name, loc,
+                       j.get("url") or j.get("application_url"),
+                       j.get("published_on") or j.get("created_at"),
+                       remote=bool(j.get("telecommuting")), description=j.get("description", "")))
+    return out
+
+
+def fetch_smartrecruiters(slug, name):
+    r = HTTP.get(f"https://api.smartrecruiters.com/v1/companies/{slug}/postings?limit=100",
+                 timeout=TIMEOUT)
+    if r.status_code != 200:
+        return None
+    content = r.json().get("content", [])
+    if not content:  # unknown companies also return 200 with no postings
+        return None
+    out = []
+    for j in content:
+        l = j.get("location") or {}
+        loc = ", ".join(x for x in [l.get("city"), l.get("country", "").upper()] if x)
+        out.append(job("sr", j.get("id"), j.get("name"), name, loc,
+                       f"https://jobs.smartrecruiters.com/{slug}/{j.get('id')}",
+                       j.get("releasedDate"), remote=bool(l.get("remote"))))
+    return out
+
+
+def fetch_recruitee(slug, name):
+    try:
+        r = HTTP.get(f"https://{slug}.recruitee.com/api/offers/", timeout=TIMEOUT)
+    except requests.exceptions.ConnectionError:
+        return None
+    if r.status_code != 200 or "offers" not in r.text[:200]:
+        return None
+    out = []
+    for j in r.json().get("offers", []):
+        out.append(job("rc", j.get("id"), j.get("title"), name,
+                       j.get("location") or ", ".join(x for x in [j.get("city"), j.get("country")] if x),
+                       j.get("careers_url"), j.get("published_at"), remote=bool(j.get("remote")),
+                       description=(j.get("description") or "") + " " + (j.get("requirements") or "")))
+    return out
+
+
+ATS = {"greenhouse": fetch_greenhouse, "lever": fetch_lever, "ashby": fetch_ashby,
+       "workable": fetch_workable, "lever_eu": fetch_lever_eu,
+       "smartrecruiters": fetch_smartrecruiters, "recruitee": fetch_recruitee}
 
 
 def fetch_company(slug, name, state):
@@ -153,17 +220,18 @@ def fetch_company(slug, name, state):
     for ats in order:
         try:
             jobs = ATS[ats](slug, name)
-        except Exception as e:
-            log(f"  ! {slug} ({ats}) error: {e}")
+        except Exception:
             jobs = None
         if jobs is not None:
             cache[slug] = {"ats": ats, "checked": NOW.isoformat()}
+            for j in jobs:
+                j["_slug"] = slug
             return jobs
     if known:  # cached platform stopped working → re-detect next run
         cache.pop(slug, None)
         return []
     cache[slug] = {"ats": "none", "checked": NOW.isoformat()}
-    log(f"  ✗ '{slug}' not found on Greenhouse/Lever/Ashby — fix or remove it in sources.yaml")
+    log(f"  ✗ '{slug}' not found on any supported job board — fix or remove it in sources.yaml")
     return []
 
 
@@ -180,30 +248,111 @@ def fetch_remoteok():
                            j.get("location") or "Remote", j.get("url"), j.get("date"),
                            fmt_money(j.get("salary_min"), j.get("salary_max")), remote=True,
                            description=j.get("description", ""))
-                       | {"_text": " ".join([j.get("position", ""), " ".join(j.get("tags") or [])])})
+                       | {"_text": " ".join([j.get("position", ""), " ".join(j.get("tags") or [])]),
+                          "via": "RemoteOK"})
         _remote_cache["remoteok"] = out
     return _remote_cache["remoteok"]
 
 
-def fetch_remotive(state):
-    # Remotive asks for no more than ~4 requests per day.
-    last = parse_date(state.get("remotive_last"))
-    if last and NOW - last < timedelta(hours=6):
+def fetch_web3career():
+    """web3.career free API. Terms: link to apply_url, no extra tracking params."""
+    token = os.environ.get("WEB3CAREER_TOKEN")
+    if not token:
         return []
-    if "remotive" not in _remote_cache:
-        r = HTTP.get("https://remotive.com/api/remote-jobs", timeout=TIMEOUT)
-        data = r.json().get("jobs", []) if r.ok else []
-        out = []
-        for j in data:
-            out.append(job("rmt", j.get("id"), j.get("title"), j.get("company_name"),
-                           j.get("candidate_required_location") or "Remote", j.get("url"),
-                           j.get("publication_date"), j.get("salary") or None, remote=True,
-                           description=j.get("description", ""))
-                       | {"_text": " ".join([j.get("title", ""), j.get("category", ""),
-                                             " ".join(j.get("tags") or [])])})
-        _remote_cache["remotive"] = out
-        state["_remotive_fetched"] = True
-    return _remote_cache["remotive"]
+    r = HTTP.get("https://web3.career/api/v1", timeout=40,
+                 params={"token": token, "limit": 100, "show_description": "true"})
+    if not r.ok:
+        log(f"  ! web3.career {r.status_code}: {r.text[:150]}")
+        return []
+    data = r.json()
+    items = data if data and isinstance(data[0], dict) else next(
+        (x for x in data if isinstance(x, list)), [])
+    out = []
+    for j in items:
+        x = job("w3c", j.get("id") or j.get("url"), j.get("title"), j.get("company"),
+                j.get("location"), j.get("apply_url") or j.get("url"), j.get("postedAt") or j.get("date"),
+                j.get("salary") or None, remote=bool(j.get("remote")),
+                description=j.get("description", ""))
+        x["via"] = "web3.career"
+        out.append(x)
+    return out
+
+
+def fetch_cryptojobslist():
+    """CryptoJobsList public API (free with link-back to canonicalURL)."""
+    key = os.environ.get("CJL_API_KEY")
+    if not key:
+        return []
+    base = os.environ.get("CJL_API_BASE", "https://cryptojobslist.com/api").rstrip("/")
+    r = HTTP.get(f"{base}/public/jobs", headers={"x-api-key": key}, timeout=40,
+                 params={"limit": 100})
+    if not r.ok:
+        log(f"  ! CryptoJobsList {r.status_code}: {r.text[:150]}")
+        return []
+    data = r.json()
+    items = data if isinstance(data, list) else (data.get("jobs") or data.get("data")
+                                                 or data.get("results") or [])
+    out = []
+    for j in items:
+        comp = j.get("companyName") or j.get("company")
+        if isinstance(comp, dict):
+            comp = comp.get("name")
+        x = job("cjl", j.get("id") or j.get("_id") or j.get("canonicalURL"),
+                j.get("jobTitle") or j.get("title"), comp,
+                j.get("jobLocation") or j.get("location") or ("Remote" if j.get("remote") else ""),
+                j.get("canonicalURL") or j.get("url"),
+                j.get("publishedAt") or j.get("createdAt"), j.get("salaryString") or None,
+                remote=bool(j.get("remote")), description=j.get("description", ""))
+        x["via"] = "CryptoJobsList"
+        out.append(x)
+    return out
+
+
+GOOGLE_QUERIES = [
+    "web3 jobs", "blockchain developer", "crypto business development", "crypto compliance",
+    "web3 marketing", "defi engineer", "crypto jobs singapore", "web3 jobs remote",
+    "stablecoin jobs", "digital assets jobs", "crypto exchange jobs", "smart contract engineer",
+]
+
+
+def fetch_google_jobs(state, monthly_budget=240):
+    """Google Jobs via SerpApi (free plan: 250 searches/month). One search per run, rotating."""
+    key = os.environ.get("SERPAPI_KEY")
+    if not key:
+        return []
+    month = NOW.strftime("%Y-%m")
+    g = state.setdefault("google", {})
+    if g.get("month") != month:
+        g.update(month=month, used=0)
+    if g["used"] >= monthly_budget:
+        log("  Google Jobs: monthly budget used up")
+        return []
+    q = GOOGLE_QUERIES[g.get("next", 0) % len(GOOGLE_QUERIES)]
+    g["next"] = g.get("next", 0) + 1
+    g["used"] += 1
+    r = HTTP.get("https://serpapi.com/search.json", timeout=60,
+                 params={"engine": "google_jobs", "q": q, "hl": "en", "api_key": key})
+    if not r.ok:
+        log(f"  ! Google Jobs {r.status_code}: {r.text[:150]}")
+        return []
+    out = []
+    for j in r.json().get("jobs_results", []):
+        posted = (j.get("detected_extensions") or {}).get("posted_at", "")
+        m = re.match(r"(\d+)\s+(hour|day)", posted)
+        if m and m.group(2) == "day" and int(m.group(1)) > 3:
+            continue
+        opts = j.get("apply_options") or []
+        link = opts[0]["link"] if opts else j.get("share_link")
+        via = (j.get("via") or "").replace("via ", "").strip()
+        x = job("gj", j.get("job_id") or link, j.get("title"), j.get("company_name"),
+                j.get("location"), link, None,
+                (j.get("detected_extensions") or {}).get("salary"),
+                description=j.get("description", ""))
+        x["via"] = f"Google Jobs{' / ' + via if via else ''}"
+        x["_text"] = f"{j.get('title', '')} {j.get('company_name', '')} {j.get('description', '')[:1500]}"
+        out.append(x)
+    log(f"  Google Jobs '{q}': {len(out)} recent results ({g['used']}/{monthly_budget} this month)")
+    return out
 
 
 def fetch_rss(url):
@@ -399,7 +548,8 @@ def format_post(j, ch):
         "",
         f"🎯 <b>Who should apply:</b> {e(who)}",
         "",
-        f'🔗 <a href="{e(j["url"], quote=True)}">Apply here</a>',
+        f'🔗 <a href="{e(j["url"], quote=True)}">Apply here</a>'
+        + (f" <i>(via {e(j['via'])})</i>" if j.get("via") else ""),
         "",
     ]
     tags = [ch.get("hashtag", "")]
@@ -435,31 +585,47 @@ def send(token, chat_id, text):
 # ───────────────────────── main ─────────────────────────
 
 def collect(ch, state):
-    jobs = []
-    for slug, name in (ch.get("companies") or {}).items():
-        got = fetch_company(slug, name or slug, state)
-        if got:
-            log(f"  ✓ {slug}: {len(got)} jobs")
-        jobs += got
+    from concurrent.futures import ThreadPoolExecutor
+    jobs, found = [], 0
+    companies = list((ch.get("companies") or {}).items())
+    with ThreadPoolExecutor(max_workers=12) as pool:
+        results = pool.map(lambda kv: fetch_company(kv[0], kv[1] or kv[0], state), companies)
+        for got in results:
+            if got:
+                found += 1
+            jobs += got
     kw = ch.get("keywords") or []
-    extra = []
-    try:
-        if ch.get("remoteok"):
-            extra += fetch_remoteok()
-    except Exception as e:
-        log(f"  ! RemoteOK error: {e}")
-    try:
-        if ch.get("remotive"):
-            extra += fetch_remotive(state)
-    except Exception as e:
-        log(f"  ! Remotive error: {e}")
-    for url in ch.get("rss") or []:
+    check = set(ch.get("keyword_check_companies") or [])
+    jobs = [j for j in jobs if j.get("_slug") not in check
+            or matches(j["title"] + " " + j["description"], kw)]
+    log(f"  company pages: {len(jobs)} jobs from {found} companies")
+
+    def safe(name, fn):
         try:
-            extra += fetch_rss(url)
+            got = fn()
+            if got:
+                log(f"  {name}: {len(got)} jobs")
+            return got
         except Exception as e:
-            log(f"  ! RSS error {url}: {e}")
+            log(f"  ! {name} error: {e}")
+            return []
+
+    # Web3-only boards: no keyword filter needed
+    if ch.get("web3career"):
+        jobs += safe("web3.career", fetch_web3career)
+    if ch.get("cryptojobslist"):
+        jobs += safe("CryptoJobsList", fetch_cryptojobslist)
+
+    # General sources: keep only jobs matching the channel keywords
+    extra = []
+    if ch.get("remoteok"):
+        extra += safe("RemoteOK", fetch_remoteok)
+    if ch.get("google_jobs"):
+        extra += safe("Google Jobs", lambda: fetch_google_jobs(state))
+    for url in ch.get("rss") or []:
+        extra += safe(f"RSS {url}", lambda u=url: fetch_rss(u))
     kept = [j for j in extra if not kw or matches(j.get("_text") or j["title"], kw)]
-    log(f"  remote/RSS: {len(kept)} of {len(extra)} match keywords")
+    log(f"  general sources: {len(kept)} of {len(extra)} match keywords")
     return jobs + kept
 
 
@@ -524,9 +690,7 @@ def main():
                 seen[j["id"]] = seen[j["dedupe"]] = seen[j["ukey"]] = {"ch": key, "t": NOW.isoformat()}
                 log(f"  posted: {j['company']} — {j['title']}")
 
-    # remember Remotive fetch time, prune old entries (60 days)
-    if state.pop("_remotive_fetched", None):
-        state["remotive_last"] = NOW.isoformat()
+    # forget entries older than remember_days
     cutoff = NOW - timedelta(days=int(s.get("remember_days", 180)))
     state["seen"] = {k: v for k, v in seen.items() if (parse_date(v.get("t")) or NOW) > cutoff}
 
