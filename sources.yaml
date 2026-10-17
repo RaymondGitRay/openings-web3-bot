@@ -441,25 +441,503 @@ channels:
     cryptojobslist: true      # needs secret CJL_API_KEY
 
     # General sources — only jobs matching "keywords" are kept
-    google_jobs: true         # Google Jobs via SerpApi, needs secret SERPAPI_KEY (1 search per run)
+    # Google Jobs via SerpApi (secret SERPAPI_KEY). One search per run, rotating across ALL channels' queries.
+    google_queries: ["web3 jobs", "blockchain developer", "crypto business development", "crypto compliance",
+      "web3 marketing", "defi engineer", "crypto jobs singapore", "stablecoin jobs", "digital assets jobs",
+      "crypto exchange jobs", "smart contract engineer"]
     remoteok: true
 
     # Auto-discovery: any job link pointing at a company job board is added as a permanent
     # source. With secret BRAVE_API_KEY, the bot also searches the web for new boards.
     discover: true
+    brave_queries: ["site:jobs.ashbyhq.com crypto", "site:jobs.ashbyhq.com web3", "site:jobs.lever.co crypto",
+      "site:jobs.lever.co web3", "site:job-boards.greenhouse.io crypto", "site:boards.greenhouse.io web3",
+      "site:apply.workable.com crypto", "site:jobs.ashbyhq.com defi", "site:jobs.lever.co blockchain",
+      "site:job-boards.greenhouse.io stablecoin", "site:teamtailor.com web3", "site:breezy.hr crypto"]
     keywords: [web3, crypto, blockchain, defi, stablecoin, ethereum, solana, bitcoin, nft, onchain, "on-chain", tokenization, wallet, custody, dao, "smart contract", solidity, "digital assets"]
 
     # Extra RSS feeds (optional). Any job RSS feed works.
     rss: []
 
-  # ── Add more channels later, e.g. ──
-  # ai:
-  #   chat_id: "@Openings_AI"
-  #   hashtag: "#AIJobs"
-  #   footer: "🔗 Openings network"
-  #   companies:
-  #     anthropic: Anthropic
-  #     openai: OpenAI
-  #   remoteok: true
-  #   google_jobs: true
-  #   keywords: [ai, "machine learning", ml, llm, "data scientist", nlp]
+  # ═════════════════════════════════════════════════════════════
+  ai:
+    enabled: false            # switch to true once @Openings_AI exists and the bot is admin
+    chat_id: "@Openings_AI"
+    hashtag: "#AIJobs"
+    footer: "🔗 Openings network · Hiring or collaborating? Tap 💬 below to message us"
+    companies:
+      # ── Frontier labs & model companies ──
+      openai: OpenAI
+      anthropic: Anthropic
+      cohere: Cohere
+      mistral: Mistral AI
+      xai: xAI
+      perplexity: Perplexity
+      perplexityai: Perplexity
+      characterai: Character.AI
+      inflectionai: Inflection AI
+      adept: Adept
+      imbue: Imbue
+      reka: Reka AI
+      sakanaai: Sakana AI
+      upstage: Upstage
+      sarvam: Sarvam AI
+      ai21: AI21 Labs
+      ai21labs: AI21 Labs
+      deepl: DeepL
+      aleph-alpha: Aleph Alpha
+      stabilityai: Stability AI
+      # ── AI infrastructure & compute ──
+      scaleai: Scale AI
+      databricks: Databricks
+      anyscale: Anyscale
+      togetherai: Together AI
+      fireworksai: Fireworks AI
+      replicate: Replicate
+      modal: Modal
+      baseten: Baseten
+      wandb: Weights & Biases
+      huggingface: Hugging Face
+      pinecone: Pinecone
+      weaviate: Weaviate
+      qdrant: Qdrant
+      trychroma: Chroma
+      langchain: LangChain
+      llamaindex: LlamaIndex
+      groq: Groq
+      cerebrassystems: Cerebras
+      sambanovasystems: SambaNova
+      lambda: Lambda
+      lambdalabs: Lambda
+      coreweave: CoreWeave
+      crusoe: Crusoe
+      nebius: Nebius
+      etched: Etched
+      tenstorrent: Tenstorrent
+      snorkelai: Snorkel AI
+      labelbox: Labelbox
+      surgeai: Surge AI
+      mercor: Mercor
+      turing: Turing
+      invisibletech: Invisible Technologies
+      datarobot: DataRobot
+      h2oai: H2O.ai
+      dataiku: Dataiku
+      # ── AI apps & agents ──
+      anysphere: Cursor (Anysphere)
+      cognition: Cognition
+      replit: Replit
+      codeium: Windsurf
+      poolside: Poolside
+      sourcegraph: Sourcegraph
+      glean: Glean
+      harvey: Harvey
+      sierra: Sierra
+      decagon: Decagon
+      writer: Writer
+      jasper: Jasper
+      elevenlabs: ElevenLabs
+      synthesia: Synthesia
+      runwayml: Runway
+      suno: Suno
+      pika: Pika
+      lumaai: Luma AI
+      ideogram: Ideogram
+      krea: Krea
+      captions: Captions
+      descript: Descript
+      gamma: Gamma
+      hebbia: Hebbia
+      abridge: Abridge
+      ambiencehealthcare: Ambience Healthcare
+      tempus: Tempus AI
+      insitro: insitro
+      recursionpharma: Recursion
+      clay: Clay
+      hex: Hex
+      notion: Notion
+      grammarly: Grammarly
+      otter: Otter.ai
+      fireflies: Fireflies.ai
+      intercom: Intercom
+      # ── Robotics, autonomy & defense AI ──
+      physicalintelligence: Physical Intelligence
+      skild: Skild AI
+      1x: 1X
+      wayve: Wayve
+      waabi: Waabi
+      aurora: Aurora
+      nuro: Nuro
+      anduril: Anduril
+      shieldai: Shield AI
+      helsing: Helsing
+      palantir: Palantir
+      # ── Asia AI ──
+      appier: Appier
+      advanceai: ADVANCE.AI
+      hyperverge: HyperVerge
+      preferrednetworks: Preferred Networks
+      aisingapore: AI Singapore
+      klingai: Kling AI
+      minimax: MiniMax
+      moonshot: Moonshot AI
+      # ── Big tech AI teams with public boards ──
+      stripe: Stripe
+      airbnb: Airbnb
+      pinterest: Pinterest
+      reddit: Reddit
+      spotify: Spotify
+      duolingo: Duolingo
+    keyword_check_companies: [stripe, airbnb, pinterest, reddit, spotify, duolingo, notion, intercom,
+      grammarly, lambda, modal, clay, hex, writer, harvey, sierra, gamma, captions, pika, aurora, turing,
+      cognition, poolside, anduril, palantir, 1x, skild, etched, crusoe, krea, suno, upstage, minimax,
+      moonshot, otter, fireflies, tempus, descript, nebius, mercor]
+    google_queries: ["machine learning engineer", "AI engineer", "LLM engineer", "AI research scientist",
+      "machine learning engineer singapore", "AI product manager", "data scientist AI", "AI jobs remote"]
+    discover: true
+    brave_queries: ["site:jobs.ashbyhq.com machine learning", "site:jobs.ashbyhq.com LLM",
+      "site:jobs.lever.co machine learning", "site:job-boards.greenhouse.io machine learning engineer",
+      "site:jobs.ashbyhq.com AI engineer", "site:apply.workable.com machine learning"]
+    remoteok: true
+    keywords: ["machine learning", "ml engineer", "ai engineer", "artificial intelligence", llm, "large language",
+      "deep learning", "computer vision", nlp, "natural language", "data scientist", "research scientist",
+      "applied scientist", "generative ai", genai, "ai/ml", "ml/ai", mlops, "reinforcement learning",
+      "foundation model", inference, "ai research", "prompt engineer", "ai product"]
+    pool:                     # also take AI roles found by the other channels
+      from: [web3, fintech, tech]
+      title_keywords: ["machine learning", "ml ", "ml engineer", "ai engineer", "ai ", "llm", "data scientist",
+        "research scientist", "applied scientist", "deep learning", "computer vision", "nlp", "genai",
+        "generative", "mlops", "ai/ml", "ml/ai", "ai research"]
+
+  # ═════════════════════════════════════════════════════════════
+  fintech:
+    enabled: false            # switch to true once @Openings_Fintech exists and the bot is admin
+    chat_id: "@Openings_Fintech"
+    hashtag: "#FintechJobs"
+    footer: "🔗 Openings network · Hiring or collaborating? Tap 💬 below to message us"
+    companies:
+      # ── Payments & infrastructure ──
+      stripe: Stripe
+      adyen: Adyen
+      checkout: Checkout.com
+      checkoutcom: Checkout.com
+      rapyd: Rapyd
+      dlocal: dLocal
+      ebanx: EBANX
+      payoneer: Payoneer
+      paddle: Paddle
+      primer: Primer
+      mollie: Mollie
+      sumup: SumUp
+      gocardless: GoCardless
+      truelayer: TrueLayer
+      tink: Tink
+      plaid: Plaid
+      marqeta: Marqeta
+      modulr: Modulr
+      railsr: Railsr
+      thunes: Thunes
+      flutterwave: Flutterwave
+      paystack: Paystack
+      moniepoint: Moniepoint
+      chipper: Chipper Cash
+      wise: Wise
+      transferwise: Wise
+      remitly: Remitly
+      worldremit: Zepz
+      zepz: Zepz
+      # ── Neobanks & consumer finance ──
+      revolut: Revolut
+      monzo: Monzo
+      starlingbank: Starling Bank
+      n26: N26
+      nubank: Nubank
+      chime: Chime
+      sofi: SoFi
+      klarna: Klarna
+      affirm: Affirm
+      afterpay: Afterpay
+      zilch: Zilch
+      upgrade: Upgrade
+      dave: Dave
+      current: Current
+      lunar: Lunar
+      bunq: bunq
+      qonto: Qonto
+      # ── B2B finance & spend ──
+      brex: Brex
+      ramp: Ramp
+      mercury: Mercury
+      pleo: Pleo
+      spendesk: Spendesk
+      payhawk: Payhawk
+      navan: Navan
+      billcom: BILL
+      carta: Carta
+      pipe: Pipe
+      capchase: Capchase
+      airbase: Airbase
+      tipalti: Tipalti
+      rippling: Rippling
+      deel: Deel
+      gusto: Gusto
+      # ── Investing & trading ──
+      robinhood: Robinhood
+      public: Public.com
+      webull: Webull
+      etoro: eToro
+      wealthsimple: Wealthsimple
+      trading212: Trading 212
+      freetrade: Freetrade
+      scalable: Scalable Capital
+      addepar: Addepar
+      betterment: Betterment
+      wealthfront: Wealthfront
+      acorns: Acorns
+      stash: Stash
+      # ── Asia fintech ──
+      airwallex: Airwallex
+      nium: Nium
+      xendit: Xendit
+      2c2p: 2C2P
+      razorpay: Razorpay
+      cred: CRED
+      phonepe: PhonePe
+      paytm: Paytm
+      pinelabs: Pine Labs
+      groww: Groww
+      zerodha: Zerodha
+      jupiter-money: Jupiter Money
+      slice: slice
+      vivarepublica: Toss
+      toss: Toss
+      kakaopay: Kakao Pay
+      mynt: GCash (Mynt)
+      maya: Maya
+      kredivo: Kredivo
+      akulaku: Akulaku
+      atome: Atome
+      advanceintelligence: Advance Intelligence Group
+      aspire: Aspire
+      fundingsocieties: Funding Societies
+      endowus: Endowus
+      syfe: Syfe
+      stashaway: StashAway
+      futu: Futu (moomoo)
+      moomoo: moomoo
+      tigerbrokers: Tiger Brokers
+      youtrip: YouTrip
+      instarem: Instarem
+      validus: Validus
+      silent-eight: Silent Eight
+      tazapay: Tazapay
+      volopay: Volopay
+      reap: Reap
+      statrys: Statrys
+      neat: Neat
+      welab: WeLab
+      zatech: ZA Tech
+      airstar: Airstar Bank
+      mox: Mox Bank
+      gxs: GXS Bank
+      trustbank: Trust Bank
+      anext: ANEXT Bank
+      # ── Risk, compliance & data ──
+      alloy: Alloy
+      persona: Persona
+      onfido: Onfido
+      sumsub: Sumsub
+      complyadvantage: ComplyAdvantage
+      featurespace: Featurespace
+      feedzai: Feedzai
+      unit21: Unit21
+      hummingbird: Hummingbird
+      fenergo: Fenergo
+      quantexa: Quantexa
+      moodys: Moody's
+      # ── Trading firms & market infrastructure ──
+      janestreet: Jane Street
+      hudsonrivertrading: Hudson River Trading
+      optiver: Optiver
+      imc: IMC Trading
+      citadelsecurities: Citadel Securities
+      drweng: DRW
+      flowtraders: Flow Traders
+      susquehanna: SIG
+      virtu: Virtu Financial
+      twosigma: Two Sigma
+      clearstreet: Clear Street
+      apex: Apex Fintech
+    keyword_check_companies: [public, current, dave, upgrade, ramp, mercury, pipe, slice, toss, maya,
+      neat, reap, aspire, rippling, deel, gusto, navan, carta, stash, apex, alloy, persona, scalable,
+      imc, mynt, atome, wise, chime, affirm, primer, checkout, cred, lunar, airbase, hummingbird,
+      futu]
+    google_queries: ["fintech jobs", "fintech jobs singapore", "payments product manager", "fintech engineer",
+      "compliance analyst fintech", "risk analyst payments", "quantitative trader", "fintech jobs hong kong"]
+    discover: true
+    brave_queries: ["site:jobs.ashbyhq.com fintech", "site:jobs.lever.co fintech", "site:jobs.lever.co payments",
+      "site:job-boards.greenhouse.io fintech", "site:apply.workable.com fintech", "site:jobs.ashbyhq.com payments"]
+    keywords: [fintech, payments, payment, banking, bank, lending, credit, "financial services", wealth,
+      investment, trading, trader, brokerage, insurance, insurtech, treasury, "risk", compliance, aml, kyc,
+      fraud, card, "money movement", remittance, "cross-border", accounting, finance, financial, neobank,
+      "buy now pay later", bnpl, quant, "capital markets", "asset management"]
+
+  # ═════════════════════════════════════════════════════════════
+  tech:
+    enabled: false            # switch to true once @Openings_Tech exists and the bot is admin
+    chat_id: "@Openings_Tech"
+    hashtag: "#TechJobs"
+    footer: "🔗 Openings network · Hiring or collaborating? Tap 💬 below to message us"
+    max_posts_per_run: 100
+    companies:
+      # ── Asia / Singapore tech ──
+      grab: Grab
+      sea: Sea (Shopee, Garena)
+      shopee: Shopee
+      garena: Garena
+      gojek: GoTo (Gojek)
+      gotogroup: GoTo Group
+      tokopedia: Tokopedia
+      lazada: Lazada
+      traveloka: Traveloka
+      carousell: Carousell
+      ninjavan: Ninja Van
+      propertyguru: PropertyGuru
+      shopback: ShopBack
+      razer: Razer
+      agoda: Agoda
+      klook: Klook
+      tiket: tiket.com
+      bukalapak: Bukalapak
+      glints: Glints
+      zalora: ZALORA
+      foodpanda: foodpanda
+      deliveryhero: Delivery Hero
+      ohmyhome: Ohmyhome
+      rakuten: Rakuten
+      mercari: Mercari
+      lineyahoo: LY Corporation
+      smartnews: SmartNews
+      coupang: Coupang
+      kakao: Kakao
+      naver: Naver
+      canva: Canva
+      atlassian: Atlassian
+      xero: Xero
+      safetyculture: SafetyCulture
+      cultureamp: Culture Amp
+      employmenthero: Employment Hero
+      linktree: Linktree
+      airtasker: Airtasker
+      swiggy: Swiggy
+      zomato: Zomato
+      meesho: Meesho
+      flipkart: Flipkart
+      freshworks: Freshworks
+      zoho: Zoho
+      postman: Postman
+      browserstack: BrowserStack
+      chargebee: Chargebee
+      hasura: Hasura
+      zeta: Zeta
+      dunzo: Dunzo
+      # ── Global tech & SaaS ──
+      figma: Figma
+      vercel: Vercel
+      supabase: Supabase
+      linear: Linear
+      retool: Retool
+      airtable: Airtable
+      asana: Asana
+      zapier: Zapier
+      webflow: Webflow
+      miro: Miro
+      datadog: Datadog
+      cloudflare: Cloudflare
+      mongodb: MongoDB
+      snowflake: Snowflake
+      confluent: Confluent
+      elastic: Elastic
+      hashicorp: HashiCorp
+      gitlab: GitLab
+      github: GitHub
+      twilio: Twilio
+      okta: Okta
+      discord: Discord
+      dropbox: Dropbox
+      doordash: DoorDash
+      instacart: Instacart
+      lyft: Lyft
+      uber: Uber
+      shopify: Shopify
+      squarespace: Squarespace
+      hubspot: HubSpot
+      zendesk: Zendesk
+      toast: Toast
+      samsara: Samsara
+      verkada: Verkada
+      benchling: Benchling
+      lattice: Lattice
+      remotecom: Remote.com
+      oyster: Oyster
+      posthog: PostHog
+      sentry: Sentry
+      grafanalabs: Grafana Labs
+      temporal: Temporal
+      planetscale: PlanetScale
+      neon: Neon
+      fly: Fly.io
+      render: Render
+      railway: Railway
+      tailscale: Tailscale
+      1password: 1Password
+      wiz: Wiz
+      snyk: Snyk
+      crowdstrike: CrowdStrike
+      sentinelone: SentinelOne
+      vanta: Vanta
+      drata: Drata
+      zscaler: Zscaler
+      calendly: Calendly
+      loom: Loom
+      typeform: Typeform
+      contentful: Contentful
+      algolia: Algolia
+      mixpanel: Mixpanel
+      amplitude: Amplitude
+      segment: Segment
+      fivetran: Fivetran
+      dbtlabs: dbt Labs
+      airbyte: Airbyte
+      sigma: Sigma Computing
+      thoughtspot: ThoughtSpot
+      celonis: Celonis
+      personio: Personio
+      n8n: n8n
+    keyword_check_companies: [sea, linear, neon, fly, render, railway, sigma, segment, loom, base, zeta,
+      temporal, lattice, oyster, current, merkle]
+    google_queries: ["software engineer singapore", "product manager singapore", "software engineer remote",
+      "data engineer singapore", "frontend engineer", "devops engineer singapore", "UX designer singapore",
+      "software engineer hong kong", "backend engineer", "tech jobs singapore"]
+    discover: true
+    brave_queries: ["site:jobs.ashbyhq.com singapore engineer", "site:jobs.lever.co singapore engineer",
+      "site:job-boards.greenhouse.io singapore software engineer", "site:apply.workable.com singapore developer"]
+    keywords: [engineer, developer, software, "product manager", designer, "data", devops, sre, frontend,
+      backend, "full stack", fullstack, mobile, ios, android, cloud, security, qa, "machine learning", platform]
+    pool:                     # also take tech roles (engineering, product, design, data, security) from other channels
+      from: [web3, ai, fintech]
+      functions: [Engineering, Product, Design, Data, Security]
+
+  # ═════════════════════════════════════════════════════════════
+  remote:
+    enabled: false            # switch to true once @Openings_Remote exists and the bot is admin
+    chat_id: "@Openings_Remote"
+    hashtag: "#RemoteJobs"
+    footer: "🔗 Openings network · Hiring or collaborating? Tap 💬 below to message us"
+    remote_only: true         # only fully-remote jobs, any field
+    remoteok: true            # every RemoteOK job (no keyword filter for this channel)
+    google_queries: ["remote jobs", "remote customer support", "remote marketing manager", "remote software engineer",
+      "remote sales jobs", "remote operations manager", "remote jobs asia", "remote finance jobs"]
+    keywords: []
+    pool:                     # every remote job found by the other channels
+      from: [web3, ai, fintech, tech]
