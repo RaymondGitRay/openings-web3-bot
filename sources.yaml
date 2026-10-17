@@ -14,7 +14,7 @@ channels:
   web3:
     chat_id: "@Openings_Web3"
     hashtag: "#Web3Jobs"
-    footer: "🔗 Openings network · Hiring or collaborating? DM @Openings_Web3_bot"
+    footer: "🔗 Openings network · Hiring or collaborating? Tap 💬 below to message us"
 
     # Welcome message posted with "--pin" (run mode "pin"), with a DM button that opens the bot inbox
     pinned:
