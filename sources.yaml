@@ -1,0 +1,98 @@
+# ─────────────────────────────────────────────────────────────
+# Openings bot — what to fetch and where to post it
+# Edit this file to add channels, companies or feeds.
+# ─────────────────────────────────────────────────────────────
+
+settings:
+  max_posts_per_run: 2        # per channel, per run (runs every 3h → max ~16/day)
+  max_job_age_days: 10        # ignore jobs older than this (when a date is known)
+  first_run_posts: 3          # on the very first run, post only this many, mark the rest as seen
+  delay_between_posts: 4      # seconds, keeps Telegram happy
+
+channels:
+  web3:
+    chat_id: "@Openings_Web3"
+    hashtag: "#Web3Jobs"
+    footer: "🔗 Openings network · Hiring? DM to feature your role"
+
+    # Company career pages. Left = the company's job-board name (slug),
+    # right = how it appears in posts. The bot auto-detects whether each one
+    # is on Greenhouse, Lever or Ashby. Wrong slugs are skipped and listed
+    # in the run log so you can fix or delete them.
+    companies:
+      coinbase: Coinbase
+      kraken: Kraken
+      krakenfx: Kraken
+      gemini: Gemini
+      circle: Circle
+      ripple: Ripple
+      paxos: Paxos
+      anchorage: Anchorage Digital
+      bitgo: BitGo
+      chainalysis: Chainalysis
+      consensys: Consensys
+      ledger: Ledger
+      fireblocks: Fireblocks
+      binance: Binance
+      okx: OKX
+      cryptocom: Crypto.com
+      bybit: Bybit
+      blockchain: Blockchain.com
+      galaxydigital: Galaxy
+      avalabs: Ava Labs
+      figment: Figment
+      alchemy: Alchemy
+      uniswap: Uniswap Labs
+      uniswaplabs: Uniswap Labs
+      opensea: OpenSea
+      phantom: Phantom
+      moonpay: MoonPay
+      mystenlabs: Mysten Labs
+      aptoslabs: Aptos Labs
+      solana: Solana Foundation
+      chainlinklabs: Chainlink Labs
+      offchainlabs: Offchain Labs
+      matterlabs: Matter Labs
+      starkware: StarkWare
+      optimism: Optimism
+      polygon: Polygon Labs
+      eigenlabs: Eigen Labs
+      flashbots: Flashbots
+      messari: Messari
+      nansen: Nansen
+      wintermute: Wintermute
+      gsr: GSR
+      falconx: FalconX
+      zerohash: Zero Hash
+      bvnk: BVNK
+      bitpanda: Bitpanda
+      animocabrands: Animoca Brands
+      immutable: Immutable
+      magiceden: Magic Eden
+      ondofinance: Ondo Finance
+      securitize: Securitize
+      toolsforhumanity: Tools for Humanity
+      kaiko: Kaiko
+      bitso: Bitso
+      dydx: dYdX
+      aave: Aave
+
+    # Remote job sites (free public APIs). Only jobs matching `keywords` are kept.
+    remoteok: true
+    remotive: true            # Remotive asks for max 4 fetches/day — handled automatically
+    keywords: [web3, crypto, blockchain, defi, stablecoin, ethereum, solana, bitcoin, nft, onchain, "on-chain", tokenization, wallet, custody, dao, "smart contract", solidity, "digital assets"]
+
+    # Extra RSS feeds (optional). Any job RSS feed works.
+    rss: []
+
+  # ── Add more channels later, e.g. ──
+  # ai:
+  #   chat_id: "@Openings_AI"
+  #   hashtag: "#AIJobs"
+  #   footer: "🔗 Openings network"
+  #   companies:
+  #     anthropic: Anthropic
+  #     openai: OpenAI
+  #   remoteok: true
+  #   remotive: true
+  #   keywords: [ai, "machine learning", ml, llm, "data scientist", nlp]
