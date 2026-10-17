@@ -19,7 +19,7 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -37,6 +37,7 @@ jobs:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           WEB3CAREER_TOKEN: ${{ secrets.WEB3CAREER_TOKEN }}
           CJL_API_KEY: ${{ secrets.CJL_API_KEY }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
         run: |
           MODE="${{ github.event.inputs.mode || 'normal' }}"
           if [ "$MODE" = "dry-run" ]; then python main.py --dry-run
