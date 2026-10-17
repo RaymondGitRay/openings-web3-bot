@@ -5,6 +5,7 @@ Usage:
   python main.py            # normal run (posts to Telegram)
   python main.py --dry-run  # prints posts instead of sending, doesn't save state
   python main.py --check    # tests every company slug and prints which ones work
+  python main.py --pin      # posts the welcome message with a DM button (then pins it)
 
 Needs env var TELEGRAM_BOT_TOKEN (set as a GitHub Secret).
 """
@@ -935,6 +936,30 @@ def collect(ch, state):
     return jobs
 
 
+def post_pinned(token, cfg):
+    """Post the welcome message with a DM button to every channel that has one configured."""
+    for key, ch in cfg["channels"].items():
+        pin = ch.get("pinned") or {}
+        path = ROOT / pin.get("file", "pinned_message.html")
+        if not pin or not path.exists():
+            continue
+        payload = {
+            "chat_id": ch["chat_id"], "text": path.read_text(), "parse_mode": "HTML",
+            "disable_web_page_preview": True,
+            "reply_markup": {"inline_keyboard": [[{"text": pin.get("button", "💬 DM us"),
+                                                   "url": pin["url"]}]]},
+        }
+        r = HTTP.post(f"https://api.telegram.org/bot{token}/sendMessage", json=payload, timeout=TIMEOUT)
+        log(f"  pinned message for {key}: {r.status_code} {r.text[:200]}")
+        if r.ok:
+            mid = r.json()["result"]["message_id"]
+            p = HTTP.post(f"https://api.telegram.org/bot{token}/pinChatMessage", timeout=TIMEOUT,
+                          json={"chat_id": ch["chat_id"], "message_id": mid,
+                                "disable_notification": True})
+            log("  pinned it" if p.ok else
+                f"  posted, but couldn't pin ({p.text[:120]}) — pin it yourself: long-press → Pin")
+
+
 def main():
     dry = "--dry-run" in sys.argv
     check = "--check" in sys.argv
@@ -953,6 +978,9 @@ def main():
     token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
     if not token and not (dry or check):
         sys.exit("TELEGRAM_BOT_TOKEN is not set")
+    if "--pin" in sys.argv:
+        post_pinned(token, cfg)
+        return
 
     for key, ch in cfg["channels"].items():
         log(f"\n=== {key} → {ch['chat_id']} ===")
