@@ -6,19 +6,19 @@
   },
   "alchemy": {
    "ats": "ashby",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "anchorage": {
    "ats": "lever",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "animocabrands": {
    "ats": "lever",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "aptoslabs": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "avalabs": {
    "ats": "none",
@@ -26,15 +26,15 @@
   },
   "binance": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "bitgo": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "bitpanda": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "bitso": {
    "ats": "none",
@@ -42,15 +42,15 @@
   },
   "blockchain": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "bvnk": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "bybit": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "chainalysis": {
    "ats": "none",
@@ -62,15 +62,15 @@
   },
   "circle": {
    "ats": "ashby",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "coinbase": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "consensys": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "cryptocom": {
    "ats": "none",
@@ -86,15 +86,15 @@
   },
   "falconx": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "figment": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "fireblocks": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "flashbots": {
    "ats": "none",
@@ -106,7 +106,7 @@
   },
   "gemini": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "gsr": {
    "ats": "none",
@@ -114,7 +114,7 @@
   },
   "immutable": {
    "ats": "lever",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "kaiko": {
    "ats": "none",
@@ -122,7 +122,7 @@
   },
   "kraken": {
    "ats": "lever",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "krakenfx": {
    "ats": "none",
@@ -130,11 +130,11 @@
   },
   "ledger": {
    "ats": "ashby",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "magiceden": {
    "ats": "ashby",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "matterlabs": {
    "ats": "none",
@@ -142,35 +142,35 @@
   },
   "messari": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "moonpay": {
    "ats": "lever",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "mystenlabs": {
    "ats": "ashby",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "nansen": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "offchainlabs": {
    "ats": "lever",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "okx": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "ondofinance": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "opensea": {
    "ats": "ashby",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "optimism": {
    "ats": "none",
@@ -178,11 +178,11 @@
   },
   "paxos": {
    "ats": "ashby",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "phantom": {
    "ats": "ashby",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "polygon": {
    "ats": "none",
@@ -190,11 +190,11 @@
   },
   "ripple": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "securitize": {
    "ats": "greenhouse",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "solana": {
    "ats": "none",
@@ -210,7 +210,7 @@
   },
   "uniswap": {
    "ats": "ashby",
-   "checked": "2026-10-17T17:41:29.990097+00:00"
+   "checked": "2026-10-17T18:14:50.137440+00:00"
   },
   "uniswaplabs": {
    "ats": "none",
@@ -226,5 +226,4086 @@
   }
  },
  "remotive_last": "2026-10-17T17:41:29.990097+00:00",
- "seen": {}
+ "seen": {
+  "ab:1bde0a10-11c5-4b21-8cef-983e77eb3722": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ab:37fa4765-8e1d-4c61-ba52-071e2d6bead0": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ab:3d25a6ac-30b7-424c-a93c-54ccf2e538b6": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ab:6e56727a-f0f3-4e10-9834-e7f99b089702": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ab:8f044bee-dc2b-4104-9ef1-f69077be4891": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ab:8f5edc68-d80e-4e07-a194-fd0ddc4d0e6f": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ab:94828769-a1d5-49c2-b539-a3629d25f79f": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ab:a04294fa-aadb-40c4-ace9-4db84e0f1a7a": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ab:b853c28e-15a7-4dac-be01-b0fbc00cd006": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ab:bca25725-dbdf-4786-9af9-aa793766d2b5": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ab:bfd8cace-7531-41c5-ace4-e168b3f2f647": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ab:fd8debdc-fc1f-4f37-95f5-75f6b62b5798": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "alchemy|senior blockchain engineer moonshot": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "alchemy|senior data engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "alchemy|senior software engineer data services": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "alchemy|senior software engineer developer experience": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "anchorage digital|member of client experience cxm": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "anchorage digital|member of people experience": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "anchorage digital|member of product tokenization": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "animoca brands|ai go to market ai product manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "animoca brands|ai vertical ai product manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "animoca brands|lead data analyst": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|affiliate bd greater china": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|affiliate relationship manager apac": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|ai agent engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|ai product manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|algorithm engineer market growth": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|algorithm engineer recommendation search": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|android developer risk control": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|backend architect pay card tech": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|backend engineer java kyc tech": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|backend engineer java trading": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|backend engineer java web 3 wallet": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|bap data analyst": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|billing legal admin executive 12 months contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program ads implementation": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program affiliate bd": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program affiliate bd greater china": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program ai engineer dev tools": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program ai intelligence efficiency engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program ai system performance engineer apac remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program applied ai agent developer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program applied ai agent engineer top talent program": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program applied ai application engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program backend engineer pay card": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program brand kol": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program brand partnerships": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program community events africa": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program creative operations": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program data analyst": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program data scientist analytics": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program data scientist llm trading": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program data scientist on chain background fully remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program data scientist recommendation square community": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program data scientist transaction monitoring": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program data scientist user growth": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program events": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program full stack engineer ai": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program full stack engineer apac remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program full stack engineer backend oriented fully remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program global affiliate bd": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program global swag": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program hr talent acquisition": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program internal audit technology": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program ios architect": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program llm model training data processing": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program monitorship": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program paid ads greater china": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program pk social media": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program qa automation": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program qa coding fully remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program qa content": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program qa engineer app testing java sql": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program quantitative trading strategy algorithm": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program research data scientist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program research on chain data analyst": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program talent acquisition": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program tradfi business development": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program ux researcher non technical": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator program vip sales": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator programm software engineer full stack ai oriented": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|binance accelerator programme campaigns operations binance square": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|blockchain engineer binance wallet": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|brand kol specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|business analytics strategic partnerships tokenisation manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|business development equity capital markets": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|business insight lead user growth": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|business intelligence data analyst": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|business intelligence data analytics manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|case analyst spanish and portuguese speaker": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|chief accountant payments kazakhstan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|clearing cs specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|client full stack engineer im chat platform android focus": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|client manager vip institutional clients senior specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|community events manager apac": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|compliance analyst corporate enhanced due diligence": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|compliance officer payments kazakhstan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|creator partnerships manager binance square": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|customer service business process specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|customer service representative arabic english": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|customer service representative spanish english": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|data analyst 12 months contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|data product manager derivatives 12 months contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|deputy mlro taiwan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|devops engineer blockchain infra fully remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|earn institutional growth lead": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|earn operation bd onchain direction": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|enterprise wide risk assessment ewra specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|events and partnerships manager mena": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|finance manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|finance systems admin 12 months contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|financial data engineer ai llm": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|flutter engineer ios": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|frontend engineer earn": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|frontend engineer kyc": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|global affiliate manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|global crypto as a service partnership senior specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|global financial crime sanctions legal counsel": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|global product marketing lead": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|government relations apac": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|graphic designer contractor gulf binance": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|growth campaign manager apac": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|growth lead pakistan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|growth marketing lead anz": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|head of risk ntl": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|institutional product solutions senior specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|institutional sales manager latam": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|internal audit investigations specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|internal auditor taiwan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|ios engineer tradfi ai": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|java backend engineer global travel rule gtr": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|kyb compliance analyst 1 year contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|kyc kyb analyst japanese speaker": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|legal regulatory counsel payments kazakhstan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|llm applied data scientist rag nlp": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|macro research analyst": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|manager card business development operations": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|market data lead": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|market surveillance investigator": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|marketing lead": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|marketing manager central africa": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|operational risk enterprise risk management framework ermf specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|operations leader binance wallet": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|operations manager payments kazakhstan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|operations specialist gulf binance": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|p2p growth operations manager cis cee": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|paid ads search specialist africa": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|payment product manager fiat": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|pioneer talent program applied ai agent ai productivity engineer top talent program": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|pioneer talent program applied data scientist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|pioneer talent program full stack engineer back end oriented apac remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|pioneer talent program full stack engineer front end oriented apac remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|pioneer talent program research data scientist apac remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|pr kol specialist apac": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|pr kol specialist mena": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|pr manager pakistan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|procurement manager professional services and marketing apac remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product and funnel optimisation manager cis": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product compliance manager abu dhabi based": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product counsel equities tokenized securities": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product lead counsel": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product manager ai": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product manager ai agent harness": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product manager brazil based": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product manager community strategy apac remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product manager institution business": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product manager lead vip institution": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product manager social features content": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product manager trading systems": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|product marketing manager south asia": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|project research due diligence": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|regional marketing specialist south east asia": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|regulatory legal counsel us monitorships": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|research analyst equity capital markets": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|research scientist llm foundation models": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|risk control analyst card ato risk": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|risk manager ad representative rch and rie abu dhabi based": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|risk manager payments kazakhstan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|risk specialist taiwan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|sanctions advisory specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior ai agents backend engineer golang apac remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior algorithmic trader liquidity researcher": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior analyst manager market supervision abu dhabi based": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior android developer cryptographic": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior android engineer futures": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior application security architect": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior card product manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior corporate legal counsel": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior creator ecosystem manager binance square": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior data analyst ai compliance": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior evaluation algorithm engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior finance transformation manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior frontend engineer web3 wallet": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior growth manager cis": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior legal operations admin executive fully remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior manager global card business development operations": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior marketing manager japan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior marketing manager south africa": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior product manager compliance 12 months contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior product manager core trading": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior product manager kyb 12 months contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior product manager spot trading": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior product manager tradfi wealth": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior product strategy manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior qa engineer rust java margin": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior talent acquisition operations specialist contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|senior talent acquisition specialist technical and product": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|social content manager apac": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|social media manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|social media specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|spot operations specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|sr events manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|talent acquisition specialist 12 months contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|talent acquisition specialist tech focus 6 months contract remote": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|tech lead payments kazakhstan": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|trade operations analyst": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|traditional finance pmo ceo office": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|treasury asset management": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|user growth lifecycle marketing manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|vip institutional growth operations 6 12 months fixed term": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|vip institutional sales mena": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|vip sales manager apac": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|vip sales sea 6 months contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|vip user operation senior specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|web app test engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "binance|web3 security senior operations specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|backend engineer e3 india": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|client services specialist prime": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|customer success manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|engineering manager infrastructure": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|financial controller": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|marketing generalist bitgo labs contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|mobile engineer e2 react native": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|office manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|recruiter contract": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|senior data engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|senior software engineer accounting ledger systems": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|senior software engineer mobile backend": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|senior software engineer mobile react native ios android": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitgo|technical lead infrastructure": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitpanda|associate tax": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitpanda|business intelligence analyst": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitpanda|front office associate": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitpanda|intern business intelligence": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitpanda|intern data engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitpanda|intern hr operations": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitpanda|intern java engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitpanda|lead information security": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitpanda|senior specialist information security": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bitpanda|specialist information security": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "blockchain com|head of institutional marketing": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "blockchain com|quantitative trader": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "blockchain com|talent acquisition coordinator": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "blockchain com|trader market making": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bvnk|bsa aml compliance specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bvnk|compliance senior manager malta": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bvnk|information security manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bvnk|senior devops engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bvnk|senior legal counsel product commercial": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bvnk|solutions engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|admin lead malaysia": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|card risk operations lead": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|client service analyst livechat turkish required": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|eu business development specialist cz sl sk": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|eu chief business operating officer eu": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|eu it manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|eu junior control analyst": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|eu junior mifid operations specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|eu lead security engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|eu senior aml specialist kyb": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|eu senior aml specialist transaction monitoring": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|eu senior growth product manager user activation europe": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|global community manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|global security compliance coe": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|hrbp lead legal compliance": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|paid media creative expert": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|payment bd lead": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|rwa product manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|senior business intelligence manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|senior data engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|senior hrbp specialist technology engineering": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|senior paid media channel manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|senior product design specialist": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|senior user reach lifecycle manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "bybit|tradfi solution expert": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|analyst privacy privacy assessments": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|associate general counsel eu legal": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|counsel employment": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|enterprise engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|forward deployed engineer intern hr technology": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|manager sec reporting": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|prime operations assistant": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|principal recruiter": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior data scientist product": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior engineering manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior engineering manager ai foundations": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior frontend engineer portfolio": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior machine learning engineer cx": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior manager digital securities market structure policy": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior product designer platform": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior product marketing manager infrastructure": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior recruiter": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior software engineer backend fullstack coinbase advisor agentic trading": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior software engineer backend retail dex": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior software engineer certificate management": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|senior strategic program lead gfco": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|social media manager predictions": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|software engineer enterprise apps": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|staff machine learning engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "coinbase|staff software engineer backend finhub transfers": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "consensys|senior manager application security": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "falconx|compliance associate onboarding": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "falconx|compliance onboarding analyst": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "falconx|customer due diligence associate": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "falconx|director electronic trading": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "falconx|senior institutional coverage": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "falconx|senior trading systems devops engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "fireblocks|sales engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gemini|content production intern winter 2027": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4391015009": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4711930006": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4740566005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4740719005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4741248005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4742079005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4742987005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4744168005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4943346101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4943841101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4947308101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4953468101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4975267101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4982408101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4987398101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4987997101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4988000101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4989603101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4995059101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4996280101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4999438101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:4999439101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5000446101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5000450101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5000663101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5000933101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5001183101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5001189101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5001233101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5001505101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5001723101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002218101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002222101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002224101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002228101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002236101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002240101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002242101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002244101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002246101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002248101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002250101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002252101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002254101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002258101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002260101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002262101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002264101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002268101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002273101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002275101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002277101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002279101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002281101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002283101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002293101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002295101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002303101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002305101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002311101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002313101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002315101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002317101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002319101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002321101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002327101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002329101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002333101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002335101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002337101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002339101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002345101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002349101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002351101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002355101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002357101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002363101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002365101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002369101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002373101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002381101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002383101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002385101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002387101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002389101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002391101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002393101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002399101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002401101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002403101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002405101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002407101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002409101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002417101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002419101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002421101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002429101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002431101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002435101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002437101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002439101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002441101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002443101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002445101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002447101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002449101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002453101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002455101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002459101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002461101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002463101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002465101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002467101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002471101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002473101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002483101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002485101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002487101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002491101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002495101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002497101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002501101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002503101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002513101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002517101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002521101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002523101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002525101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002527101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002529101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002531101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002533101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002535101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002539101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002543101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002545101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002547101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002549101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002551101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002553101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002555101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002557101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002559101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002563101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002565101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002567101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002569101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002571101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002573101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002575101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002577101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002579101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002583101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002585101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002599101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002603101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002607101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002609101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002611101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002615101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002617101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002619101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002621101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002625101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002627101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002631101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002633101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002635101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002637101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002639101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002641101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002645101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002647101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002651101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002653101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002657101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002659101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002661101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002663101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002667101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002671101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002673101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002675101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002677101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002679101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002681101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002685101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002687101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002689101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002693101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002695101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002697101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002699101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002701101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002703101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002705101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002707101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002709101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002711101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002713101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002715101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002721101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002727101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002731101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002733101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002737101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002739101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002741101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002743101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002745101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002747101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002749101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002751101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002753101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002755101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002757101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002759101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002761101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002763101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002765101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002768101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002770101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002772101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5002796101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5003052101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5003181101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5003324101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5003790101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5004113101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5004269101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5004445101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5004603101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5004769101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5004802101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5004804101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5004806101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5004808101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5004839101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5005251101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5005253101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5005311101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5005426101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5005752101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5005854101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5005910101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5006367101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5006785101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5007958101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5008058101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5008303101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5008607101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5008751101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:5009421101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:7767519": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8016081003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8016694003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8016752003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8018091003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8018541003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8026443003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8026445003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8032195003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8032296003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8034260003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8034261003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8034282003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8034314003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8034335003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8034338003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8035255003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8036167003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8174232": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8175510": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8213490": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8230848": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8243520": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8247993": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8248663": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8250934": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8257746": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8260302": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8260306": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8260314": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8260349": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8262841": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8265422": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8265721": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8265918": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8267151": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8269049": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8269052": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8269081": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8269104": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8275226": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8275465": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8279479": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8280149": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8280209": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8285182": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8287662": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8287668": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8288570": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8289214": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8289231": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8289239": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8292793": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8853156002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8869949002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8877400002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8878904002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8879340002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8880834002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8880857002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8880888002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8880891002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8882325002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8882456002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8888996002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8893460002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "gh:8895178002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ledger|compensation benefits specialist contractor 6 months": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ledger|salesforce lead agentforce": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ledger|staff mechanical engineer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "lv:12165f07-7ac6-40cf-a2b9-554c1a52ad06": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "lv:285292d5-c197-4e01-b291-a2d66affe5d3": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "lv:5e150bc1-bf8f-485c-861a-a2abc6c81f39": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "lv:66c6bd95-742d-4dfd-974d-f6a25e6a81ee": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "lv:aa8de320-7602-4b1d-8dcf-ed982ef8a225": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "lv:b0455cc0-8c0d-4dd0-9b1c-17196d92a666": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "lv:d0716e17-7a46-46db-84ca-2ab17a6b6501": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "magic eden|senior growth product manager ai native": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "moonpay|head of business risk controls": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|ad creative strategist creative producer": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|affiliate business development manager southeast asia": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|associate general counsel employment law": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|deputy general counsel employment law": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|finance accounting analyst": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|head of compliance eu uk": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|head of corporate investigations": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|head of marketing compliance": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|legal counsel web3 products": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|product manager director tradingview growth trading experience": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|senior growth manager web3": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|senior manager global physical security operations": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|senior product director ai agent chatbot": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|senior staff engineer dex trading system": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|senior staff engineer payment": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|software engineer mobile core compliance": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "okx|specialist legal response": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ondo finance|senior product manager platform experience": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "paxos|compliance associate": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "paxos|director of engineering assets issuance": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "phantom|staff software engineer sre": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ripple|director product planning": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ripple|senior manager customer partner success": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ripple|senior sales manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ripple|senior staff product manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "ripple|treasury manager global treasury operations": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "rok:1137478": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "tether operations limited|product engineering lead": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "uniswap labs|ecosystem growth manager": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://boards.greenhouse.io/embed/job_app": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002218101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002222101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002224101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002228101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002236101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002240101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002242101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002244101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002246101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002248101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002250101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002252101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002254101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002258101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002260101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002262101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002264101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002268101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002273101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002275101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002277101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002279101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002281101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002283101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002293101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002295101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002303101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002305101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002311101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002313101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002315101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002317101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002319101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002321101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002327101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002329101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002333101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002335101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002337101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002339101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002345101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002349101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002351101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002355101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002357101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002363101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002365101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002369101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002373101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002381101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002383101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002385101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002387101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002389101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002391101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002393101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002399101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002401101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002403101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002405101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002407101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002409101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002417101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002419101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002421101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002429101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002431101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002435101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002437101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002439101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002441101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002443101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002445101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002447101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002449101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002453101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002455101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002459101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002461101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002463101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002465101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002467101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002471101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002473101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002483101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002485101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002487101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002491101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002495101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002497101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002501101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002503101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002513101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002517101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002521101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002523101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002525101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002527101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002529101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002531101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002533101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002535101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002539101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002543101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002545101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002547101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002549101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002551101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002553101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002555101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002557101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002559101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002563101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002565101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002567101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002569101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002571101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002573101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002575101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002577101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002579101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002583101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002585101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002599101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002603101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002607101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002609101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002611101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002615101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002617101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002619101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002621101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002625101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002627101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002631101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002633101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002635101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002637101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002639101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002641101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002645101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002647101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002651101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002653101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002657101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002659101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002661101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002663101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002667101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002671101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002673101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002675101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002677101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002679101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002681101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002685101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002687101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002689101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002693101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002695101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002697101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002699101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002701101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002703101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002705101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002707101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002709101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002711101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002713101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002715101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002721101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002727101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002731101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002733101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002737101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002739101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002741101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002743101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002745101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002747101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002749101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002751101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002753101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002755101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002757101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002759101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002761101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002763101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002765101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002768101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002770101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5002772101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5004113101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5004445101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5004603101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5004769101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5004802101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5004804101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5004806101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5004808101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5004839101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5005251101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5005253101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/binance/jobs/5007958101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bitpanda/jobs/4987398101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bitpanda/jobs/4989603101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bitpanda/jobs/4995059101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bitpanda/jobs/4996280101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bitpanda/jobs/4999438101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bitpanda/jobs/4999439101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bitpanda/jobs/5001505101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bitpanda/jobs/5001723101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bitpanda/jobs/5003324101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bitpanda/jobs/5005854101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bvnk/jobs/5000663101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bvnk/jobs/5000933101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bvnk/jobs/5003181101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bvnk/jobs/5004269101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bvnk/jobs/5006367101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bvnk/jobs/5008751101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/4943346101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/4943841101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/4947308101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/4953468101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/4975267101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/4982408101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/4987997101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/4988000101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5000446101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5000450101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5001183101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5001189101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5001233101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5002796101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5003052101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5003790101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5005311101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5005426101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5005752101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5005910101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5006785101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5008058101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5008303101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5008607101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.eu.greenhouse.io/bybit/jobs/5009421101": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8853156002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8869949002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8877400002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8878904002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8879340002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8880834002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8880857002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8880888002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8880891002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8882325002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8882456002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8888996002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8893460002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/bitgo/jobs/8895178002": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/blockchain/jobs/8213490": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/blockchain/jobs/8289214": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/blockchain/jobs/8289231": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/blockchain/jobs/8289239": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/consensys/jobs/8288570": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/falconx/jobs/4740566005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/falconx/jobs/4740719005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/falconx/jobs/4741248005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/falconx/jobs/4742079005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/falconx/jobs/4742987005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/falconx/jobs/4744168005": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8016081003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8016694003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8016752003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8018091003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8018541003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8026443003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8026445003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8032195003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8032296003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8034260003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8034261003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8034282003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8034314003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8034335003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8034338003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8035255003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/okx/jobs/8036167003": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://job-boards.greenhouse.io/ondofinance/jobs/4391015009": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/alchemy/37fa4765-8e1d-4c61-ba52-071e2d6bead0": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/alchemy/a04294fa-aadb-40c4-ace9-4db84e0f1a7a": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/alchemy/bca25725-dbdf-4786-9af9-aa793766d2b5": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/alchemy/fd8debdc-fc1f-4f37-95f5-75f6b62b5798": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/ledger/8f044bee-dc2b-4104-9ef1-f69077be4891": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/ledger/8f5edc68-d80e-4e07-a194-fd0ddc4d0e6f": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/ledger/94828769-a1d5-49c2-b539-a3629d25f79f": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/magiceden/1bde0a10-11c5-4b21-8cef-983e77eb3722": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/paxos/6e56727a-f0f3-4e10-9834-e7f99b089702": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/paxos/bfd8cace-7531-41c5-ace4-e168b3f2f647": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/phantom/b853c28e-15a7-4dac-be01-b0fbc00cd006": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.ashbyhq.com/uniswap/3d25a6ac-30b7-424c-a93c-54ccf2e538b6": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.lever.co/anchorage/12165f07-7ac6-40cf-a2b9-554c1a52ad06": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.lever.co/anchorage/b0455cc0-8c0d-4dd0-9b1c-17196d92a666": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.lever.co/anchorage/d0716e17-7a46-46db-84ca-2ab17a6b6501": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.lever.co/animocabrands/285292d5-c197-4e01-b291-a2d66affe5d3": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.lever.co/animocabrands/66c6bd95-742d-4dfd-974d-f6a25e6a81ee": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.lever.co/animocabrands/aa8de320-7602-4b1d-8dcf-ed982ef8a225": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://jobs.lever.co/moonpay/5e150bc1-bf8f-485c-861a-a2abc6c81f39": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://remoteok.com/remote-jobs/remote-product-engineering-lead-tether-operations-limited-1137478": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://ripple.com/careers/all-jobs/job/7767519": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://ripple.com/careers/all-jobs/job/8248663": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://ripple.com/careers/all-jobs/job/8257746": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://ripple.com/careers/all-jobs/job/8260314": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://ripple.com/careers/all-jobs/job/8260349": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8174232": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8175510": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8230848": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8243520": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8250934": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8260302": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8260306": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8262841": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8265422": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8265721": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8265918": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8267151": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8269049": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8269052": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8269081": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8269104": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8275226": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8275465": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8279479": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8280149": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8280209": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8285182": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8287662": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8287668": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.coinbase.com/careers/positions/8292793": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  },
+  "url:https://www.fireblocks.com/careers/position": {
+   "ch": "web3",
+   "t": "2026-10-17T18:14:50.137440+00:00"
+  }
+ }
 }
