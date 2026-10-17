@@ -301,12 +301,48 @@ def who_rule_based(j):
     return f"{who}{exp} who want to build in Web3."
 
 
+_gemini_model = None
+
+
+def pick_gemini_model(key):
+    """Ask Google which models this key can use; pick the newest stable 'flash' model."""
+    global _gemini_model
+    if _gemini_model is not None:
+        return _gemini_model
+    _gemini_model = os.environ.get("GEMINI_MODEL") or ""
+    if _gemini_model:
+        return _gemini_model
+    try:
+        r = HTTP.get("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200",
+                     headers={"x-goog-api-key": key}, timeout=20)
+        models = r.json().get("models", []) if r.ok else []
+    except Exception as e:
+        log(f"  ! Gemini model list error: {e}")
+        models = []
+    bad = ("image", "tts", "live", "audio", "embedding", "exp", "thinking", "robotics", "computer")
+
+    def ver(name):
+        m = re.search(r"gemini-(\d+(?:\.\d+)?)", name)
+        return float(m.group(1)) if m else 0
+
+    names = [m["name"].split("/")[-1] for m in models
+             if "generateContent" in (m.get("supportedGenerationMethods") or [])]
+    flash = [n for n in names if "flash" in n and not any(b in n for b in bad)]
+    ranked = sorted(flash, key=lambda n: (("lite" not in n), ("preview" not in n), ver(n), -len(n)),
+                    reverse=True)
+    _gemini_model = ranked[0] if ranked else ""
+    log(f"  Gemini model: {_gemini_model or 'none available'}")
+    return _gemini_model
+
+
 def who_ai(j):
     """One-sentence 'who should apply' via Google Gemini free tier. Returns None on any issue."""
     key = os.environ.get("GEMINI_API_KEY")
     if not key or not j["description"]:
         return None
-    model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+    model = pick_gemini_model(key)
+    if not model:
+        return None
     prompt = (
         "You write one line for a job-board post. Based on the job below, say WHO SHOULD APPLY: "
         "the ideal candidate's background, years of experience, and 2-3 key skills. "
@@ -318,14 +354,14 @@ def who_ai(j):
     try:
         r = HTTP.post(
             f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-            headers={"x-goog-api-key": key}, timeout=30,
+            headers={"x-goog-api-key": key}, timeout=60,
             json={"contents": [{"parts": [{"text": prompt}]}],
-                  "generationConfig": {"temperature": 0.3, "maxOutputTokens": 120,
-                                       "thinkingConfig": {"thinkingBudget": 0}}})
+                  "generationConfig": {"temperature": 0.3, "maxOutputTokens": 2048}})
         if not r.ok:
-            log(f"  ! Gemini {r.status_code}: {r.text[:150]}")
+            log(f"  ! Gemini {r.status_code}: {r.text[:300]}")
             return None
-        text = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+        parts = r.json()["candidates"][0]["content"]["parts"]
+        text = " ".join(p.get("text", "") for p in parts if not p.get("thought")).strip()
         text = re.sub(r"\s+", " ", text).strip(' "')
         return text if 10 < len(text) < 300 else None
     except Exception as e:
