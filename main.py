@@ -63,6 +63,9 @@ def strip_html(s):
     return re.sub(r"[ \t]+", " ", s).strip()
 
 
+REMOTE_RE = re.compile(r"\b(remote|anywhere|worldwide|work from home|wfh|distributed|fully remote)\b", re.I)
+
+
 def job(source, uid, title, company, location, url, posted=None, salary=None, remote=False,
         description=""):
     return {
@@ -76,6 +79,7 @@ def job(source, uid, title, company, location, url, posted=None, salary=None, re
         "salary": salary,
         "description": strip_html(description)[:6000],
         "via": "",
+        "remote": bool(remote) or bool(REMOTE_RE.search(location or "")),
     }
 
 
@@ -332,8 +336,18 @@ def find_boards(text):
     return found
 
 
+_company_cache = {}
+
+
 def fetch_company(slug, name, state):
-    """Use the cached job-board type, or try all three and remember which works."""
+    """Fetch a company's jobs once per run, even if several channels list it."""
+    if slug not in _company_cache:
+        _company_cache[slug] = _fetch_company(slug, name, state)
+    return [dict(j, company=name) for j in _company_cache[slug]]
+
+
+def _fetch_company(slug, name, state):
+    """Use the cached job-board type, or try every supported board and remember which works."""
     cache = state.setdefault("platforms", {})
     known = cache.get(slug)
     if known and known.get("ats") == "none":
@@ -433,9 +447,10 @@ BRAVE_QUERIES = [
 ]
 
 
-def brave_discover(state, per_run=3, monthly_budget=900):
+def brave_discover(state, queries=None, channel="web3", per_run=1, monthly_budget=900):
     """Find new companies' job boards with Brave Search (free monthly credits). Needs BRAVE_API_KEY."""
     key = os.environ.get("BRAVE_API_KEY")
+    queries = queries or BRAVE_QUERIES
     if not key:
         return set()
     month = NOW.strftime("%Y-%m")
@@ -446,10 +461,11 @@ def brave_discover(state, per_run=3, monthly_budget=900):
     for _ in range(per_run):
         if b["used"] >= monthly_budget:
             break
-        i = b.get("next", 0)
-        q = BRAVE_QUERIES[i % len(BRAVE_QUERIES)]
-        offset = (i // len(BRAVE_QUERIES)) % 5  # page deeper on each pass through the list
-        b["next"] = i + 1
+        nxt = b.setdefault("next_by_channel", {})
+        i = nxt.get(channel, 0)
+        q = queries[i % len(queries)]
+        offset = (i // len(queries)) % 5  # page deeper on each pass through the list
+        nxt[channel] = i + 1
         b["used"] += 1
         try:
             r = HTTP.get("https://api.search.brave.com/res/v1/web/search", timeout=30,
@@ -465,8 +481,8 @@ def brave_discover(state, per_run=3, monthly_budget=900):
     return found
 
 
-def remember_boards(state, boards, known_slugs, source, names=None):
-    """Add newly found job boards to the permanent discovered list."""
+def remember_boards(state, boards, known_slugs, source, names=None, channel="web3"):
+    """Add newly found job boards to the permanent discovered list (owned by one channel)."""
     disc = state.setdefault("discovered", {})
     added = 0
     for ats, slug in boards:
@@ -474,41 +490,44 @@ def remember_boards(state, boards, known_slugs, source, names=None):
         if key in disc or slug in known_slugs:
             continue
         disc[key] = {"name": (names or {}).get((ats, slug)) or slug.replace("-", " ").title(),
-                     "found": NOW.isoformat()[:10], "via": source}
+                     "found": NOW.isoformat()[:10], "via": source, "ch": channel}
         added += 1
     return added
 
 
-def fetch_discovered(state, keywords):
-    """Fetch every discovered board; keep only jobs that mention Web3 keywords."""
+def fetch_discovered(state, keywords, channel="web3"):
+    """Fetch this channel's discovered boards; keep only jobs that mention its keywords."""
     from concurrent.futures import ThreadPoolExecutor
-    disc = state.setdefault("discovered", {})
+    all_disc = state.setdefault("discovered", {})
+    disc = {k: v for k, v in all_disc.items() if v.get("ch", "web3") == channel}
 
     def one(item):
         key, meta = item
         ats, slug = key.split(":", 1)
-        try:
-            got = ATS[ats](slug, meta["name"])
-        except Exception:
-            got = None
-        return key, got
+        if key not in _company_cache:
+            try:
+                _company_cache[key] = ATS[ats](slug, meta["name"])
+            except Exception:
+                _company_cache[key] = None
+        got = _company_cache[key]
+        return key, (None if got is None else [dict(j) for j in got])
 
     jobs, dead, live = [], [], 0
     with ThreadPoolExecutor(max_workers=16) as pool:
         for key, got in pool.map(one, list(disc.items())):
             if got is None:
-                disc[key]["fails"] = disc[key].get("fails", 0) + 1
-                if disc[key]["fails"] >= 3:
+                all_disc[key]["fails"] = all_disc[key].get("fails", 0) + 1
+                if all_disc[key]["fails"] >= 3:
                     dead.append(key)
                 continue
-            disc[key]["fails"] = 0
+            all_disc[key]["fails"] = 0
             live += 1
             for j in got:
                 j["_slug"] = key
             jobs += [j for j in got if matches(j["title"] + " " + j["description"], keywords)]
     for key in dead:
-        disc.pop(key, None)
-    log(f"  discovered boards: {len(jobs)} Web3 jobs from {live} of {len(disc)} boards")
+        all_disc.pop(key, None)
+    log(f"  discovered boards: {len(jobs)} matching jobs from {live} of {len(disc)} boards")
     return jobs
 
 
@@ -592,8 +611,8 @@ GOOGLE_QUERIES = [
 ]
 
 
-def fetch_google_jobs(state, monthly_budget=240):
-    """Google Jobs via SerpApi (free plan: 250 searches/month). One search per run, rotating."""
+def fetch_google_jobs(state, query=None, monthly_budget=240):
+    """Google Jobs via SerpApi (free plan: 250 searches/month). One search per run across all channels."""
     key = os.environ.get("SERPAPI_KEY")
     if not key:
         return []
@@ -604,8 +623,7 @@ def fetch_google_jobs(state, monthly_budget=240):
     if g["used"] >= monthly_budget:
         log("  Google Jobs: monthly budget used up")
         return []
-    q = GOOGLE_QUERIES[g.get("next", 0) % len(GOOGLE_QUERIES)]
-    g["next"] = g.get("next", 0) + 1
+    q = query or GOOGLE_QUERIES[g.get("next", 0) % len(GOOGLE_QUERIES)]
     g["used"] += 1
     r = HTTP.get("https://serpapi.com/search.json", timeout=60,
                  params={"engine": "google_jobs", "q": q, "hl": "en", "api_key": key})
@@ -774,8 +792,10 @@ def gemini_call(key, model, prompt, thinking=True):
 def who_ai(j):
     """One-sentence 'who should apply' via Google Gemini free tier. Returns None on any issue."""
     key = os.environ.get("GEMINI_API_KEY")
-    if not key or not j["description"] or _gemini["failures"] >= 3:
+    if (not key or not j["description"] or _gemini["failures"] >= 3
+            or _gemini.get("calls", 0) >= _gemini.get("max_calls", 80)):
         return None
+    _gemini["calls"] = _gemini.get("calls", 0) + 1
     prompt = (
         "You write one line for a job-board post. Based on the job below, say WHO SHOULD APPLY: "
         "the ideal candidate's background, years of experience, and 2-3 key skills. "
@@ -809,10 +829,15 @@ def who_ai(j):
     return None
 
 
+_who_cache = {}
+
+
 def format_post(j, ch):
     e = html.escape
     func, _, _, places = classify(j)
-    who = who_ai(j) or who_rule_based(j)
+    if j["dedupe"] not in _who_cache:  # same job in several channels → one AI call
+        _who_cache[j["dedupe"]] = who_ai(j) or who_rule_based(j)
+    who = _who_cache[j["dedupe"]]
     lines = [
         f"🏢 <b>{e(j['company'])}</b>",
         f"💼 {e(j['title'])}",
@@ -861,36 +886,39 @@ def send(token, chat_id, text):
 
 # ───────────────────────── main ─────────────────────────
 
-def collect(ch, state):
+def collect(ch, state, key="web3", google_query=None):
+    """Gather every job for one channel from all of its configured sources."""
     from concurrent.futures import ThreadPoolExecutor
     jobs, found = [], 0
     companies = list((ch.get("companies") or {}).items())
     known_slugs = {slug for slug, _ in companies}
-    with ThreadPoolExecutor(max_workers=16) as pool:
-        results = pool.map(lambda kv: fetch_company(kv[0], kv[1] or kv[0], state), companies)
-        for got in results:
-            if got:
-                found += 1
-            jobs += got
+    if companies:
+        with ThreadPoolExecutor(max_workers=16) as pool:
+            for got in pool.map(lambda kv: fetch_company(kv[0], kv[1] or kv[0], state), companies):
+                if got:
+                    found += 1
+                jobs += got
     kw = ch.get("keywords") or []
     check = set(ch.get("keyword_check_companies") or [])
     jobs = [j for j in jobs if j.get("_slug") not in check
             or matches(j["title"] + " " + j["description"], kw)]
-    log(f"  company pages: {len(jobs)} jobs from {found} companies")
+    if companies:
+        log(f"  company pages: {len(jobs)} jobs from {found} companies")
 
     # Careers pages: find which job board each company uses, plus jobs embedded in the page
     pages = list((ch.get("careers_pages") or {}).items())
-    page_jobs, page_boards, names = [], set(), {}
-    with ThreadPoolExecutor(max_workers=16) as pool:
-        for (name, url), (boards, pj) in zip(pages, pool.map(lambda kv: scan_careers_page(*kv), pages)):
-            page_boards |= boards
-            for b in boards:
-                names.setdefault(b, name)
-            page_jobs += pj
-    added = remember_boards(state, page_boards, known_slugs, "careers page", names)
-    jobs += page_jobs
-    log(f"  careers pages: {len(page_jobs)} embedded jobs, {len(page_boards)} job boards found "
-        f"({added} new)")
+    if pages:
+        page_jobs, page_boards, names = [], set(), {}
+        with ThreadPoolExecutor(max_workers=16) as pool:
+            for (name, url), (boards, pj) in zip(pages, pool.map(lambda kv: scan_careers_page(*kv), pages)):
+                page_boards |= boards
+                for b in boards:
+                    names.setdefault(b, name)
+                page_jobs += pj
+        added = remember_boards(state, page_boards, known_slugs, "careers page", names, key)
+        jobs += page_jobs
+        log(f"  careers pages: {len(page_jobs)} embedded jobs, {len(page_boards)} job boards found "
+            f"({added} new)")
 
     def safe(name, fn):
         try:
@@ -908,32 +936,55 @@ def collect(ch, state):
     if ch.get("cryptojobslist"):
         jobs += safe("CryptoJobsList", fetch_cryptojobslist)
 
-    # General sources: keep only jobs matching the channel keywords
+    # General sources: keep only jobs matching the channel keywords (all jobs if no keywords)
     extra = []
     if ch.get("remoteok"):
         extra += safe("RemoteOK", fetch_remoteok)
-    if ch.get("google_jobs"):
-        extra += safe("Google Jobs", lambda: fetch_google_jobs(state))
+    if google_query:
+        extra += safe("Google Jobs", lambda: fetch_google_jobs(state, google_query))
     for url in ch.get("rss") or []:
         extra += safe(f"RSS {url}", lambda u=url: fetch_rss(u))
-    kept = [j for j in extra if not kw or matches(j.get("_text") or j["title"], kw)]
-    log(f"  general sources: {len(kept)} of {len(extra)} match keywords")
-    jobs += kept
+    if extra:
+        kept = [j for j in extra if not kw or matches(j.get("_text") or j["title"], kw)]
+        log(f"  general sources: {len(kept)} of {len(extra)} match keywords")
+        jobs += kept
 
     # Auto-discovery: any job link that points at a company job board becomes a permanent source
-    if ch.get("discover", True):
+    if ch.get("discover"):
         link_boards, link_names = set(), {}
         for j in jobs:
             for b in find_boards(j["url"] or ""):
                 link_boards.add(b)
                 link_names.setdefault(b, j["company"])
-        added = remember_boards(state, link_boards, known_slugs, "job link", link_names)
-        brave = brave_discover(state)
-        added_b = remember_boards(state, brave, known_slugs, "brave search")
-        log(f"  discovery: +{added} boards from job links, +{added_b} from search "
-            f"({len(state.get('discovered', {}))} discovered in total)")
-        jobs += fetch_discovered(state, kw)
+        added = remember_boards(state, link_boards, known_slugs, "job link", link_names, key)
+        brave = brave_discover(state, ch.get("brave_queries"), key) if ch.get("brave_queries") else set()
+        added_b = remember_boards(state, brave, known_slugs, "brave search", None, key)
+        log(f"  discovery: +{added} boards from job links, +{added_b} from search")
+        if kw:
+            jobs += fetch_discovered(state, kw, key)
     return jobs
+
+
+def pool_jobs(ch, collected):
+    """For channels like Remote and Tech: pick matching jobs found by other channels."""
+    pool = ch.get("pool") or {}
+    picked = []
+    funcs = set(pool.get("functions") or [])
+    title_kw = pool.get("title_keywords") or []
+    for src in pool.get("from") or []:
+        for j in collected.get(src, []):
+            if pool.get("remote_only") and not j.get("remote"):
+                continue
+            if funcs:
+                f = classify(j)[0]
+                if not f or f[0] not in funcs:
+                    continue
+            if title_kw and not matches(j["title"], title_kw):
+                continue
+            picked.append(dict(j))
+    if pool:
+        log(f"  pooled from {', '.join(pool.get('from') or [])}: {len(picked)} matching jobs")
+    return picked
 
 
 def post_pinned(token, cfg):
@@ -968,10 +1019,15 @@ def main():
     max_posts = int(s.get("max_posts_per_run", 2))
     max_age = timedelta(days=int(s.get("max_job_age_days", 10)))
     first_posts = int(s.get("first_run_posts", 3))
-    delay = float(s.get("delay_between_posts", 4))
+    delay = float(s.get("delay_between_posts", 3.2))
+    _gemini["max_calls"] = int(s.get("ai_max_calls_per_run", 80))
 
     state = json.loads(STATE_FILE.read_text()) if STATE_FILE.exists() else {}
     seen = state.setdefault("seen", {})
+    # One-time upgrade: older entries had no channel prefix
+    for k in [k for k in seen if "::" not in k]:
+        v = seen.pop(k)
+        seen[f"{v.get('ch', 'web3')}::{k}"] = v
     if check:
         state["platforms"] = {}  # force re-detection
 
@@ -982,19 +1038,41 @@ def main():
         post_pinned(token, cfg)
         return
 
-    for key, ch in cfg["channels"].items():
+    channels = {k: v for k, v in cfg["channels"].items() if v.get("enabled", True)}
+
+    # Google Jobs: one search per run, rotating through every channel's queries
+    pairs = [(k, q) for k, ch in channels.items() for q in (ch.get("google_queries") or [])]
+    g = state.setdefault("google", {})
+    pick = pairs[g.get("next", 0) % len(pairs)] if pairs else (None, None)
+    g["next"] = g.get("next", 0) + 1
+
+    # Phase 1: every channel collects from its own sources
+    order = list(channels)
+    collected, queues = {}, {}
+    for key in order:
+        ch = channels[key]
         log(f"\n=== {key} → {ch['chat_id']} ===")
-        jobs = collect(ch, state)
+        collected[key] = collect(ch, state, key, pick[1] if pick[0] == key else None)
+
+    # Phase 2: add pooled jobs (Remote, Tech, AI), filter, and pick what's new for each channel
+    for key in order:
+        ch = channels[key]
+        log(f"\n--- {key}: choosing new jobs ---")
+        jobs = list(collected[key]) + pool_jobs(ch, collected)
+        if ch.get("remote_only"):
+            jobs = [j for j in jobs if j.get("remote")]
+            log(f"  remote only: {len(jobs)} remote jobs")
         if check:
             continue
-        first_run = not any(v.get("ch") == key for v in seen.values())
+        sk = lambda k: f"{key}::{k}"
+        first_run = not any(k.startswith(f"{key}::") for k in seen)
 
         fresh, batch_keys = [], set()
         for j in jobs:
             if not j["url"] or not j["title"]:
                 continue
             ukey = "url:" + j["url"].split("?")[0].rstrip("/").lower()
-            if (j["id"] in seen or j["dedupe"] in seen or ukey in seen
+            if (sk(j["id"]) in seen or sk(j["dedupe"]) in seen or sk(ukey) in seen
                     or j["dedupe"] in batch_keys or ukey in batch_keys):
                 continue
             if j["posted"] and NOW - j["posted"] > max_age:
@@ -1004,25 +1082,39 @@ def main():
             fresh.append(j)
         fresh.sort(key=lambda j: j["posted"] or datetime.min.replace(tzinfo=timezone.utc),
                    reverse=True)
-        log(f"  {len(fresh)} new jobs not yet posted")
-
-        to_post = fresh[:first_posts] if first_run else fresh[:max_posts]
+        limit = int(ch.get("max_posts_per_run", max_posts))
+        to_post = fresh[:first_posts] if first_run else fresh[:limit]
+        log(f"  {len(fresh)} new jobs not yet posted → posting {len(to_post)} this run")
         if first_run:
-            log(f"  first run: posting {len(to_post)}, marking the rest as seen")
+            log(f"  first run for this channel: the other {len(fresh) - len(to_post)} are marked as seen")
             for j in fresh[len(to_post):]:
-                seen[j["id"]] = seen[j["dedupe"]] = seen[j["ukey"]] = {"ch": key, "t": NOW.isoformat()}
+                for k in (j["id"], j["dedupe"], j["ukey"]):
+                    seen[sk(k)] = {"ch": key, "t": NOW.isoformat()}
+        queues[key] = to_post
 
-        for j in to_post:
+    # Post round-robin across channels: each channel still gets ~3s between its own posts
+    active = [k for k in order if queues.get(k)]
+    gap = max(0.4, delay / max(1, len(active)))
+    posted = {k: 0 for k in active}
+    while any(queues.get(k) for k in active):
+        for key in active:
+            if not queues[key]:
+                continue
+            j = queues[key].pop(0)
+            ch = channels[key]
             text = format_post(j, ch)
             if dry:
-                log("\n--- DRY RUN POST ---\n" + text)
+                log(f"\n--- DRY RUN POST [{key}] ---\n" + text)
                 ok = True
             else:
                 ok = send(token, ch["chat_id"], text)
-                time.sleep(delay)
+                time.sleep(gap)
             if ok:
-                seen[j["id"]] = seen[j["dedupe"]] = seen[j["ukey"]] = {"ch": key, "t": NOW.isoformat()}
-                log(f"  posted: {j['company']} — {j['title']}")
+                for k in (j["id"], j["dedupe"], j["ukey"]):
+                    seen[f"{key}::{k}"] = {"ch": key, "t": NOW.isoformat()}
+                posted[key] += 1
+    if posted:
+        log("\nPosted: " + ", ".join(f"{k} {n}" for k, n in posted.items()))
 
     # forget entries older than remember_days
     cutoff = NOW - timedelta(days=int(s.get("remember_days", 180)))
