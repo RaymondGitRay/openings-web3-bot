@@ -6,7 +6,7 @@ on:
   workflow_dispatch:          # lets you click "Run workflow" manually
     inputs:
       mode:
-        description: "normal, dry-run, or check"
+        description: "normal, dry-run, check, or pin"
         default: "normal"
 
 permissions:
@@ -42,6 +42,7 @@ jobs:
           MODE="${{ github.event.inputs.mode || 'normal' }}"
           if [ "$MODE" = "dry-run" ]; then python main.py --dry-run
           elif [ "$MODE" = "check" ]; then python main.py --check
+          elif [ "$MODE" = "pin" ]; then python main.py --pin
           else python main.py; fi
 
       - name: Save state
