@@ -18,6 +18,14 @@ settings:
   delay_between_posts: 3.2    # seconds between posts (Telegram allows ~20/min per channel)
   remember_days: 180          # a job (same company + title, or same link) is never re-posted within this window
 
+# Job website (GitHub Pages): one page per open job, so people find you on Google and join on Telegram
+site:
+  enabled: true
+  base_url: "https://raymondgitray.github.io/openings-web3-bot/"
+  max_job_age_days: 60        # jobs with a known date older than this are left off the site
+  max_jobs_per_list: 400      # newest N roles shown on each listing page
+  # google_verification: google1234abcd.html   # file name from Google Search Console (optional)
+
 channels:
   web3:
     chat_id: "@Openings_Web3"
