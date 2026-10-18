@@ -33,6 +33,7 @@ jobs:
       - name: Run bot
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_BOT_TOKEN_TECH: ${{ secrets.TELEGRAM_BOT_TOKEN_TECH }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           WEB3CAREER_TOKEN: ${{ secrets.WEB3CAREER_TOKEN }}
