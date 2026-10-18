@@ -866,6 +866,112 @@ def format_post(j, ch):
     return "\n".join(lines)
 
 
+# ───────────────────────── digest format ─────────────────────────
+
+# (label, flag, hashtag, patterns) — first match wins; order roughly by importance to the audience
+COUNTRIES = [
+    ("Singapore", "🇸🇬", "Singapore", ["singapore"]),
+    ("Hong Kong", "🇭🇰", "HongKong", ["hong kong", "hongkong"]),
+    ("UAE", "🇦🇪", "UAE", ["dubai", "abu dhabi", "uae", "united arab emirates"]),
+    ("India", "🇮🇳", "India", ["india", "bangalore", "bengaluru", "mumbai", "delhi", "gurgaon", "gurugram",
+                             "hyderabad", "pune", "chennai", "noida"]),
+    ("Japan", "🇯🇵", "Japan", ["japan", "tokyo", "osaka"]),
+    ("South Korea", "🇰🇷", "Korea", ["korea", "seoul"]),
+    ("Taiwan", "🇹🇼", "Taiwan", ["taiwan", "taipei"]),
+    ("China", "🇨🇳", "China", ["china", "shanghai", "beijing", "shenzhen", "hangzhou"]),
+    ("Malaysia", "🇲🇾", "Malaysia", ["malaysia", "kuala lumpur"]),
+    ("Indonesia", "🇮🇩", "Indonesia", ["indonesia", "jakarta", "bali"]),
+    ("Philippines", "🇵🇭", "Philippines", ["philippines", "manila", "makati", "taguig"]),
+    ("Vietnam", "🇻🇳", "Vietnam", ["vietnam", "ho chi minh", "hanoi"]),
+    ("Thailand", "🇹🇭", "Thailand", ["thailand", "bangkok"]),
+    ("Australia", "🇦🇺", "Australia", ["australia", "sydney", "melbourne", "brisbane", "perth"]),
+    ("New Zealand", "🇳🇿", "NewZealand", ["new zealand", "auckland", "wellington"]),
+    ("USA", "🇺🇸", "USA", ["united states", "usa", "u.s.", "new york", "nyc", "san francisco", "los angeles",
+                         "seattle", "austin", "chicago", "boston", "miami", "denver", "palo alto",
+                         "mountain view", "menlo park", "washington", ", ca", ", ny", ", tx", ", wa", ", ma",
+                         ", fl", ", co", ", il", ", nv", ", ga", ", nc", ", va", ", ut", ", az", " us",
+                         "us-", "-us", "california", "texas", "florida", "colorado", "illinois",
+                         "massachusetts", "virginia", "utah", "arizona", "oregon", "pennsylvania",
+                         "new jersey", "indiana", "indianapolis", "ohio", "michigan", "minnesota",
+                         "tennessee", "north carolina", "nevada"]),
+    ("Canada", "🇨🇦", "Canada", ["canada", "toronto", "vancouver", "montreal"]),
+    ("UK", "🇬🇧", "UK", ["united kingdom", "london", " uk", "uk-", "england", "manchester", "edinburgh"]),
+    ("Ireland", "🇮🇪", "Ireland", ["ireland", "dublin"]),
+    ("Germany", "🇩🇪", "Germany", ["germany", "berlin", "munich", "hamburg", "frankfurt"]),
+    ("France", "🇫🇷", "France", ["france", "paris"]),
+    ("Switzerland", "🇨🇭", "Switzerland", ["switzerland", "zurich", "zürich", "zug", "geneva", "lausanne"]),
+    ("Netherlands", "🇳🇱", "Netherlands", ["netherlands", "amsterdam", "rotterdam"]),
+    ("Portugal", "🇵🇹", "Portugal", ["portugal", "lisbon", "porto"]),
+    ("Spain", "🇪🇸", "Spain", ["spain", "madrid", "barcelona"]),
+    ("Poland", "🇵🇱", "Poland", ["poland", "warsaw", "krakow"]),
+    ("Austria", "🇦🇹", "Austria", ["austria", "vienna"]),
+    ("Italy", "🇮🇹", "Italy", ["italy", "milan", "rome"]),
+    ("Israel", "🇮🇱", "Israel", ["israel", "tel aviv"]),
+    ("Turkey", "🇹🇷", "Turkey", ["turkey", "türkiye", "istanbul"]),
+    ("Brazil", "🇧🇷", "Brazil", ["brazil", "são paulo", "sao paulo"]),
+    ("Mexico", "🇲🇽", "Mexico", ["mexico"]),
+    ("Argentina", "🇦🇷", "Argentina", ["argentina", "buenos aires"]),
+    ("Nigeria", "🇳🇬", "Nigeria", ["nigeria", "lagos"]),
+    ("South Africa", "🇿🇦", "SouthAfrica", ["south africa", "cape town", "johannesburg"]),
+    ("Europe", "🇪🇺", "Europe", ["europe", "emea", "eu "]),
+    ("APAC", "🌏", "APAC", ["apac", "asia"]),
+]
+
+
+def group_of(j):
+    """Which country section a job goes in. Fully remote jobs get their own section."""
+    if j.get("remote"):
+        return ("Remote", "🌐", "Remote")
+    loc = f" {(j.get('location') or '').lower()} "
+    for label, flag, tag, pats in COUNTRIES:
+        if any(re.search(re.escape(p) + r"(?![a-z])", loc) for p in pats):
+            return (label, flag, tag)
+    return ("Other locations", "🌍", "")
+
+
+def digest_messages(jobs, ch, max_chars=3600):
+    """Build compact messages: jobs grouped by country, one line per job."""
+    e = html.escape
+    groups = {}
+    for j in jobs:
+        groups.setdefault(group_of(j), []).append(j)
+    # Remote and Singapore first, then the biggest groups
+    priority = {"Remote": 0, "Singapore": 1}
+    ordered = sorted(groups.items(), key=lambda kv: (priority.get(kv[0][0], 2), -len(kv[1]), kv[0][0]))
+    name = ch.get("title") or ch.get("hashtag", "#Jobs").lstrip("#").replace("Jobs", " jobs")
+    header = f"🗂 <b>New {e(name)}</b> · {NOW.strftime('%d %b')} · {len(jobs)} roles"
+    tags = [ch.get("hashtag", "")] + ["#" + g[2] for g, _ in ordered if g[2]]
+    funcs = sorted({f[0] for f in (classify(j)[0] for j in jobs) if f})
+    tag_line = " ".join(t for t in tags if t) + ("\n" + " ".join("#" + f for f in funcs) if funcs else "")
+    footer = (f"\n{tag_line}" + (f"\n<i>{e(ch['footer'])}</i>" if ch.get("footer") else ""))
+
+    blocks = []
+    for (label, flag, _), js in ordered:
+        lines = [f"\n{flag} <b>{e(label)}</b> ({len(js)})"]
+        for j in sorted(js, key=lambda j: j["company"].lower()):
+            extra = ""
+            if label in ("Remote", "Other locations", "Europe", "APAC") and j.get("location"):
+                loc = j["location"] if len(j["location"]) <= 28 else j["location"][:26] + "…"
+                extra = f" · {e(loc)}"
+            if j.get("via") == "RemoteOK":
+                extra += " · via RemoteOK"
+            lines.append(f'• {e(j["company"])} is hiring <a href="{e(j["url"], quote=True)}">'
+                         f'{e(j["title"])}</a>{extra}')
+        blocks.append(lines)
+
+    # Split into Telegram-sized messages (limit counts visible text; keep a safe margin)
+    visible = lambda t: len(re.sub(r"<[^>]+>", "", t))
+    messages, cur = [], header
+    for lines in blocks:
+        for i, line in enumerate(lines):
+            if visible(cur) + visible(line) + visible(footer) + 1 > max_chars:
+                messages.append(cur + footer)
+                cur = header + " (cont.)" + ("" if i == 0 else f"\n{lines[0].strip()} (cont.)")
+            cur += "\n" + line
+    messages.append(cur + footer)
+    return messages
+
+
 def send(token, chat_id, text):
     for attempt in range(3):
         r = HTTP.post(f"https://api.telegram.org/bot{token}/sendMessage", timeout=TIMEOUT, json={
@@ -1092,7 +1198,26 @@ def main():
                     seen[sk(k)] = {"ch": key, "t": NOW.isoformat()}
         queues[key] = to_post
 
-    # Post round-robin across channels: each channel still gets ~3s between its own posts
+    # Digest channels: one compact message (or a few) per run, grouped by country
+    for key in [k for k in order if queues.get(k) and channels[k].get("format", "digest") == "digest"]:
+        ch = channels[key]
+        jobs = queues.pop(key)
+        for text in digest_messages(jobs, ch):
+            if dry:
+                log(f"\n--- DRY RUN DIGEST [{key}] ---\n" + text)
+                ok = True
+            else:
+                ok = send(token, ch["chat_id"], text)
+                time.sleep(1.5)
+            if not ok:
+                break
+        else:
+            for j in jobs:
+                for k in (j["id"], j["dedupe"], j["ukey"]):
+                    seen[f"{key}::{k}"] = {"ch": key, "t": NOW.isoformat()}
+            log(f"  {key}: posted a digest of {len(jobs)} jobs")
+
+    # "Card" channels: one detailed post per job, round-robin across channels
     active = [k for k in order if queues.get(k)]
     gap = max(0.4, delay / max(1, len(active)))
     posted = {k: 0 for k in active}
