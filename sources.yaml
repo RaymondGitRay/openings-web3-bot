@@ -5,6 +5,8 @@
 
 settings:
   max_posts_per_run: 100      # per channel, per run (runs every 3h)
+  # Post style per channel: "digest" (default) = one compact message per run, jobs grouped by country
+  #                         "cards"  = one detailed post per job, with the "Who should apply" line
   max_job_age_days: 10        # ignore jobs older than this (when a date is known)
   first_run_posts: 3          # on the very first run, post only this many, mark the rest as seen
   delay_between_posts: 3.2    # seconds between posts (Telegram allows ~20/min per channel)
@@ -14,6 +16,8 @@ channels:
   web3:
     chat_id: "@Openings_Web3"
     hashtag: "#Web3Jobs"
+    title: "Web3 jobs"
+    format: digest
     footer: "🔗 Openings network · Hiring or collaborating? Tap 💬 below to message us"
 
     # Welcome message posted with "--pin" (run mode "pin"), with a DM button that opens the bot inbox
@@ -464,6 +468,8 @@ channels:
     enabled: false            # switch to true once @Openings_AI exists and the bot is admin
     chat_id: "@Openings_AI"
     hashtag: "#AIJobs"
+    title: "AI jobs"
+    format: digest
     footer: "🔗 Openings network · Hiring or collaborating? Tap 💬 below to message us"
     companies:
       # ── Frontier labs & model companies ──
@@ -614,6 +620,8 @@ channels:
     enabled: false            # switch to true once @Openings_Fintech exists and the bot is admin
     chat_id: "@Openings_Fintech"
     hashtag: "#FintechJobs"
+    title: "Fintech jobs"
+    format: digest
     footer: "🔗 Openings network · Hiring or collaborating? Tap 💬 below to message us"
     companies:
       # ── Payments & infrastructure ──
@@ -787,6 +795,8 @@ channels:
     enabled: false            # switch to true once @Openings_Tech exists and the bot is admin
     chat_id: "@Openings_Tech"
     hashtag: "#TechJobs"
+    title: "Tech jobs"
+    format: digest
     footer: "🔗 Openings network · Hiring or collaborating? Tap 💬 below to message us"
     max_posts_per_run: 100
     companies:
@@ -933,6 +943,8 @@ channels:
     enabled: false            # switch to true once @Openings_Remote exists and the bot is admin
     chat_id: "@Openings_Remote"
     hashtag: "#RemoteJobs"
+    title: "Remote jobs"
+    format: digest
     footer: "🔗 Openings network · Hiring or collaborating? Tap 💬 below to message us"
     remote_only: true         # only fully-remote jobs, any field
     remoteok: true            # every RemoteOK job (no keyword filter for this channel)
