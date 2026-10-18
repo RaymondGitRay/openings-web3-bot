@@ -1288,7 +1288,7 @@ def main():
         fresh.sort(key=lambda j: j["posted"] or datetime.min.replace(tzinfo=timezone.utc),
                    reverse=True)
         limit = int(ch.get("max_posts_per_run", max_posts))
-        to_post = fresh[:first_posts] if first_run else fresh[:limit]
+        to_post = fresh[:int(ch.get("first_run_posts", first_posts))] if first_run else fresh[:limit]
         log(f"  {len(fresh)} new jobs not yet posted → posting {len(to_post)} this run")
         if first_run:
             log(f"  first run for this channel: the other {len(fresh) - len(to_post)} are marked as seen")
