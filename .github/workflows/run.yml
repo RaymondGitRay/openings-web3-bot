@@ -44,6 +44,10 @@ jobs:
           WEB3CAREER_TOKEN: ${{ secrets.WEB3CAREER_TOKEN }}
           CJL_API_KEY: ${{ secrets.CJL_API_KEY }}
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
+          MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
         run: |
           MODE="${{ github.event.inputs.mode || 'normal' }}"
           if [ "$MODE" = "dry-run" ]; then python main.py --dry-run
