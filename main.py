@@ -38,6 +38,19 @@ def log(*a):
     print(*a, flush=True)
 
 
+def last_slot(times, utc_offset):
+    """Most recent scheduled digest time (list of "HH:MM" local times) at or before now, in UTC."""
+    local = NOW + timedelta(hours=utc_offset)
+    cands = []
+    for t in times:
+        hh, mm = (int(x) for x in str(t).split(":"))
+        for d in (0, 1):
+            c = local.replace(hour=hh, minute=mm, second=0, microsecond=0) - timedelta(days=d)
+            if c <= local:
+                cands.append(c)
+    return max(cands) - timedelta(hours=utc_offset)
+
+
 def parse_date(v):
     """Turn ISO strings / epoch (s or ms) into an aware datetime, or None."""
     if v is None or v == "":
@@ -1288,15 +1301,21 @@ def main():
     # The bot runs hourly but only posts every `digest_every_hours` (or sooner if many jobs pile up);
     # jobs that wait are not marked as seen, so the next run picks them up again.
     every = float(s.get("digest_every_hours", 3))
-    early = int(s.get("digest_post_early_at", 30))
+    early = int(s.get("digest_post_early_at", 0) or 0)
+    times = s.get("digest_times") or []
+    slot = last_slot(times, float(s.get("digest_utc_offset", 8))) if times else None
     last_post = state.setdefault("last_post", {})
     for key in [k for k in order if queues.get(k) and channels[k].get("format", "digest") == "digest"]:
         ch = channels[key]
         jobs = queues.pop(key)
-        since = (NOW - parse_date(last_post[key])).total_seconds() / 3600 if last_post.get(key) else 999
-        if since < every - 0.25 and len(jobs) < early and "--now" not in sys.argv:
-            log(f"  {key}: {len(jobs)} new jobs waiting; last digest {since:.1f}h ago, next in "
-                f"~{every - since:.1f}h (or at {early} jobs)")
+        lp = parse_date(last_post.get(key))
+        since = (NOW - lp).total_seconds() / 3600 if lp else 999
+        # Fixed daily times (e.g. 09:00, 14:00, 20:00 SGT): post once per time slot. Runs are hourly,
+        # so if GitHub skips or delays a run, the next one still posts that slot's digest.
+        due = (not lp or lp < slot) if slot else since >= every - 0.25
+        if not due and not (early and len(jobs) >= early) and "--now" not in sys.argv:
+            log(f"  {key}: {len(jobs)} new jobs waiting for the next digest time "
+                f"({', '.join(times) if times else f'every {every:g}h'})")
             continue
         for text in digest_messages(jobs, ch):
             if dry:
