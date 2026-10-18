@@ -1179,8 +1179,13 @@ def main():
     # Google Jobs: one search per run, rotating through every channel's queries
     pairs = [(k, q) for k, ch in channels.items() for q in (ch.get("google_queries") or [])]
     g = state.setdefault("google", {})
-    pick = pairs[g.get("next", 0) % len(pairs)] if pairs else (None, None)
-    g["next"] = g.get("next", 0) + 1
+    last_g = parse_date(g.get("last_search"))
+    if pairs and (not last_g or NOW - last_g >= timedelta(hours=float(s.get("google_every_hours", 3))) - timedelta(minutes=15)):
+        pick = pairs[g.get("next", 0) % len(pairs)]
+        g["next"] = g.get("next", 0) + 1
+        g["last_search"] = NOW.isoformat()
+    else:
+        pick = (None, None)  # Google Jobs budget: one search every few hours, not every hourly run
 
     # Phase 1: every channel collects from its own sources
     order = list(channels)
