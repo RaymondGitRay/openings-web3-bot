@@ -798,8 +798,9 @@ channels:
 
   # ═════════════════════════════════════════════════════════════
   tech:
-    enabled: false            # switch to true once @Openings_Tech exists and the bot is admin
+    enabled: true             # live since 18 Oct 2026
     chat_id: "@Openings_Tech"
+    first_run_posts: 30       # launch digest: the 30 newest jobs (older ones are skipped)
     hashtag: "#TechJobs"
     title: "Tech jobs"
     format: digest
