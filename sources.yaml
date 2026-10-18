@@ -26,6 +26,12 @@ site:
   max_jobs_per_list: 400      # newest N roles shown on each listing page
   # google_verification: google1234abcd.html   # file name from Google Search Console (optional)
 
+# Social cross-posting: after each digest, a short post with top roles + Telegram link.
+# Switches on per network when its GitHub secrets exist (BLUESKY_HANDLE + BLUESKY_APP_PASSWORD,
+# MASTODON_INSTANCE + MASTODON_TOKEN). Set enabled: false to stop all social posts.
+social:
+  enabled: true
+
 channels:
   web3:
     chat_id: "@Openings_Web3"
