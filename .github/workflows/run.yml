@@ -2,7 +2,7 @@ name: Post jobs
 
 on:
   schedule:
-    - cron: "17 */3 * * *"   # every 3 hours (UTC), at minute 17
+    - cron: "23 * * * *"     # every hour (UTC) at minute 23; digests still go out ~every 3h (see sources.yaml)
   workflow_dispatch:          # lets you click "Run workflow" manually
     inputs:
       mode:
