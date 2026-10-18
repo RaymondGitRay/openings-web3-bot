@@ -1354,6 +1354,12 @@ def main():
             for j in jobs:
                 if j["dedupe"] in _who_short_cache:
                     who_store[j["dedupe"]] = {"l": _who_short_cache[j["dedupe"]], "t": NOW.isoformat()}
+            if not dry:
+                try:  # cross-post a short version to Bluesky / Mastodon (if their secrets are set)
+                    import social
+                    social.share_digest(jobs, ch, key, cfg, group_of, log)
+                except Exception as ex:
+                    log(f"  ! social sharing failed: {ex}")
 
     # "Card" channels: one detailed post per job, round-robin across channels
     active = [k for k in order if queues.get(k)]
