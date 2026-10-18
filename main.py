@@ -698,8 +698,8 @@ FUNCTIONS = [
     ("Design", ["designer", "design", "ux", "ui ", "creative"], "designers"),
     ("Compliance", ["compliance", "aml", "kyc", "risk", "legal", "counsel", "regulatory", "licensing", "audit", "fraud"], "compliance, risk and legal professionals"),
     ("Finance", ["finance", "accountant", "accounting", "treasury", "controller", "tax", "fp&a", "trader", "trading", "quant", "investment", "analyst"], "finance, trading and investment people"),
-    ("BD", ["business development", "bd ", "partnership", "sales", "account executive", "account manager", "institutional", "relationship manager", "growth"], "BD and sales people"),
-    ("Marketing", ["marketing", "community", "content", "social media", "brand", "communications", "pr ", "seo", "ecosystem", "devrel", "developer relations", "events", "kol"], "marketers and community builders"),
+    ("BD", ["business development", "bd ", "partnership", "sales", "account executive", "account manager", "institutional", "relationship manager"], "BD and sales people"),
+    ("Marketing", ["marketing", "growth", "community", "content", "social media", "brand", "communications", "pr ", "seo", "ecosystem", "devrel", "developer relations", "events", "kol"], "marketers and community builders"),
     ("CustomerSuccess", ["customer success", "customer support", "support", "client service", "onboarding", "customer experience", "implementation"], "customer success and support people"),
     ("Operations", ["operations", "ops", "chief of staff", "administrator", "office", "executive assistant", "strategy"], "operators and generalists"),
     ("People", ["recruit", "talent", "people", "hr ", "human resources"], "recruiters and HR people"),
@@ -723,9 +723,21 @@ PLACES = {
 }
 
 
+# Short or ambiguous keywords must match as whole words ("intern" must not match "internal")
+WHOLE_WORDS = {"intern", "internship", "ops", "qa", "ux", "ui", "sre", "hr", "pr", "bd", "ai", "ml", "tax",
+               "risk", "kol", "people", "office", "content", "brand", "card", "events", "growth", "lead",
+               "staff", "chief", "vp", "head of", "associate", "entry", "junior", "senior", "graduate",
+               "trainee", "design", "data", "aml", "kyc", "audit", "legal", "support", "strategy"}
+
+
 def has_any(text, words):
     t = f" {text.lower()} "
-    return any(w in t for w in words)
+    for w in words:
+        k = w.strip()
+        tail = r"(?![a-z])" if k in WHOLE_WORDS else ""
+        if re.search(r"(?<![a-z])" + re.escape(k) + tail, t):
+            return True
+    return False
 
 
 def classify(j):
