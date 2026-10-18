@@ -817,7 +817,7 @@ def gemini_call(key, model, prompt, thinking=True):
         json={"contents": [{"parts": [{"text": prompt}]}], "generationConfig": cfg})
 
 
-def who_ai(j):
+def who_ai(j, short=False):
     """One-sentence 'who should apply' via Google Gemini free tier. Returns None on any issue."""
     key = os.environ.get("GEMINI_API_KEY")
     if (not key or not j["description"] or _gemini["failures"] >= 3
@@ -827,9 +827,11 @@ def who_ai(j):
     prompt = (
         "You write one line for a job-board post. Based on the job below, say WHO SHOULD APPLY: "
         "the ideal candidate's background, years of experience, and 2-3 key skills. "
-        "Max 30 words, plain text, no emojis, no intro like 'Ideal candidate:'. "
-        "Start with the type of person (e.g. 'Backend engineers with 5+ years...').\n\n"
-        f"Title: {j['title']}\nCompany: {j['company']}\nLocation: {j['location']}\n"
+        + ("Max 12 words, very compact, plain text, no emojis, no full stop, no intro. "
+           "Example: 'Backend engineers, 5+ yrs; Go, distributed systems'.\n\n" if short else
+           "Max 30 words, plain text, no emojis, no intro like 'Ideal candidate:'. "
+           "Start with the type of person (e.g. 'Backend engineers with 5+ years...').\n\n")
+        + f"Title: {j['title']}\nCompany: {j['company']}\nLocation: {j['location']}\n"
         f"Description:\n{j['description'][:4000]}"
     )
     for model in list(gemini_models(key)):
@@ -858,6 +860,18 @@ def who_ai(j):
 
 
 _who_cache = {}
+_who_short_cache = {}
+
+
+def who_short(j):
+    """Compact 'who should apply' line (~12 words) for digests; cached per job across channels."""
+    if j["dedupe"] not in _who_short_cache:
+        line = who_ai(j, short=True)
+        if not line:
+            line = re.sub(r" who want to build in Web3\.?$| keen to start a career in Web3\.?$", "",
+                          who_rule_based(j)).rstrip(".")
+        _who_short_cache[j["dedupe"]] = line.rstrip(".")
+    return _who_short_cache[j["dedupe"]]
 
 
 def format_post(j, ch):
@@ -960,7 +974,8 @@ def group_of(j):
 
 
 def digest_messages(jobs, ch, max_chars=3600):
-    """Build compact messages: jobs grouped by country, one line per job."""
+    """Build compact messages: jobs grouped by country, one line per job, and (optionally) a
+    collapsed 'Who should apply' box per country that readers expand by tapping."""
     e = html.escape
     groups = {}
     for j in jobs:
@@ -969,16 +984,17 @@ def digest_messages(jobs, ch, max_chars=3600):
     priority = {"Remote": 0, "Singapore": 1}
     ordered = sorted(groups.items(), key=lambda kv: (priority.get(kv[0][0], 2), -len(kv[1]), kv[0][0]))
     name = ch.get("title") or ch.get("hashtag", "#Jobs").lstrip("#").replace("Jobs", " jobs")
-    header = f"🗂 <b>New {e(name)}</b> · {NOW.strftime('%d %b')} · {len(jobs)} role{'s' if len(jobs) != 1 else ''}"
+    n = len(jobs)
+    header = f"🗂 <b>New {e(name)}</b> · {NOW.strftime('%d %b')} · {n} role{'s' if n != 1 else ''}"
     tags = [ch.get("hashtag", "")] + ["#" + g[2] for g, _ in ordered if g[2]]
     funcs = sorted({f[0] for f in (classify(j)[0] for j in jobs) if f})
     tag_line = " ".join(t for t in tags if t) + ("\n" + " ".join("#" + f for f in funcs) if funcs else "")
-    footer = (f"\n{tag_line}" + (f"\n<i>{e(ch['footer'])}</i>" if ch.get("footer") else ""))
+    footer = (f"\n\n{tag_line}" + (f"\n<i>{e(ch['footer'])}</i>" if ch.get("footer") else ""))
+    show_who = ch.get("who_should_apply", True)
 
-    blocks = []
-    for (label, flag, _), js in ordered:
-        lines = [f"\n{flag} <b>{e(label)}</b> ({len(js)})"]
-        for j in sorted(js, key=lambda j: j["company"].lower()):
+    def chunk_text(label, flag, js, total, cont):
+        lines = [f"{flag} <b>{e(label)}</b> ({total}){' (cont.)' if cont else ''}"]
+        for j in js:
             extra = ""
             if label in ("Remote", "Other locations", "Europe", "APAC") and j.get("location"):
                 loc = j["location"] if len(j["location"]) <= 28 else j["location"][:26] + "…"
@@ -987,17 +1003,34 @@ def digest_messages(jobs, ch, max_chars=3600):
                 extra += " · via RemoteOK"
             lines.append(f'• {e(j["company"])} is hiring <a href="{e(j["url"], quote=True)}">'
                          f'{e(j["title"])}</a>{extra}')
-        blocks.append(lines)
+        text = "\n".join(lines)
+        if show_who:
+            who = "\n".join(f"<b>{e(j['company'])}</b> · {e(j['title'][:40])}: {e(who_short(j))}" for j in js)
+            text += f"\n<blockquote expandable>🎯 <b>Who should apply</b>\n{who}</blockquote>"
+        return text
 
-    # Split into Telegram-sized messages (limit counts visible text; keep a safe margin)
+    # Each country becomes one or more chunks (a big country is split so every chunk fits a message)
     visible = lambda t: len(re.sub(r"<[^>]+>", "", t))
+    chunks = []
+    for (label, flag, _), js in ordered:
+        js = sorted(js, key=lambda j: j["company"].lower())
+        part, cont = [], False
+        for j in js:
+            trial = chunk_text(label, flag, part + [j], len(js), cont)
+            if part and visible(header) + visible(trial) + visible(footer) + 4 > max_chars:
+                chunks.append(chunk_text(label, flag, part, len(js), cont))
+                part, cont = [j], True
+            else:
+                part.append(j)
+        chunks.append(chunk_text(label, flag, part, len(js), cont))
+
+    # Pack chunks into Telegram-sized messages (the limit counts visible text)
     messages, cur = [], header
-    for lines in blocks:
-        for i, line in enumerate(lines):
-            if visible(cur) + visible(line) + visible(footer) + 1 > max_chars:
-                messages.append(cur + footer)
-                cur = header + " (cont.)" + ("" if i == 0 else f"\n{lines[0].strip()} (cont.)")
-            cur += "\n" + line
+    for c in chunks:
+        if visible(cur) + visible(c) + visible(footer) + 2 > max_chars and cur != header:
+            messages.append(cur + footer)
+            cur = header + " (cont.)"
+        cur += "\n\n" + c
     messages.append(cur + footer)
     return messages
 
@@ -1156,7 +1189,7 @@ def main():
     max_age = timedelta(days=int(s.get("max_job_age_days", 10)))
     first_posts = int(s.get("first_run_posts", 3))
     delay = float(s.get("delay_between_posts", 3.2))
-    _gemini["max_calls"] = int(s.get("ai_max_calls_per_run", 80))
+    _gemini["max_calls"] = int(s.get("ai_max_calls_per_run", 150))
 
     state = json.loads(STATE_FILE.read_text()) if STATE_FILE.exists() else {}
     seen = state.setdefault("seen", {})
