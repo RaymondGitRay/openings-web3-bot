@@ -7,6 +7,7 @@ settings:
   max_posts_per_run: 100      # max jobs per digest
   digest_every_hours: 3       # the bot checks every hour, but posts a digest at most every 3 hours...
   digest_post_early_at: 30    # ...unless this many new jobs are waiting
+  google_every_hours: 3       # one Google Jobs search every 3 hours (~240/month, the SerpApi free plan)
   # Post style per channel: "digest" (default) = one compact message per run, jobs grouped by country
   #                         "cards"  = one detailed post per job, with the "Who should apply" line
   max_job_age_days: 10        # ignore jobs older than this (when a date is known)
