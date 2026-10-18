@@ -1056,6 +1056,15 @@ def digest_messages(jobs, ch, max_chars=3600):
     return messages
 
 
+def bot_token(ch, default):
+    """A channel can post through its own bot: set token_env in sources.yaml to the name of the
+    GitHub secret holding that bot's token (e.g. TELEGRAM_BOT_TOKEN_TECH). Falls back to the main bot."""
+    env = ch.get("token_env")
+    if env and not os.environ.get(env):
+        log(f"  ! {env} is not set — posting with the main bot instead")
+    return (os.environ.get(env) if env else None) or default
+
+
 def send(token, chat_id, text):
     for attempt in range(3):
         r = HTTP.post(f"https://api.telegram.org/bot{token}/sendMessage", timeout=TIMEOUT, json={
@@ -1271,7 +1280,7 @@ def main():
                 if dry:
                     log("\n--- PREVIEW DIGEST ---\n" + text)
                 else:
-                    send(token, ch["chat_id"], text)
+                    send(bot_token(ch, token), ch["chat_id"], text)
                     time.sleep(1.5)
             log(f"  {key}: preview digest of {len(sample)} recent jobs (nothing marked as seen)")
             continue
@@ -1330,7 +1339,7 @@ def main():
                 log(f"\n--- DRY RUN DIGEST [{key}] ---\n" + text)
                 ok = True
             else:
-                ok = send(token, ch["chat_id"], text)
+                ok = send(bot_token(ch, token), ch["chat_id"], text)
                 time.sleep(1.5)
             if not ok:
                 break
@@ -1356,7 +1365,7 @@ def main():
                 log(f"\n--- DRY RUN POST [{key}] ---\n" + text)
                 ok = True
             else:
-                ok = send(token, ch["chat_id"], text)
+                ok = send(bot_token(ch, token), ch["chat_id"], text)
                 time.sleep(gap)
             if ok:
                 for k in (j["id"], j["dedupe"], j["ukey"]):
