@@ -611,6 +611,23 @@ GOOGLE_QUERIES = [
 ]
 
 
+TRUSTED_APPLY = ("greenhouse.io", "lever.co", "ashbyhq.com", "workable.com", "smartrecruiters.com",
+                 "recruitee.com", "bamboohr.com", "personio.", "breezy.hr", "teamtailor.com", "pinpointhq.com",
+                 "myworkdayjobs.com", "linkedin.com", "wellfound.com", "web3.career", "cryptojobslist.com")
+
+
+def best_apply_link(j):
+    """Prefer the company's own site, its job board or LinkedIn over job-reposting websites."""
+    opts = j.get("apply_options") or []
+    company = re.sub(r"[^a-z0-9]", "", (j.get("company_name") or "").lower())
+    for o in opts:
+        link = o.get("link", "")
+        host = re.sub(r"^https?://(www\.)?", "", link).split("/")[0].lower()
+        if any(t in link for t in TRUSTED_APPLY) or (company and company[:6] in host.replace("-", "")):
+            return re.sub(r"[?&]utm_[^&]+", "", link).rstrip("?&")
+    return j.get("share_link") or (opts[0]["link"] if opts else None)
+
+
 def fetch_google_jobs(state, query=None, monthly_budget=240):
     """Google Jobs via SerpApi (free plan: 250 searches/month). One search per run across all channels."""
     key = os.environ.get("SERPAPI_KEY")
@@ -636,8 +653,7 @@ def fetch_google_jobs(state, query=None, monthly_budget=240):
         m = re.match(r"(\d+)\s+(hour|day)", posted)
         if m and m.group(2) == "day" and int(m.group(1)) > 3:
             continue
-        opts = j.get("apply_options") or []
-        link = opts[0]["link"] if opts else j.get("share_link")
+        link = best_apply_link(j)
         via = (j.get("via") or "").replace("via ", "").strip()
         x = job("gj", j.get("job_id") or link, j.get("title"), j.get("company_name"),
                 j.get("location"), link, None,
@@ -893,7 +909,9 @@ COUNTRIES = [
                          "us-", "-us", "california", "texas", "florida", "colorado", "illinois",
                          "massachusetts", "virginia", "utah", "arizona", "oregon", "pennsylvania",
                          "new jersey", "indiana", "indianapolis", "ohio", "michigan", "minnesota",
-                         "tennessee", "north carolina", "nevada"]),
+                         "tennessee", "north carolina", "nevada"] + [", " + c for c in (
+                         "al ak az ar ca co ct de fl ga hi id il in ia ks ky la me md ma mi mn ms mo mt ne "
+                         "nv nh nj nm ny nc nd oh ok or pa ri sc sd tn tx ut vt va wa wv wi wy dc").split()]),
     ("Canada", "🇨🇦", "Canada", ["canada", "toronto", "vancouver", "montreal"]),
     ("UK", "🇬🇧", "UK", ["united kingdom", "london", " uk", "uk-", "england", "manchester", "edinburgh"]),
     ("Ireland", "🇮🇪", "Ireland", ["ireland", "dublin"]),
