@@ -5,8 +5,11 @@
 
 settings:
   max_posts_per_run: 100      # max jobs per digest
-  digest_every_hours: 3       # the bot checks every hour, but posts a digest at most every 3 hours...
-  digest_post_early_at: 30    # ...unless this many new jobs are waiting
+  # The bot checks for jobs every hour, but posts a digest only at these times (local time below).
+  # If GitHub skips a run, the next hourly run catches up. Big batches split into several messages.
+  digest_times: ["09:00", "14:00", "20:00"]
+  digest_utc_offset: 8        # Singapore time (UTC+8)
+  digest_post_early_at: 0     # 0 = never post between digest times
   google_every_hours: 3       # one Google Jobs search every 3 hours (~240/month, the SerpApi free plan)
   # Post style per channel: "digest" (default) = one compact message per run, jobs grouped by country
   #                         "cards"  = one detailed post per job, with the "Who should apply" line
