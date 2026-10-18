@@ -969,7 +969,7 @@ def digest_messages(jobs, ch, max_chars=3600):
     priority = {"Remote": 0, "Singapore": 1}
     ordered = sorted(groups.items(), key=lambda kv: (priority.get(kv[0][0], 2), -len(kv[1]), kv[0][0]))
     name = ch.get("title") or ch.get("hashtag", "#Jobs").lstrip("#").replace("Jobs", " jobs")
-    header = f"🗂 <b>New {e(name)}</b> · {NOW.strftime('%d %b')} · {len(jobs)} roles"
+    header = f"🗂 <b>New {e(name)}</b> · {NOW.strftime('%d %b')} · {len(jobs)} role{'s' if len(jobs) != 1 else ''}"
     tags = [ch.get("hashtag", "")] + ["#" + g[2] for g, _ in ordered if g[2]]
     funcs = sorted({f[0] for f in (classify(j)[0] for j in jobs) if f})
     tag_line = " ".join(t for t in tags if t) + ("\n" + " ".join("#" + f for f in funcs) if funcs else "")
@@ -1228,10 +1228,20 @@ def main():
                     seen[sk(k)] = {"ch": key, "t": NOW.isoformat()}
         queues[key] = to_post
 
-    # Digest channels: one compact message (or a few) per run, grouped by country
+    # Digest channels: one compact message (or a few) per run, grouped by country.
+    # The bot runs hourly but only posts every `digest_every_hours` (or sooner if many jobs pile up);
+    # jobs that wait are not marked as seen, so the next run picks them up again.
+    every = float(s.get("digest_every_hours", 3))
+    early = int(s.get("digest_post_early_at", 30))
+    last_post = state.setdefault("last_post", {})
     for key in [k for k in order if queues.get(k) and channels[k].get("format", "digest") == "digest"]:
         ch = channels[key]
         jobs = queues.pop(key)
+        since = (NOW - parse_date(last_post[key])).total_seconds() / 3600 if last_post.get(key) else 999
+        if since < every - 0.25 and len(jobs) < early and "--now" not in sys.argv:
+            log(f"  {key}: {len(jobs)} new jobs waiting; last digest {since:.1f}h ago, next in "
+                f"~{every - since:.1f}h (or at {early} jobs)")
+            continue
         for text in digest_messages(jobs, ch):
             if dry:
                 log(f"\n--- DRY RUN DIGEST [{key}] ---\n" + text)
@@ -1245,6 +1255,7 @@ def main():
             for j in jobs:
                 for k in (j["id"], j["dedupe"], j["ukey"]):
                     seen[f"{key}::{k}"] = {"ch": key, "t": NOW.isoformat()}
+            last_post[key] = NOW.isoformat()
             log(f"  {key}: posted a digest of {len(jobs)} jobs")
 
     # "Card" channels: one detailed post per job, round-robin across channels
