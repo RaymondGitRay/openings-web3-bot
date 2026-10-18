@@ -52,5 +52,13 @@ jobs:
           git config user.name "openings-bot"
           git config user.email "openings-bot@users.noreply.github.com"
           git add seen_jobs.json || true
-          git diff --cached --quiet || git commit -m "Update seen jobs [skip ci]"
-          git push || echo "nothing to push"
+          git diff --cached --quiet && exit 0
+          git commit -m "Update seen jobs [skip ci]"
+          # If the repo changed while the bot ran (e.g. a code edit), merge and retry so the
+          # list of posted jobs is never lost (a lost list would cause repeat posts).
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase -X theirs || { git rebase --abort; git pull --no-rebase -X ours; }
+            sleep 5
+          done
+          echo "::error::Could not save seen_jobs.json"; exit 1
