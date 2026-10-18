@@ -1252,7 +1252,7 @@ def main():
 
     # Phase 1: every channel collects from its own sources
     order = list(channels)
-    collected, queues = {}, {}
+    collected, queues, site_jobs = {}, {}, {}
     for key in order:
         ch = channels[key]
         log(f"\n=== {key} → {ch['chat_id']} ===")
@@ -1266,6 +1266,7 @@ def main():
         if ch.get("remote_only"):
             jobs = [j for j in jobs if j.get("remote")]
             log(f"  remote only: {len(jobs)} remote jobs")
+        site_jobs[key] = jobs  # everything open right now also goes on the website
         if "--preview" in sys.argv and not check:
             # Show what a digest looks like using the most recent jobs (already posted or not).
             # Nothing is marked as seen and the digest timer is untouched.
@@ -1349,6 +1350,10 @@ def main():
                     seen[f"{key}::{k}"] = {"ch": key, "t": NOW.isoformat()}
             last_post[key] = NOW.isoformat()
             log(f"  {key}: posted a digest of {len(jobs)} jobs")
+            who_store = state.setdefault("who", {})  # keep the AI lines for the website
+            for j in jobs:
+                if j["dedupe"] in _who_short_cache:
+                    who_store[j["dedupe"]] = {"l": _who_short_cache[j["dedupe"]], "t": NOW.isoformat()}
 
     # "Card" channels: one detailed post per job, round-robin across channels
     active = [k for k in order if queues.get(k)]
@@ -1377,6 +1382,17 @@ def main():
     # forget entries older than remember_days
     cutoff = NOW - timedelta(days=int(s.get("remember_days", 180)))
     state["seen"] = {k: v for k, v in seen.items() if (parse_date(v.get("t")) or NOW) > cutoff}
+    who_cut = NOW - timedelta(days=60)
+    state["who"] = {k: v for k, v in state.get("who", {}).items() if (parse_date(v.get("t")) or NOW) > who_cut}
+
+    # Website: one page per open job + listing pages, published to GitHub Pages by the workflow
+    if not check and site_jobs:
+        try:
+            import site_builder
+            site_builder.build(site_jobs, channels, cfg, group_of, classify,
+                               {k: v["l"] for k, v in state["who"].items()}, log)
+        except Exception as ex:
+            log(f"  ! website build failed: {ex}")
 
     if check:
         ok = sorted(k for k, v in state["platforms"].items() if v["ats"] != "none")
