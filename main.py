@@ -1236,6 +1236,24 @@ def main():
         if ch.get("remote_only"):
             jobs = [j for j in jobs if j.get("remote")]
             log(f"  remote only: {len(jobs)} remote jobs")
+        if "--preview" in sys.argv and not check:
+            # Show what a digest looks like using the most recent jobs (already posted or not).
+            # Nothing is marked as seen and the digest timer is untouched.
+            sample, keys = [], set()
+            for j in sorted(jobs, key=lambda j: j["posted"] or datetime.min.replace(tzinfo=timezone.utc),
+                            reverse=True):
+                if j["url"] and j["title"] and j["dedupe"] not in keys:
+                    keys.add(j["dedupe"])
+                    sample.append(j)
+            sample = sample[:int(s.get("preview_jobs", 15))]
+            for text in digest_messages(sample, ch):
+                if dry:
+                    log("\n--- PREVIEW DIGEST ---\n" + text)
+                else:
+                    send(token, ch["chat_id"], text)
+                    time.sleep(1.5)
+            log(f"  {key}: preview digest of {len(sample)} recent jobs (nothing marked as seen)")
+            continue
         if check:
             continue
         sk = lambda k: f"{key}::{k}"
