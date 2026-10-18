@@ -852,6 +852,13 @@ def who_ai(j, short=False):
             r = gemini_call(key, model, prompt)
             if r.status_code == 400 and "thinking" in r.text.lower():
                 r = gemini_call(key, model, prompt, thinking=False)
+            # Busy (503) or per-minute limit (429): wait and retry instead of giving up
+            for wait in (8, 25):
+                if r.status_code not in (429, 503):
+                    break
+                m = re.search(r'"retryDelay":\s*"(\d+)', r.text)
+                time.sleep(min(int(m.group(1)) + 1, 40) if m else wait)
+                r = gemini_call(key, model, prompt)
             if not r.ok:
                 log(f"  ! Gemini {model} {r.status_code}: {r.text[:200]}")
                 raise RuntimeError("bad status")
@@ -860,6 +867,7 @@ def who_ai(j, short=False):
             text = re.sub(r"\s+", " ", text).strip(' "')
             if 10 < len(text) < 300:
                 _gemini["models"] = [model] + [m for m in _gemini["models"] if m != model]
+                _gemini["failures"] = 0  # only consecutive failures switch AI off
                 return text
             raise RuntimeError("empty answer")
         except Exception as e:
