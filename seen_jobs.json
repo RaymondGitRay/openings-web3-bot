@@ -174,49 +174,49 @@
   },
   "workable:activate-interactive-pte-ltd": {
    "ch": "tech",
-   "fails": 1,
+   "fails": 0,
    "found": "2026-10-20",
    "name": "Activate Interactive Pte Ltd",
    "via": "job link"
   },
   "workable:anza-xyz": {
-   "fails": 1,
+   "fails": 0,
    "found": "2026-10-17",
    "name": "Anza",
    "via": "careers page"
   },
   "workable:seeq": {
    "ch": "tech",
-   "fails": 1,
+   "fails": 0,
    "found": "2026-10-20",
    "name": "Self Financial",
    "via": "job link"
   },
   "workable:zodia-custody": {
-   "fails": 1,
+   "fails": 0,
    "found": "2026-10-17",
    "name": "Zodia Custody",
    "via": "careers page"
   }
  },
  "google": {
-  "last_search": "2026-11-07T23:43:56.010217+00:00",
+  "last_search": "2026-11-08T06:20:57.543049+00:00",
   "month": "2026-11",
-  "next": 95,
-  "used": 26
+  "next": 96,
+  "used": 27
  },
  "last_post": {
-  "tech": "2026-11-07T15:47:14.033666+00:00",
-  "web3": "2026-11-07T15:47:14.033666+00:00"
+  "tech": "2026-11-08T06:20:57.543049+00:00",
+  "web3": "2026-11-08T06:20:57.543049+00:00"
  },
  "platforms": {
   "1inch": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "1password": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "a16zcrypto": {
    "ats": "none",
@@ -232,27 +232,27 @@
   },
   "agoda": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "agora": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "airbyte": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "airtable": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "airtasker": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "alchemy": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "alchemypay": {
    "ats": "none",
@@ -260,7 +260,11 @@
   },
   "algolia": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "algorand": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "algorandfoundation": {
    "ats": "none",
@@ -268,15 +272,15 @@
   },
   "ambergroup": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "amplitude": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "anchorage": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "anchoragedigital": {
    "ats": "none",
@@ -284,7 +288,7 @@
   },
   "animocabrands": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ankr": {
    "ats": "none",
@@ -296,11 +300,11 @@
   },
   "aptoslabs": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "arbitrumfoundation": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "argent": {
    "ats": "none",
@@ -312,7 +316,11 @@
   },
   "asana": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "atlassian": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "auros": {
    "ats": "none",
@@ -322,13 +330,17 @@
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "avalanche": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "avara": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
   "b2c2": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "babylonlabs": {
    "ats": "none",
@@ -340,11 +352,15 @@
   },
   "banxa": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "base": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "benchling": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "berachain": {
    "ats": "none",
@@ -352,11 +368,11 @@
   },
   "binance": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bitfinex": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bitflyer": {
    "ats": "none",
@@ -364,31 +380,31 @@
   },
   "bitget": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bitgo": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bitkub": {
    "ats": "breezy",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bitmex": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bitpanda": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bitso": {
    "ats": "bamboohr",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bitstamp": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bitwise": {
    "ats": "none",
@@ -400,15 +416,15 @@
   },
   "blockchain": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "blockdaemon": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "blockworks": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "blur": {
    "ats": "none",
@@ -416,35 +432,51 @@
   },
   "bridge": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bridgexyz": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "browserstack": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "bukalapak": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "bullish": {
    "ats": "breezy",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bvnk": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "bybit": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "calendly": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "canva": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "carousell": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ceffu": {
    "ats": "bamboohr",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "celestia": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "celestialabs": {
    "ats": "none",
@@ -452,15 +484,15 @@
   },
   "celonis": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "centrifuge": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "certik": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "chainalysis": {
    "ats": "none",
@@ -470,29 +502,37 @@
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "chainsafe": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "chainsecurity": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
   "chainstack": {
    "ats": "bamboohr",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "chargebee": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "circle": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "cloudflare": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "cobo": {
    "ats": "bamboohr",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "coinbase": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "coincheck": {
    "ats": "none",
@@ -500,19 +540,19 @@
   },
   "coindcx": {
    "ats": "pinpoint",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "coindesk": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "coinhako": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "coinjar": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "coinmetrics": {
    "ats": "none",
@@ -520,39 +560,39 @@
   },
   "coinshares": {
    "ats": "teamtailor",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "coinswitch": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "compound": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "confluent": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "consensys": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "contentful": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "copper": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "copperco": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "coupang": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "cronos": {
    "ats": "none",
@@ -564,7 +604,7 @@
   },
   "crypto": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "cryptocom": {
    "ats": "none",
@@ -572,7 +612,7 @@
   },
   "cultureamp": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "cumberland": {
    "ats": "none",
@@ -588,7 +628,7 @@
   },
   "datadog": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "dbsdigitalexchange": {
    "ats": "none",
@@ -598,17 +638,25 @@
    "ats": "none",
    "checked": "2026-11-01T16:51:14.952479+00:00"
   },
+  "deliveryhero": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "deribit": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
   "dfns": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "discord": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "doordash": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "dourolabs": {
    "ats": "none",
@@ -616,11 +664,11 @@
   },
   "drata": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "dropbox": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "dunamu": {
    "ats": "none",
@@ -628,11 +676,15 @@
   },
   "dune": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "duneanalytics": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
+  },
+  "dunzo": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "dydx": {
    "ats": "none",
@@ -656,31 +708,39 @@
   },
   "elastic": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "elliptic": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "employmenthero": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "emurgo": {
    "ats": "breezy",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ethena": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ethenalabs": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ethereumfoundation": {
    "ats": "smartrecruiters",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "exodus": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "falconx": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "farcaster": {
    "ats": "none",
@@ -688,35 +748,39 @@
   },
   "figma": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "figment": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "figure": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "filecoinfoundation": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "fireblocks": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "fivetran": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "flashbots": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "flipkart": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "flowdesk": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "flowfoundation": {
    "ats": "none",
@@ -724,7 +788,11 @@
   },
   "fly": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "foodpanda": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "fordefi": {
    "ats": "none",
@@ -732,15 +800,15 @@
   },
   "framework": {
    "ats": "breezy",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "freshworks": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "galaxy": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "galaxydigital": {
    "ats": "none",
@@ -748,7 +816,11 @@
   },
   "galaxydigitalservices": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "garena": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "gateio": {
    "ats": "none",
@@ -756,15 +828,23 @@
   },
   "gemini": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "github": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "gitlab": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "glassnode": {
    "ats": "bamboohr",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "glints": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "gmx": {
    "ats": "none",
@@ -772,19 +852,27 @@
   },
   "gnosis": {
    "ats": "bamboohr",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "gojek": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "gotogroup": {
    "ats": "none",
    "checked": "2026-11-01T16:51:14.952479+00:00"
   },
+  "grab": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "grafanalabs": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "grayscale": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "gsr": {
    "ats": "none",
@@ -792,11 +880,15 @@
   },
   "gsrmarkets": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "hashgraph": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "hashicorp": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "hashkey": {
    "ats": "none",
@@ -814,13 +906,17 @@
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "hubspot": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "immunefi": {
    "ats": "none",
    "checked": "2026-11-05T18:51:28.373354+00:00"
   },
   "immutable": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "independentreserve": {
    "ats": "none",
@@ -832,7 +928,7 @@
   },
   "injective": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "injectivelabs": {
    "ats": "none",
@@ -844,15 +940,23 @@
   },
   "instacart": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "interchain": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "interoplabs": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "iohk": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "jito": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "jitolabs": {
    "ats": "none",
@@ -860,11 +964,11 @@
   },
   "jumpcrypto": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "jumptrading": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "jupiter": {
    "ats": "none",
@@ -874,9 +978,25 @@
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "kakao": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "kava": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "keyrock": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "kiln": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "klook": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "komainu": {
    "ats": "none",
@@ -884,7 +1004,7 @@
   },
   "kraken": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "kucoin": {
    "ats": "none",
@@ -892,15 +1012,19 @@
   },
   "lattice": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "layerzerolabs": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "lazada": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ledger": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ledn": {
    "ats": "none",
@@ -909,6 +1033,10 @@
   "lemoncash": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
+  },
+  "lido": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "lidofinance": {
    "ats": "none",
@@ -920,27 +1048,31 @@
   },
   "linear": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "lineyahoo": {
    "ats": "none",
    "checked": "2026-11-01T16:51:14.952479+00:00"
   },
+  "linktree": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "loom": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "luno": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "lyft": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "magiceden": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "magiclabs": {
    "ats": "none",
@@ -952,7 +1084,7 @@
   },
   "mantle": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "maplefinance": {
    "ats": "none",
@@ -968,19 +1100,19 @@
   },
   "meesho": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "mercadobitcoin": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "mercari": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "mercuryo": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "merkle": {
    "ats": "none",
@@ -988,11 +1120,11 @@
   },
   "merklescience": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "messari": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "metamask": {
    "ats": "none",
@@ -1004,11 +1136,11 @@
   },
   "miro": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "mixpanel": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "monad": {
    "ats": "none",
@@ -1020,15 +1152,15 @@
   },
   "mongodb": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "moonpay": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "morpho": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "morpholabs": {
    "ats": "none",
@@ -1044,7 +1176,7 @@
   },
   "mystenlabs": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "mythicalgames": {
    "ats": "none",
@@ -1052,31 +1184,43 @@
   },
   "n8n": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "nansen": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "naver": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "near": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "nearfoundation": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "neon": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "nexo": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ninjavan": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "notabene": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "offchainlabs": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ohmyhome": {
    "ats": "none",
@@ -1084,35 +1228,39 @@
   },
   "okta": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "okx": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ondofinance": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "opensea": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "openzeppelin": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "oplabs": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "optimism": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "osl": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "oyster": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "p2pvalidator": {
    "ats": "none",
@@ -1124,11 +1272,11 @@
   },
   "paradigm": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "parity": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "paritytechnologies": {
    "ats": "none",
@@ -1136,15 +1284,19 @@
   },
   "paxos": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "pendle": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "personio": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "phantom": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "pintu": {
    "ats": "none",
@@ -1152,7 +1304,11 @@
   },
   "planetscale": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "polygon": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "polygonlabs": {
    "ats": "none",
@@ -1160,11 +1316,19 @@
   },
   "posthog": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "postman": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "privy": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "propertyguru": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "protocollabs": {
    "ats": "none",
@@ -1172,19 +1336,19 @@
   },
   "pythnetwork": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "qredo": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "quicknode": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "railway": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "rainbow": {
    "ats": "none",
@@ -1194,17 +1358,25 @@
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "rakuten": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "rampnetwork": {
    "ats": "none",
    "checked": "2026-11-03T01:40:49.562436+00:00"
   },
+  "razer": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "remotecom": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "render": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "retool": {
    "ats": "none",
@@ -1212,35 +1384,39 @@
   },
   "ripio": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ripple": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "safe": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "safeglobal": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "safeheron": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "safetyculture": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "samsara": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "sardine": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "satoshilabs": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "sbivc": {
    "ats": "none",
@@ -1250,9 +1426,17 @@
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "sea": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "securitize": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "segment": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "seilabs": {
    "ats": "none",
@@ -1264,27 +1448,51 @@
   },
   "sentry": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "shopback": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "shopee": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "shopify": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "sigma": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "skyecosystem": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "skymavis": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "smartcontractkit": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "smartnews": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "snowflake": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "snyk": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "solana": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "solanafoundation": {
    "ats": "none",
@@ -1292,11 +1500,11 @@
   },
   "solanalabs": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "sorare": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "spearbit": {
    "ats": "none",
@@ -1304,11 +1512,11 @@
   },
   "squarespace": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "starknetfoundation": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "starkware": {
    "ats": "none",
@@ -1316,7 +1524,7 @@
   },
   "stellar": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "stellardevelopmentfoundation": {
    "ats": "none",
@@ -1324,7 +1532,7 @@
   },
   "straitsx": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "suifoundation": {
    "ats": "none",
@@ -1332,11 +1540,15 @@
   },
   "supabase": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "superstate": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "swiggy": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "swirldslabs": {
    "ats": "none",
@@ -1352,7 +1564,7 @@
   },
   "tailscale": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "talos": {
    "ats": "none",
@@ -1372,11 +1584,11 @@
   },
   "temporal": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "tenderly": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "theblock": {
    "ats": "none",
@@ -1386,17 +1598,25 @@
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "thoughtspot": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tiket": {
    "ats": "none",
    "checked": "2026-11-01T16:51:14.952479+00:00"
   },
   "toast": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "tokocrypto": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
+  },
+  "tokopedia": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "ton": {
    "ats": "none",
@@ -1412,19 +1632,23 @@
   },
   "trailofbits": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "transak": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "traveloka": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "trilitech": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "triplea": {
    "ats": "recruitee",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "trmlabs": {
    "ats": "none",
@@ -1432,23 +1656,27 @@
   },
   "trustwallet": {
    "ats": "bamboohr",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "turnkey": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "twilio": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "typeform": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "uber": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "uniswap": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "uniswaplabs": {
    "ats": "none",
@@ -1460,7 +1688,7 @@
   },
   "uphold": {
    "ats": "bamboohr",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "upholdinc": {
    "ats": "none",
@@ -1472,19 +1700,19 @@
   },
   "valr": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "vanta": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "vercel": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "verkada": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "web3auth": {
    "ats": "none",
@@ -1496,7 +1724,7 @@
   },
   "webflow": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "wintermute": {
    "ats": "none",
@@ -1508,11 +1736,11 @@
   },
   "wirex": {
    "ats": "workable",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "wiz": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "worldcoin": {
    "ats": "none",
@@ -1528,7 +1756,7 @@
   },
   "xero": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "xlabs": {
    "ats": "none",
@@ -1540,19 +1768,27 @@
   },
   "youhodler": {
    "ats": "bamboohr",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "yugalabs": {
    "ats": "bamboohr",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "zalora": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "zapier": {
    "ats": "ashby",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "zendesk": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "zerion": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "zerohash": {
    "ats": "none",
@@ -1560,7 +1796,7 @@
   },
   "zeta": {
    "ats": "lever",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   },
   "zksync": {
    "ats": "none",
@@ -1570,13 +1806,21 @@
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
+  "zoho": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "zomato": {
+   "ats": "workable",
+   "checked": "2026-11-08T06:20:57.543049+00:00"
+  },
   "zora": {
    "ats": "none",
    "checked": "2026-11-07T23:43:56.010217+00:00"
   },
   "zscaler": {
    "ats": "greenhouse",
-   "checked": "2026-11-07T23:43:56.010217+00:00"
+   "checked": "2026-11-08T06:20:57.543049+00:00"
   }
  },
  "remotive_last": "2026-10-17T17:41:29.990097+00:00",
@@ -3593,6 +3837,10 @@
    "ch": "tech",
    "t": "2026-10-31T07:06:11.650803+00:00"
   },
+  "tech::ab:ba140960-361c-4357-8a8e-e4825f0d200b": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::ab:ba20d64f-ce7f-4748-936c-684763b2331e": {
    "ch": "tech",
    "t": "2026-10-18T11:30:59.394003+00:00"
@@ -5065,6 +5313,10 @@
    "ch": "tech",
    "t": "2026-11-05T02:36:07.259845+00:00"
   },
+  "tech::allcan international pte ltd|software engineer backend": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::allianz insurance|ai software engineer": {
    "ch": "tech",
    "t": "2026-10-21T01:43:31.211625+00:00"
@@ -5396,6 +5648,10 @@
   "tech::asana|staff software engineer query and access control": {
    "ch": "tech",
    "t": "2026-10-19T10:58:14.994941+00:00"
+  },
+  "tech::augmented|senior backend engineer go blockchain fintech": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::avant arte|creative producer": {
    "ch": "tech",
@@ -7889,6 +8145,10 @@
    "ch": "tech",
    "t": "2026-11-05T18:51:28.373354+00:00"
   },
+  "tech::datadog|technical escalations engineer 2 web platform": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::datadog|technical program manager technical solutions": {
    "ch": "tech",
    "t": "2026-10-18T11:30:59.394003+00:00"
@@ -8072,6 +8332,10 @@
   "tech::ethos beath chapman idibu|lead software engineer full stack": {
    "ch": "tech",
    "t": "2026-11-02T07:46:48.914364+00:00"
+  },
+  "tech::ethos beath chapman idibu|node js software engineer": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::executiveplacements com|junior web developer": {
    "ch": "tech",
@@ -8420,6 +8684,10 @@
   "tech::galaxy|vp technical program manager": {
    "ch": "tech",
    "t": "2026-10-27T06:26:06.618411+00:00"
+  },
+  "tech::gauntlet|research engineer": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::gemini|senior associate corporate security": {
    "ch": "tech",
@@ -14469,6 +14737,10 @@
    "ch": "tech",
    "t": "2026-11-05T02:36:07.259845+00:00"
   },
+  "tech::gh:8351509": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::gh:8351641": {
    "ch": "tech",
    "t": "2026-11-04T15:34:00.266722+00:00"
@@ -16293,6 +16565,10 @@
    "ch": "tech",
    "t": "2026-10-21T07:50:03.863292+00:00"
   },
+  "tech::gj:eyJqb2JfdGl0bGUiOiJCYWNrZW5kIEVuZ2luZWVyIChBcHBsaWNhdGlvbiBEZXZlbG9wbWVudCkiLCJjb21wYW55X25hbWUiOiJNYW51cyBBSSIsImh0aWRvY2lkIjoiUEpsd1REblJyd3FvdC1lUkFBQUFBQT09IiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVVJFWWxkbFlrWTFUWFpYT1cwdE1qZG1SRlZCZEZSdWFFaHVlSE15WjBKNk1uUjBOM0E1TjFkVVgyTjNOMmt3YzB4SVYzRkNTemhpZGtkNVMxOUlRVk5IUkhjeVpGTkRPVFo1Ym01WlgwVTFMV1ppTkhGMloxVlBiWFZYYTB0TmJ6STJTbWcyTXpaR2RqUkRUekk0Tm1wdlJHdERYMlZsVlVSbFNrc3dNelJwUzBSTGVVbFFjWGxmVUhFU0Z6ZG9WSGRoY0Voc1EyVnFhemRmVlZCcGNXWlBObEZ6R2lKQlNFNHdSVGRHVEc0emRHTnVjRWRDWVZOV09GTnNaazg0YTJOSVNVUXhablYzIiwiZmN2IjoiMyIsImZjX2lkIjoiUEpsd1REblJyd3FvdC1lUkFBQUFBQT09In0=": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::gj:eyJqb2JfdGl0bGUiOiJCYWNrZW5kIEVuZ2luZWVyIiwiY29tcGFueV9uYW1lIjoiTW9kdWxhdGUiLCJodGlkb2NpZCI6Ikw3bnAzUlVuR040UlNyOXdBQUFBQUE9PSIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVSRVlsZGxXblZQTXpBNFowTjBlbVJUTFc5SlMzbG9SRWQzUzNvNFR6YzJYMmwwY25vd1NWTlZOMTloUkVKTFVsbzRVQzFxYVhVMVRIQTFPWFkxTjNoT1UwWkdZMFJvWkhVM2J6Uk1kRVZGUlU5d09IbGZSVTVYYVcweE1rb3diMFJqZUVGSWFscE1aVFZGYVVsWFlWRXdhWGxqV0RSa1pUaDJURXRRWTNkYWNFMDBOVGwwU1cxTFZEQVNGM0pzYm10aGN6WnVVRXB1VjNCMFVWQm5TVU5tYjBGckdpSkJTRTR3UlRkR1FXbDJiMUJNZFZsV2IyWm5RVlpaYzI5ZmJHRnljbUZzV0ZGMyIsImZjdiI6IjMiLCJmY19pZCI6Ikw3bnAzUlVuR040UlNyOXdBQUFBQUE9PSJ9": {
    "ch": "tech",
    "t": "2026-10-30T08:47:05.180484+00:00"
@@ -16421,6 +16697,10 @@
    "ch": "tech",
    "t": "2026-10-23T07:43:30.343317+00:00"
   },
+  "tech::gj:eyJqb2JfdGl0bGUiOiJGdWxsIFN0YWNrIFNvZnR3YXJlIEVuZ2luZWVyIChBVlMgSW5ub3ZhdGlvbiBMYWIpIiwiY29tcGFueV9uYW1lIjoiVGhhbGVzIiwiaHRpZG9jaWQiOiJramUtUXV1MmVwaUo1ODJlQUFBQUFBPT0iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVUkVZbGRsWWpKSk5HZFZOVlV4ZGpNeldGYzBaWEJCZG1GdFlXOWtObFJLYTFSRFVUaEhNRWRLWDNkQllrdEtaMlJCU0RCbWMybERhVlF4TW1kb1pHRktkamRVWDNsb1RWYzVlbmRQYVdGeU4weFFlR3BHV0dOS1ptNUJjbDlJVWxwU1gzcGxaRUpVWnpSaU5GOHhkVE5DTTJacFlqaElSRUZ2UzBNMVlWaE1Xa2hSZEdsTVEzVnlSVmNTRnpkb1ZIZGhjRWhzUTJWcWF6ZGZWVkJwY1daUE5sRnpHaUpCU0U0d1JUZEhlRUpKZEVKVVoya3ljbmhRVm5sSlJubEhVWGxWVms5TVZYTjMiLCJmY3YiOiIzIiwiZmNfaWQiOiJramUtUXV1MmVwaUo1ODJlQUFBQUFBPT0ifQ==": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::gj:eyJqb2JfdGl0bGUiOiJGdWxsLVN0YWNrIFNvZnR3YXJlIEVuZ2luZWVyIChOZXcgR3JhZCkgLSBSZW1vdGUiLCJjb21wYW55X25hbWUiOiJTcHJ1Y2VJRCIsImh0aWRvY2lkIjoiVXNtSks2SDM1MVdBVi14NEFBQUFBQT09IiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFNuZHZWWFYzUkVFMVNVNXdkRTE0Vm1kWVVHNTJZazVsV2tSMk5IbFhUM0pqWW1oU04wcHBObXB4U1MxU2RYQllRMUk0VGtGalNGaGhSMmREUlZjdFVsOTVNRWhxTUZWbWNWaFpXa3hHWjBsTlJYZzBNVFV0WWpCaGQzUXpSWFJaVEZkbVgwRk5ZMUl5Y1RoV2IzWm5PR0paWTFObk1rOVRkREp1Ymtwa1N6bExaR3h3Vms0U0YxcGpjbGRoYzFkMlQyUXpWRFZPYjFCNE9ETk1lVkUwR2lKQlJITnlPV1pUY1hwMWFEZENPSFJJWTNkT1ZIZHpRMVpZWlZad2FVODNkV3hSIiwiZmN2IjoiMyIsImZjX2lkIjoiVXNtSks2SDM1MVdBVi14NEFBQUFBQT09In0=": {
    "ch": "tech",
    "t": "2026-10-20T01:56:17.862853+00:00"
@@ -16521,6 +16801,10 @@
    "ch": "tech",
    "t": "2026-10-21T01:43:31.211625+00:00"
   },
+  "tech::gj:eyJqb2JfdGl0bGUiOiJOb2RlIGpzIFNvZnR3YXJlIEVuZ2luZWVyIiwiY29tcGFueV9uYW1lIjoiRXRob3MgQmVhdGggQ2hhcG1hbiBJZGlidSIsImh0aWRvY2lkIjoidHUyaEJrTzRIdXhsNVJEdUFBQUFBQT09IiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVVJFWWxkbFlWcEJPSGRETW1wSWREQlFVMUY0Tkc0NFdIY3hlbmRoWlhWTmNIQkNUME5TYlUxYU1XcFhNazF3WVdaSFdXMUZOelV6VERsRFJHWXpRWEZIUkVveFJXTXpka3N3U1V4UlVYTTRTMmRPTVc1TWRrMTZRbUpLVW1nd1JWbFRkM3BXY1RaeVVGWXhNMjVWVlZST2JsaHhhM1ZHTkhsRGQwZFNjbWhyY204MmFqRnljM1V4YW5NU0Z6ZG9WSGRoY0Voc1EyVnFhemRmVlZCcGNXWlBObEZ6R2lKQlNFNHdSVGRHZG14NWNVbGpkVFJLVVV3NVREUXRNWEJrWTBOTFUyaDNSMmxuIiwiZmN2IjoiMyIsImZjX2lkIjoidHUyaEJrTzRIdXhsNVJEdUFBQUFBQT09In0=": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::gj:eyJqb2JfdGl0bGUiOiJQcm9kdWN0IE1hbmFnZXIgLSBBUEFDJyBFeHBhbnNpb24iLCJjb21wYW55X25hbWUiOiJTb2tpbiIsImh0aWRvY2lkIjoiTlk5em1WLUE5cmRfbTZGOEFBQUFBQT09IiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFMzcFVSMFZwZEd0clozRlZSRFY0WjBSV1dGaEZkaTFYUnpOV2RucFFaR1JsYjNKRWVVNUNPVEZyYkhoc0xYTTFOV2htVlRBNWRuSlhXazVWVGxaYVNIcHJhMFpOY0hka2FscHRjbFIwU0V4ZldqbEtWVFJOYW5odVRtdEVMVzh3VjFoRmJuWTRlRk51WlRSSmIwTmtVa3AzU1RWaGJIVm9aMmR5WjJVeU5VTlBWRE5rYWkwU0YyTkJNMk5oYjJKVlNYTTNVV3RRU1ZCeVkwOXRNbEUwR2lKQlJITnlPV1pUVEVKR1pqUlNNRk56VUZGelZFSjNlWGhqU1Zoa2RGRmxXa1pSIiwiZmN2IjoiMyIsImZjX2lkIjoiTlk5em1WLUE5cmRfbTZGOEFBQUFBQT09In0=": {
    "ch": "tech",
    "t": "2026-10-24T01:43:34.159379+00:00"
@@ -16564,6 +16848,10 @@
   "tech::gj:eyJqb2JfdGl0bGUiOiJQcmluY2lwYWwgfCBTZW5pb3IgU29mdHdhcmUgRW5naW5lZXIgQysrIHwgTWFudWZhY3R1cmluZyIsImNvbXBhbnlfbmFtZSI6IlJhbmRzdGFkIiwiaHRpZG9jaWQiOiJYRlNIZW9HZFV5aERTMXVMQUFBQUFBPT0iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVcHBWRFIwU205VVFXRk5ObVJIZURaNWRrRk5iM04wY1hKU1VYTjNjVkZ1YzB0cGJHOUZlalpHWkdsdmVHNVNkbll3VDJoNllXOWpiVlJZUVVwaFgzSkdRMmhwU0V0TWNVNDBNWGRsU1dKa2JrUlJUVEJ4WDBkRlZ6WlhRVzVHYkV0RFZYVnRWRUpPYkZadUxURmhiMVZUWmtwcGEyVmpVRlZvTWpGc09XbGpWVlZoVWxRdFlUZERUblFTRjBsR1dGZGhkV1o0VDB0eGVuSjFSVkJ6Y25rMGJVRTRHaUpCUkhOeU9XWlNNM1JuTVVkVUxUWjZlVTFOV25KelJIaHZiMWxuTXpKT2RtNUIiLCJmY3YiOiIzIiwiZmNfaWQiOiJYRlNIZW9HZFV5aERTMXVMQUFBQUFBPT0ifQ==": {
    "ch": "tech",
    "t": "2026-10-19T17:35:50.213321+00:00"
+  },
+  "tech::gj:eyJqb2JfdGl0bGUiOiJQeXRob24gQyMgLSBTb2Z0d2FyZSBFbmdpbmVlciAvIERldmVsb3BlciAtIEZpbmFuY2lhbCBNYXJrZXRzIiwiY29tcGFueV9uYW1lIjoiR3Jhdml0YXMgUmVjcnVpdG1lbnQgR3JvdXAgKEdsb2JhbCkgTHRkIiwiaHRpZG9jaWQiOiI3c0FINHQtTG5CeVFxQkVoQUFBQUFBPT0iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVUkVZbGRsV25aS2NFaFhWVzkzTm1OSE1teE5VekpMWjFaeVpYWlZiMjlhTldGUE1XWjFPWGx5VW10MGJYQklUa2RwYVVwUWRsSmFTMDQwYjAxWFpFZ3pabTkwVFZwUWEwdHVlRmRsTkZGSVMwRkZWUzFyWDIwNWNsUmFjazgzY0c1dllsOW9aRll6UVUwek1WcExjbWhtTFhVMVEwSmhaRVI2ZUZWNVRVMTFSM2hHVlhCRmRYSmpPREVTRnpkb1ZIZGhjRWhzUTJWcWF6ZGZWVkJwY1daUE5sRnpHaUpCU0U0d1JUZEhhVXcxV1UxU2FuZGlVbTVxVm1WMmMydDNWVzFoZFZodVpuZEIiLCJmY3YiOiIzIiwiZmNfaWQiOiI3c0FINHQtTG5CeVFxQkVoQUFBQUFBPT0ifQ==": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::gj:eyJqb2JfdGl0bGUiOiJQeXRob24gU29mdHdhcmUgRW5naW5lZXIg4oCTIFdvcmsgRnJvbSBIb21lIiwiY29tcGFueV9uYW1lIjoiSVQgUmVjcnVpdGVycyBmb3IgVGVjaCBKb2JzIC0gaXRyZWNydWl0ZXJzLnRlY2hub2xvZ3kiLCJodGlkb2NpZCI6ImlITU5mR2VwS3NjMUxmSWlBQUFBQUE9PSIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVSRVlsZGxXalo0YjFwdVF6bEdlVzB0Y2tnd1drNVFjMUJsVm5sSmFYUXRjVFpRYmpNMllXMVdiblJXTFZsTWRIZGhYMTlHWTNkM1NrWm5ibVZ1VUhSVExXOHlXbWxSYlhsSmJqbHVkMU5TVjFjMU1tdGhiREp0U0hwclYyWnJVVmxoYTI1c1UwSnhiVTVFUlVKQlYyeGhRa1V6YjBka2FYbDRUMWhvYzJaUmNWaHdPRmxqYzFSNU1IWVNGekJFZG5CaGRIcGFSelUyVG5kaWExQTVkV1ZEYlVFMEdpSkJTRTR3UlRkR01VUTVjMUl4U1hWV2NHRmpabTVqTVV4d1EwczFVbXhQVDNaQiIsImZjdiI6IjMiLCJmY19pZCI6ImlITU5mR2VwS3NjMUxmSWlBQUFBQUE9PSJ9": {
    "ch": "tech",
@@ -16692,6 +16980,10 @@
   "tech::gj:eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBFbmdpbmVlciAoQW5kcm9pZCkiLCJjb21wYW55X25hbWUiOiJUaGFsZXMiLCJodGlkb2NpZCI6IkFsZ2ZxWTdvQUR6YWZWQVdBQUFBQUE9PSIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVwcFZEUjBTVlpqTXpndE5UWldNRlI1UzBaTmVVeDBOMlUxVEZwTFUxTktRMVZ2U1dGNWJDMXZWbVJLWmpOaE9IRTRPRGRXUVVONGVUQjRkR052VVVoeFdEaERRVmsyVWt4ME5EWkhZV281YzNaRGRUTmlhVkZNTW1kUFRYQTNlbVIzV0RrNE1rUndPVEZsYkdoWFNGWnRiM0V4YjBsNlUzbG9lV0ZsTlRWSlJFdGFUbHBYV0d0Q2NtNFNGMGxHV0ZkaGRXWjRUMHR4ZW5KMVJWQnpjbmswYlVFNEdpSkJSSE55T1daUmVGSTJTa3RpTUZkT1RVdEdjR2x3YVZVdExWRmZVa1pEUW1kQiIsImZjdiI6IjMiLCJmY19pZCI6IkFsZ2ZxWTdvQUR6YWZWQVdBQUFBQUE9PSJ9": {
    "ch": "tech",
    "t": "2026-10-19T17:35:50.213321+00:00"
+  },
+  "tech::gj:eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBFbmdpbmVlciAoQmFja2VuZCkiLCJjb21wYW55X25hbWUiOiJBTExDQU4gSU5URVJOQVRJT05BTCBQVEUuIExURC4iLCJodGlkb2NpZCI6Ik9iVjV2enJpdTF2cjlEdDdBQUFBQUE9PSIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVSRVlsZGxXUzFRTjJsMFZXaGpYMHBOZDJ4SVZHUmhhMVF3VDBoMlRtRkRVRm90Tnpsa2VtNXJkMFp3VkVzd2FXcE9abFJpWlZaNU5qSnhNVGxzWlZGYVNVNTBPR05WTTFkWVVUazJSRWN5Tm1OcVlrNDRRMjlQZW5SbFREWk5kMkp5WnpOTlZEZHphemRNUm1kd05qUjNjV0p3YjNGeVdtczNUSE5mVGt0MWVqTlFVbVkzZDI5d1gwZ1NGemRvVkhkaGNFaHNRMlZxYXpkZlZWQnBjV1pQTmxGekdpSkJTRTR3UlRkR2NVRnVaVXRHYVhRd1RuZFNPRFpzUzFvMmVXMXlUQzFNVTBsQiIsImZjdiI6IjMiLCJmY19pZCI6Ik9iVjV2enJpdTF2cjlEdDdBQUFBQUE9PSJ9": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::gj:eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBFbmdpbmVlciAoR2l0SHViIENvbnRyaWJ1dG9yKSDigJMgUmVtb3RlIChXb3JsZHdpZGUpIiwiY29tcGFueV9uYW1lIjoiUmVtb3RlSm9ic09uZSIsImh0aWRvY2lkIjoiTG9uLV8xMHNEV1JGWE9DR0FBQUFBQT09IiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVVJFWWxkbFdUZDZSbE5xVUY5aGFsTllaRVpaWVdOSFdFczVOalZ3UTJwbmRGUndORjlyU2paSlFVUmlaVkYzUzFKUFJtUmlURkk0VGtwTGMyOW9MV1ZMTjAxVWNsVjRRa1Y1ZVhoR1NqbEhabVJ5UzFKblJFbGFiakJNYlhWaFNEZFlNVmhUTTFZNVh6RkZZbmxSYUd4R2MxaDBTMnBZUkRaUE5VbFlTa2hGWmkxak5uaDBTMnBwT0VjU0Z6QkVkbkJoZEhwYVJ6VTJUbmRpYTFBNWRXVkRiVUUwR2lKQlNFNHdSVGRHUkdGbmIwRkxiVkpOUzNORVQzcHRWbEpKWVcxdWNWVnFWVzUzIiwiZmN2IjoiMyIsImZjX2lkIjoiTG9uLV8xMHNEV1JGWE9DR0FBQUFBQT09In0=": {
    "ch": "tech",
@@ -17472,6 +17764,10 @@
   "tech::grafana labs|strategic channel manager remote west coast us": {
    "ch": "tech",
    "t": "2026-11-03T01:40:49.562436+00:00"
+  },
+  "tech::gravitas recruitment group global ltd|python c software engineer developer financial markets": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::hdb housing development board|senior ux designer design systems": {
    "ch": "tech",
@@ -18296,6 +18592,10 @@
   "tech::manulife|full stack software engineer": {
    "ch": "tech",
    "t": "2026-10-19T17:35:50.213321+00:00"
+  },
+  "tech::manus ai|backend engineer application development": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::meesho|cluster head last mile": {
    "ch": "tech",
@@ -20837,6 +21137,10 @@
    "ch": "tech",
    "t": "2026-10-18T11:30:59.394003+00:00"
   },
+  "tech::snowflake|senior product manager extensible compute": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::snowflake|senior product manager horizontal ui experiences": {
    "ch": "tech",
    "t": "2026-10-18T11:30:59.394003+00:00"
@@ -21728,6 +22032,10 @@
   "tech::tether|ai research engineer agentic reinforcement learning 100 remote worldwide": {
    "ch": "tech",
    "t": "2026-11-04T06:43:54.726395+00:00"
+  },
+  "tech::thales|full stack software engineer avs innovation lab": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::thales|lead ui ux designer": {
    "ch": "tech",
@@ -23965,6 +24273,10 @@
    "ch": "tech",
    "t": "2026-11-04T06:43:54.726395+00:00"
   },
+  "tech::url:https://careers.datadoghq.com/detail/8351509": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::url:https://careers.datadoghq.com/detail/8354556": {
    "ch": "tech",
    "t": "2026-11-07T08:57:20.495758+00:00"
@@ -24032,6 +24344,10 @@
   "tech::url:https://careers.thalesgroup.com/global/en/job/r0340409/senior-software-devops-engineer-ife-ecs": {
    "ch": "tech",
    "t": "2026-10-29T16:59:35.931297+00:00"
+  },
+  "tech::url:https://careers.thalesgroup.com/global/en/job/r0345491/full-stack-software-engineer-avs-innovation-lab": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::url:https://careers.toasttab.com/jobs": {
    "ch": "tech",
@@ -29649,6 +29965,10 @@
    "ch": "tech",
    "t": "2026-10-29T02:35:38.769721+00:00"
   },
+  "tech::url:https://jobs.ashbyhq.com/snowflake/ba140960-361c-4357-8a8e-e4825f0d200b": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::url:https://jobs.ashbyhq.com/snowflake/bcde2a32-5fa1-4dfb-8208-23bfa859ff8c": {
    "ch": "tech",
    "t": "2026-10-18T11:30:59.394003+00:00"
@@ -31265,6 +31585,10 @@
    "ch": "tech",
    "t": "2026-10-30T16:02:12.673460+00:00"
   },
+  "tech::url:https://sg.linkedin.com/jobs/view/backend-engineer-application-development-at-manus-ai-4488112104": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::url:https://sg.linkedin.com/jobs/view/backend-lead-software-engineer-l5-%e2%80%94-bangkok-relocation-provided-at-agoda-4485115105": {
    "ch": "tech",
    "t": "2026-11-02T07:46:48.914364+00:00"
@@ -31372,6 +31696,10 @@
   "tech::url:https://sg.linkedin.com/jobs/view/software-engineer-2-at-dell-technologies-4472877692": {
    "ch": "tech",
    "t": "2026-10-25T16:36:19.840304+00:00"
+  },
+  "tech::url:https://sg.linkedin.com/jobs/view/software-engineer-backend-at-aquariux-fintech-4487584884": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::url:https://sg.linkedin.com/jobs/view/software-engineer-senior-software-engineer-ai-products-platform-ministry-of-education-at-govtech-singapore-4466859552": {
    "ch": "tech",
@@ -31556,6 +31884,10 @@
   "tech::url:https://web3.career/r/3czn1utm__bqy4ax": {
    "ch": "tech",
    "t": "2026-10-29T02:35:38.769721+00:00"
+  },
+  "tech::url:https://web3.career/r/3edm2utm__bqy4ax": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::url:https://web3.career/r/3etn1utm__bqy4ax": {
    "ch": "tech",
@@ -31792,6 +32124,10 @@
   "tech::url:https://web3.career/r/zato1utm__bqy4ax": {
    "ch": "tech",
    "t": "2026-11-04T06:43:54.726395+00:00"
+  },
+  "tech::url:https://web3.career/r/zedm2utm__bqy4ax": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::url:https://web3.career/r/zkzm1utm__bqy4ax": {
    "ch": "tech",
@@ -32209,6 +32545,10 @@
    "ch": "tech",
    "t": "2026-11-02T07:46:48.914364+00:00"
   },
+  "tech::url:https://www.ethosbc.com/job-details/node-js-software-engineer-in-contract-interim-jobs-1783588": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::url:https://www.fireblocks.com/careers/position": {
    "ch": "tech",
    "t": "2026-10-18T11:30:59.394003+00:00"
@@ -32244,6 +32584,10 @@
   "tech::url:https://www.jumptrading.com/hr/job": {
    "ch": "tech",
    "t": "2026-10-29T10:13:07.392142+00:00"
+  },
+  "tech::url:https://www.linkedin.com/jobs/view/4486954191": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "tech::url:https://www.linkedin.com/jobs/view/backend-security-engineer-remote-at-yo-ai-labs-4479320097": {
    "ch": "tech",
@@ -34433,6 +34777,14 @@
    "ch": "tech",
    "t": "2026-11-06T16:01:45.987475+00:00"
   },
+  "tech::w3c:156013": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "tech::w3c:156017": {
+   "ch": "tech",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "tech::w3c:58473": {
    "ch": "tech",
    "t": "2026-10-18T11:30:59.394003+00:00"
@@ -36320,6 +36672,10 @@
   "web3::asymmetric research|strategic partnerships manager": {
    "ch": "web3",
    "t": "2026-10-24T12:47:27.032675+00:00"
+  },
+  "web3::augmented|senior backend engineer go blockchain fintech": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "web3::ava labs|finance lead": {
    "ch": "web3",
@@ -38969,6 +39325,10 @@
    "ch": "web3",
    "t": "2026-10-17T20:42:41.527399+00:00"
   },
+  "web3::crypto com|chief trust amp treasury officer digital asset custody": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "web3::crypto com|chief trust treasury officer digital asset custody": {
    "ch": "web3",
    "t": "2026-11-07T02:03:45.039849+00:00"
@@ -39512,6 +39872,10 @@
   "web3::galaxy|vp technical program manager": {
    "ch": "web3",
    "t": "2026-10-27T06:26:06.618411+00:00"
+  },
+  "web3::gauntlet|research engineer": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "web3::gauntlet|trading operations lead": {
    "ch": "web3",
@@ -43277,6 +43641,10 @@
    "ch": "web3",
    "t": "2026-11-01T09:28:56.974111+00:00"
   },
+  "web3::newton|compliance associate canada wide remote": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "web3::newton|director of finance canada wide remote": {
    "ch": "web3",
    "t": "2026-10-21T01:43:31.211625+00:00"
@@ -44100,6 +44468,10 @@
   "web3::swissborg|accountant": {
    "ch": "web3",
    "t": "2026-10-21T14:07:55.703759+00:00"
+  },
+  "web3::swissborg|assistant e juridique": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "web3::swissborg|corporate amp legal administrator": {
    "ch": "web3",
@@ -47713,6 +48085,10 @@
    "ch": "web3",
    "t": "2026-10-25T06:19:23.489416+00:00"
   },
+  "web3::url:https://web3.career/r/0edm2utm__bqy4ax": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "web3::url:https://web3.career/r/0edo1utm__bqy4ax": {
    "ch": "web3",
    "t": "2026-10-29T10:13:07.392142+00:00"
@@ -47804,6 +48180,10 @@
   "web3::url:https://web3.career/r/1cto1utm__bqy4ax": {
    "ch": "web3",
    "t": "2026-11-06T08:00:25.626246+00:00"
+  },
+  "web3::url:https://web3.career/r/1edm2utm__bqy4ax": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "web3::url:https://web3.career/r/1edo1utm__bqy4ax": {
    "ch": "web3",
@@ -47968,6 +48348,10 @@
   "web3::url:https://web3.career/r/3czn1utm__bqy4ax": {
    "ch": "web3",
    "t": "2026-10-29T02:35:38.769721+00:00"
+  },
+  "web3::url:https://web3.career/r/3edm2utm__bqy4ax": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "web3::url:https://web3.career/r/3etn1utm__bqy4ax": {
    "ch": "web3",
@@ -48501,6 +48885,10 @@
    "ch": "web3",
    "t": "2026-11-06T08:00:25.626246+00:00"
   },
+  "web3::url:https://web3.career/r/yedm2utm__bqy4ax": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "web3::url:https://web3.career/r/yejn1utm__bqy4ax": {
    "ch": "web3",
    "t": "2026-10-22T01:38:17.122073+00:00"
@@ -48608,6 +48996,10 @@
   "web3::url:https://web3.career/r/zcjn1utm__bqy4ax": {
    "ch": "web3",
    "t": "2026-10-25T06:19:23.489416+00:00"
+  },
+  "web3::url:https://web3.career/r/zedm2utm__bqy4ax": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "web3::url:https://web3.career/r/zejn1utm__bqy4ax": {
    "ch": "web3",
@@ -50133,6 +50525,26 @@
    "ch": "web3",
    "t": "2026-11-07T08:57:20.495758+00:00"
   },
+  "web3::w3c:156012": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "web3::w3c:156013": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "web3::w3c:156014": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "web3::w3c:156015": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
+  "web3::w3c:156017": {
+   "ch": "web3",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "web3::w3c:20697": {
    "ch": "web3",
    "t": "2026-10-29T02:35:38.769721+00:00"
@@ -51151,6 +51563,10 @@
    "l": "BD and sales people with 5+ years of experience",
    "t": "2026-11-05T02:36:07.259845+00:00"
   },
+  "allcan international pte ltd|software engineer backend": {
+   "l": "Backend engineers, 5-10 yrs; distributed systems, databases, API design",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "allianz insurance|ai software engineer": {
    "l": "Full-stack engineers, 3+ yrs; Python, GenAI, LLMs, React",
    "t": "2026-10-21T01:43:31.211625+00:00"
@@ -51438,6 +51854,10 @@
   "asymmetric research|strategic partnerships manager": {
    "l": "NYC enterprise sales professionals, 1-2+ yrs; closing, networking, persuasion",
    "t": "2026-10-24T12:47:27.032675+00:00"
+  },
+  "augmented|senior backend engineer go blockchain fintech": {
+   "l": "Go backend engineers, 6+ yrs; blockchain, financial systems",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "avantsi semitech pte ltd|senior software engineer technical lead": {
    "l": "Automation engineers, 10+ yrs; C#, C++, motion control",
@@ -53475,6 +53895,10 @@
    "l": "Tech/Business grads, 3+ yrs; process automation, AI/LLMs, SQL",
    "t": "2026-10-21T07:50:03.863292+00:00"
   },
+  "crypto com|chief trust amp treasury officer digital asset custody": {
+   "l": "Trust and treasury executives, 10+ yrs; digital assets, banking, regulatory compliance",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "crypto com|chief trust treasury officer digital asset custody": {
    "l": "Trust and treasury leaders, 10+ yrs; digital-asset custody, treasury operations, banking",
    "t": "2026-11-07T02:03:45.039849+00:00"
@@ -53851,6 +54275,10 @@
    "l": "Technical support engineers, 3+ yrs; debugging, monitoring, APIs",
    "t": "2026-11-05T18:51:28.373354+00:00"
   },
+  "datadog|technical escalations engineer 2 web platform": {
+   "l": "Support engineers, 4+ yrs; web technologies, troubleshooting, authentication standards",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "datadog|vice president people business partner": {
    "l": "HR leaders, 15+ yrs; engineering org support, workforce planning, executive coaching",
    "t": "2026-11-06T08:00:25.626246+00:00"
@@ -54070,6 +54498,10 @@
   "ethos beath chapman idibu|lead software engineer full stack": {
    "l": "Full-stack leads, 6+ yrs; system design, cloud, team mentoring",
    "t": "2026-11-02T07:46:48.914364+00:00"
+  },
+  "ethos beath chapman idibu|node js software engineer": {
+   "l": "Node.js engineers, 3+ yrs; Node.js, Agile, cloud",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "evolution singapore|account executive digital assets crypto": {
    "l": "Crypto sales leaders, 6+ yrs; enterprise sales, APAC networks, pipeline generation",
@@ -54486,6 +54918,10 @@
   "galaxy|vp technical program manager": {
    "l": "Technical Program Managers, 7+ yrs; cross-functional delivery, stakeholder management, technical execution",
    "t": "2026-10-27T06:26:06.618411+00:00"
+  },
+  "gauntlet|research engineer": {
+   "l": "AI research engineers, 3+ yrs; agent evaluation, experimentation, Python",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "gic private limited|avp vp software engineer java technology group": {
    "l": "Java software engineers, 5+ yrs; Java, Spring, Agile",
@@ -55407,6 +55843,10 @@
    "l": "Channel managers, 7+ yrs; channel sales, SaaS, partner strategy",
    "t": "2026-11-03T01:40:49.562436+00:00"
   },
+  "gravitas recruitment group global ltd|python c software engineer developer financial markets": {
+   "l": "Financial software engineers, 3+ yrs; Python, C#, financial markets",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "grupo dul cesar i c s a|cryptocurrency trading specialist": {
    "l": "Crypto traders, 2+ yrs; spot/derivatives, risk management, technical analysis",
    "t": "2026-10-19T04:56:31.748386+00:00"
@@ -55927,6 +56367,10 @@
    "l": "Full-stack engineers, 5+ yrs; React, Node.js, Azure",
    "t": "2026-10-19T17:35:50.213321+00:00"
   },
+  "manus ai|backend engineer application development": {
+   "l": "Backend engineers, 3+ yrs; Python or Go, LLMs, system design",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "meesho|deputy manager fp a": {
    "l": "Experienced finance, trading and investment people with 2+ years of experience",
    "t": "2026-11-04T15:34:00.266722+00:00"
@@ -56290,6 +56734,10 @@
   "network guard|director of data": {
    "l": "Senior leaders",
    "t": "2026-10-21T14:07:55.703759+00:00"
+  },
+  "newton|compliance associate canada wide remote": {
+   "l": "Compliance professionals, 2+ yrs; regulatory knowledge, risk assessment, attention to detail",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "newton|director of finance canada wide remote": {
    "l": "CPAs, 10+ yrs; IFRS, financial reporting, internal controls",
@@ -58195,6 +58643,10 @@
    "l": "Payroll analysts, 4+ yrs EMEA payroll; vendor management, reconciliations, automation",
    "t": "2026-10-22T07:45:46.268154+00:00"
   },
+  "snowflake|senior product manager extensible compute": {
+   "l": "Product managers, 5+ yrs; cloud infrastructure, platform, containers",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "snowflake|senior product manager streamlit": {
    "l": "Product managers, 5+ yrs B2B SaaS; Python, developer platforms, cloud infrastructure",
    "t": "2026-10-21T01:43:31.211625+00:00"
@@ -58591,6 +59043,10 @@
    "l": "Finance, trading and investment people with 5+ years of experience",
    "t": "2026-10-21T14:07:55.703759+00:00"
   },
+  "swissborg|assistant e juridique": {
+   "l": "Legal administrators, 3-5 yrs; entity management, contract tracking, French/English",
+   "t": "2026-11-08T06:20:57.543049+00:00"
+  },
   "swissborg|corporate amp legal administrator": {
    "l": "Corporate administrators, 3-5 yrs; entity management, KYB, contract administration",
    "t": "2026-10-29T16:59:35.931297+00:00"
@@ -58938,6 +59394,10 @@
   "tether|technical content creator pear bare p2p remote europe": {
    "l": "Technical content creators, 3+ yrs; P2P tech, coding, technical storytelling",
    "t": "2026-10-31T07:06:11.650803+00:00"
+  },
+  "thales|full stack software engineer avs innovation lab": {
+   "l": "Full stack engineers, 5+ yrs; TypeScript/React, Python/Node.js, PostgreSQL",
+   "t": "2026-11-08T06:20:57.543049+00:00"
   },
   "thales|lead ui ux designer": {
    "l": "Experienced designers with 8+ years of experience",
